@@ -89,12 +89,13 @@ public class MeshLoader {
 	}
 
 	// Generates VAO, VBO and EBO
-	public static Mesh createMesh(float[] vertices, int[] indices, float[] texCoords) {
+	public static Mesh createMesh(float[] vertices, int[] indices, float[] texCoords, float[] shadingValue) {
 		// UV -> Area on the txture the Mesh is using
 		int vao = genVAO(); // Gen VAO
 
-		storeData(0, 3, vertices); // Store vertices positions
-		storeData(1, 3, texCoords); // Store texture coords
+		storeData(0, 3, vertices);  // Store vertices positions
+		storeData(1, 3, texCoords); // Texture coords
+		storeData(2, 1, shadingValue); // Shading
 
 		bindIndices(indices); // Bind
 		GL30.glBindVertexArray(0); // Delete

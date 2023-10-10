@@ -5,7 +5,6 @@ import org.lwjgl.opengl.GL30;
 
 import com.magenta.engine.Camera;
 import com.magenta.engine.Window;
-import com.magenta.engine.input.MouseInput;
 import com.magenta.game.block.Block;
 import com.magenta.game.block.BlockManager;
 import com.magenta.render.mesh.Mesh;
@@ -33,13 +32,8 @@ public class Renderer {
 		 * Move camera and releated to another class
 		 * 
 		 * */
-		// mouseInput = new MouseInput();
-		// mouseInput.init(window);
-
 		// Load shaders
 		shaderProgram = new ShaderProgram("vertex.glsl", "fragment.glsl");
-		// matrixPosition = shaderProgram.findUniform("camMatrix");
-		// texSampler = shaderProgram.findUniform("texSampler");
 
 		// Load Texture Manager	
 		texManager = new TextureManager(16, 16, 256);
@@ -49,7 +43,7 @@ public class Renderer {
 		Block block = blockManager.getBlock("grass");
 
 		// Load mesh
-		mesh = MeshLoader.createMesh(block.vertexPositions, block.indices, block.texCoords);
+		mesh = MeshLoader.createMesh(block.vertexPositions, block.indices, block.texCoords, block.shadingValue);
 	}
 
 	public void clear() {

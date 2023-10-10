@@ -3,16 +3,14 @@ package com.magenta.engine;
 import org.joml.Matrix4f;
 import org.joml.Vector2f;
 import org.joml.Vector3f;
-import org.lwjgl.glfw.GLFW;
 
 import com.magenta.render.shader.ShaderProgram;
 
 public class Camera {
-	private Window window;
 	private int width, height;
 
 	// Camera options
-	private final float speed = 0.1f, sensitivity = 0.1f;
+	private final float sensitivity;
 
 	// Movement vectors
 	private Vector3f position = new Vector3f(0.0f, 0.0f, -3.0f);
@@ -21,12 +19,13 @@ public class Camera {
 	// Render Matrices
 	private Matrix4f mvMatrix, pMatrix;
 
-	// Temp rotate
-	// private Vector3f axis = new Vector3f(0.0f, 1.0f, 0.0f);
-	// private float rotation = 0.5f;
+	// Temp rotation
+	private float cuberotation = 0.5f;
+	private Matrix4f cubeModelMatrix4f = new Matrix4f();
+	private Matrix4f finalModelViewRotationMatrix = new Matrix4f();
 
-	public Camera(Window window) {
-		this.window = window;
+	public Camera(Window window, float sensitivity) {
+		this.sensitivity = sensitivity;
 
 		width = window.getWidth();
 		height = window.getHeight();
@@ -58,24 +57,25 @@ public class Camera {
 		// Avoid 360º spin (Y only duurh)
 		rotation.y = Math.max((float) (-Math.TAU / 4), Math.min((float) (Math.TAU / 4), rotation.y));
 	}
-
-	public void movePosition(float offsetX, float offsetY, float offsetZ, float doubleSpeed) {
+	
+	public void movePosition(float offsetX, float offsetY, float offsetZ, float speed) {
 		float angle = (float)(rotation.x - Math.atan2(offsetZ, offsetX) + (Math.TAU / 4));
 		if(offsetX != 0.0f || offsetZ != 0.0f) {
-			position.x += (float) Math.cos(angle) * doubleSpeed * 0.1f;
-			position.z += (float) Math.sin(angle) * doubleSpeed * 0.1f;
+			position.x += (float) Math.cos(angle) * speed * 0.1f;
+			position.z += (float) Math.sin(angle) * speed * 0.1f;
 		}
 
 		position.y += offsetY * 0.1f;
 	}
 
+
+
+
+
 	private void rotate2D(Matrix4f matrix, float x, float y) {
 		matrix.rotate(x, 0.0f, 1.0f, 0.0f);
 		matrix.rotate(-y, (float) Math.cos(x), 0.0f, (float) Math.sin(x));
 	}
-
-
-
 
 	public void matrix(float FOVdeg, float nearPlane, float farPlane, ShaderProgram shaderProgram) {
 		pMatrix.identity(); // Create matrix
@@ -84,32 +84,47 @@ public class Camera {
 
 		mvMatrix.identity();
 
-		mvMatrix.translate(-position.x, -position.y, position.z); // Move camera (minus = away, positive = zoom)	
-		// ^ Translates plugging on view / Indicating in which direction and how much to move the world
-		
+		/**
+		 * 
+		 * Rotate before translate creates a first person camera
+		 * the opposite creates a orbital camera
+		 * 
+		 * */
 		// Moving whole world instead of camera	
 		// It needs to be negative because technically is the scene that is moving arround the camera
 		rotate2D(mvMatrix, (float) -(rotation.x - Math.TAU / 4), (float) rotation.y);
-		// mvMatrix.rotate((float) -(Math.toRadians(rotation.x) - Math.TAU / 4), new Vector3f((float) Math.toRadians(rotation.x), (float) Math.toRadians(rotation.y), 0.0f));
 
+		mvMatrix.translate(-position.x, -position.y, position.z); // Move camera (minus = away, positive = zoom)	
+		// ^ Translates plugging on view / Indicating in which direction and how much to move the world
+
+
+		// Temp rotation
+		cubeModelMatrix4f.identity();
+		cubeModelMatrix4f.rotateY((float) Math.toRadians(cuberotation));
+		finalModelViewRotationMatrix = mvMatrix.mul(cubeModelMatrix4f);
 
 		// Exports the camera amtrix to the Vertex Shader (proj * view)
-		shaderProgram.uniformMatrix(shaderProgram.findUniform("camMatrix"), pMatrix.mul(mvMatrix));
+		// shaderProgram.uniformMatrix(shaderProgram.findUniform("camMatrix"), pMatrix.mul(mvMatrix));
+		shaderProgram.uniformMatrix(shaderProgram.findUniform("camMatrix"), pMatrix.mul(finalModelViewRotationMatrix));
 	}
 
-	// public void keyboardInputs() {
-	// 	// Keyboard //
-	// 	if(GLFW.glfwGetKey(window.getWindowHandle(), GLFW.GLFW_KEY_ESCAPE) == GLFW.GLFW_TRUE)
-	// 		GLFW.glfwSetWindowShouldClose(window.getWindowHandle(), true); // Close window
-	// }
+
+
+
+
+
+	public void setCuberotation(float cuberotation) {
+		this.cuberotation = cuberotation;
+	}
+
 
 	public float getSensitivity() {
 	    return sensitivity;
 	}
 
 	// Update on resize
-	public void updateSize(int width, int height) {
-		this.width = width;
-		this.height = height;
-	}
+	// public void updateSize(int width, int height) {
+	// 	this.width = width;
+	// 	this.height = height;
+	// }
 }

@@ -22,7 +22,7 @@ import com.magenta.render.shader.ShaderProgram;
  * */
 public class TextureManager {
 	private int texID;
-	private final int width, height, max;
+	private final int width, height;
 	private int texType = GL30.GL_TEXTURE_2D_ARRAY;
 
 	private List<String> textures = new ArrayList<String>(); // Stored textures (to not load the same texture twice)
@@ -30,8 +30,6 @@ public class TextureManager {
 	public TextureManager(int width, int height, int max) {
 		this.width = width;
 		this.height = height;
-		this.max = max; // Max textures
-
 		// Generates texture program
 		texID = GL11.glGenTextures();
 
@@ -39,8 +37,8 @@ public class TextureManager {
 		GL11.glBindTexture(texType, texID); // texType
 
 		// Apply texture filter on magnify and minify (linear/nearest)
-		GL11.glTexParameteri(texType, GL11.GL_TEXTURE_MIN_FILTER, GL11.GL_NEAREST);
 		GL11.glTexParameteri(texType, GL11.GL_TEXTURE_MAG_FILTER, GL11.GL_NEAREST);
+		GL11.glTexParameteri(texType, GL11.GL_TEXTURE_MIN_FILTER, GL11.GL_NEAREST);
 
 		// GL11.glTexParameteri(texType, GL11.GL_TEXTURE_WRAP_S, GL11.GL_REPEAT);
 		// GL11.glTexParameteri(texType, GL11.GL_TEXTURE_WRAP_T, GL11.GL_REPEAT);

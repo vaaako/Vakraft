@@ -3,7 +3,7 @@ package com.magenta.main;
 import com.magenta.engine.IGameLogic;
 import com.magenta.engine.Timer;
 import com.magenta.engine.Window;
-import com.magenta.engine.input.MouseInput;
+import com.magenta.engine.MouseInput;
 
 public class Engine implements Runnable {
 	private final Window window;
@@ -12,19 +12,20 @@ public class Engine implements Runnable {
 	private final Timer timer;
 	private final MouseInput mouseInput;
 
-	// private float last;
 	private int frames = 0,
 				ticks  = 0;
+	private final double TIME_PER_UPDATE;
+
 	String title = "Just testing around";
 
 	public Engine(IGameLogic gameLogic) throws Exception {
 		this.gameLogic = gameLogic;
 
 		window = new Window(title, 640, 480, true);
-		timer = new Timer();
 		mouseInput = new MouseInput();
 
-		frames = 0;
+		timer = new Timer(60);
+		TIME_PER_UPDATE = 1.0 / timer.getTargetFPS();
 	}
 
 	@Override
@@ -48,41 +49,32 @@ public class Engine implements Runnable {
 	}
 
 	private void loop() {
-		double lastTime = System.currentTimeMillis(); // To change title
+		double deltaTime;
+		double unprocessed = 0;
+		double lastFps = timer.getTime(); // To display FPS
 
-		float deltaF = 0; // Frames
-		float deltaT = 0; // Ticks	
-		float now;
-		timer.setLast(System.nanoTime());
-
-		boolean running = true;
-		while(running && !window.windowShouldClose()) {
+		while(!window.windowShouldClose()) {
 			// Calculate elapsed time since the last frame
-			now = System.nanoTime();
-			deltaT += timer.getDeltaTick(now);
-			deltaF += timer.getDeltaFrame(now);
-			timer.setLast(now); // The last elapsed time is the now (this is logical)
+			deltaTime = timer.getElapsedTime();
+			unprocessed += deltaTime;
 
-			input();
-			while(deltaT >= 1.0f) {
-				update(deltaT);
-				deltaT--;
+
+			input(); // Process input
+			while(unprocessed >= TIME_PER_UPDATE) {
+				update(TIME_PER_UPDATE);
+				unprocessed -= TIME_PER_UPDATE;
 				ticks++;
 			}
 
-			while(deltaF >= 1.0f) {
-				render();
-				deltaF--;
-				frames++;
-			}
+			render();
+			frames++;
 
-			// if(!window.isvSync()) sync();
+			if(!window.isvSync()) sync();
+			// System.out.println(timer.getCurrentTime() - timer.getLast());
 
-			// Display FPS each second
-			// System.out.println(System.currentTimeMillis() - lastTime);
-			// Show each 1 sec
-			if(System.currentTimeMillis() - lastTime > 1000) {
-				lastTime += 1000;
+			// Updte FPS display each second
+			if(timer.getLast() - lastFps >= 1) {
+				lastFps = timer.getLast();
 				window.setTitle(title + " - " + frames + " FPS" + " - " + ticks + " UDP");
 				frames = 0;
 				ticks  = 0;
@@ -91,12 +83,9 @@ public class Engine implements Runnable {
 	}
 
 	private void sync() {
-		float now = System.nanoTime(); 
-		float loopSlot = 1.0f / timer.getTargetFPS();
-		float end = timer.getDeltaFrame(now) + loopSlot;
-		timer.setLast(now);
+		double end = timer.getLast() + TIME_PER_UPDATE; // last + loopSlot
 
-		while(timer.getLast() < end) {
+		while(timer.getTime() < end) {
 			try {
 				Thread.sleep(1);
 			} catch (InterruptedException e) {
@@ -110,7 +99,7 @@ public class Engine implements Runnable {
 		gameLogic.input(window, mouseInput);
 	}
 
-	private void update(float delta) {
+	private void update(double delta) {
 		mouseInput.input();
 		gameLogic.update(delta, mouseInput, window);
 	}

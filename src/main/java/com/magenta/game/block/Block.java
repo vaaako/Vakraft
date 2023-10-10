@@ -1,7 +1,5 @@
 package com.magenta.game.block;
 
-import java.util.HashMap;
-
 public class Block {
 	public final float[] vertexPositions = { // 12
 		 0.5f,  0.5f,  0.5f,  0.5f, -0.5f,  0.5f,  0.5f, -0.5f, -0.5f,  0.5f,  0.5f, -0.5f,
@@ -19,6 +17,15 @@ public class Block {
 		0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f, 1.0f, 0.0f,
 		0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f, 1.0f, 0.0f,
 		0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f, 1.0f, 0.0f,
+	};
+
+	public final float[] shadingValue = {
+		0.6f, 0.6f, 0.6f, 0.6f,
+		0.6f, 0.6f, 0.6f, 0.6f,
+		1.0f, 1.0f, 1.0f, 1.0f,
+		0.4f, 0.4f, 0.4f, 0.4f,
+		0.8f, 0.8f, 0.8f, 0.8f,
+		0.8f, 0.8f, 0.8f, 0.8f
 	};
 
 	public final float[] shading = {

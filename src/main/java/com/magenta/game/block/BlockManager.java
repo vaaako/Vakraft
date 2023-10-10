@@ -53,8 +53,7 @@ public class BlockManager {
 
 		// Load all block textures
 		for(String face : blockFaces) { // blockFaces => This block textures (array)
-			// texture = blockFaces[face]; // In old texture loader (python)
-			texManager.addTexture(face);
+			texManager.addTexture(face); // Adds current texture
 			texIndex = texManager.getTextureIndex(face); // Texture index in All Textures array (grab image)
 			// ^ gets current face to apply texture
 

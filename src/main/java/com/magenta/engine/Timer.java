@@ -2,25 +2,28 @@ package com.magenta.engine;
 
 public class Timer {
 	private double last;
-	private final int TARGET_FPS = 60,
-					  TARGET_UPS = 120;
-	private final double nsPerFrame = 1_000_000_000.0 / TARGET_FPS, // 1 sec (in nanoTime) / targetFPS => interval
-						 nsPerTick  = 1_000_000_000.0 / TARGET_UPS; // Frequency time
-
-	// public float getCurrentTime() {
-	// 	return System.nanoTime();
-	// }
-
-	public float getDeltaFrame(float now) {
-		// float now = getTime();
-		float delta = (float) ((now - last) / nsPerFrame); // (time elapsed between frames) / interval
-		return delta;
+	private final int TARGET_FPS;
+	
+	public Timer(int targetFPS) {
+		this.TARGET_FPS = targetFPS;
+		last = getTime();
 	}
 
-	public float getDeltaTick(float now) {
-		float delta = (float) ((now - last) / nsPerTick);
-		return delta;
+	public double getCurrentTime() {
+		return System.nanoTime();
 	}
+
+	public double getTime() {
+		return System.nanoTime() / 1e9;
+	}
+
+	public double getElapsedTime() {
+		double now = getTime();
+		double deltaTime = now - last; // Calc elapsed time
+		last = now; // Lat time now is "now" time
+		return deltaTime;
+	}
+
 
 	public void setLast(double last) {
 		this.last = last;
