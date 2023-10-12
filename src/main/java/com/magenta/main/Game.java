@@ -7,6 +7,7 @@ import org.lwjgl.glfw.GLFW;
 import com.magenta.engine.Camera;
 import com.magenta.engine.IGameLogic;
 import com.magenta.engine.Window;
+import com.magenta.game.World;
 import com.magenta.engine.MouseInput;
 
 public class Game implements IGameLogic {
@@ -18,6 +19,8 @@ public class Game implements IGameLogic {
 					movimentEnable = false,
 					doubleSpeed =  false;
 
+	private World world;
+
 	// Temp rotate
 	float rotation = 0.0f, prevTime = (float) GLFW.glfwGetTime();
 
@@ -27,12 +30,18 @@ public class Game implements IGameLogic {
 
 	@Override
 	public void init(Window window) throws Exception {
-		renderer = new Renderer(window);
+		// Load camera
+		camera = new Camera(window, 90.0f, 0.06f);
+
+		// Load renderer
+		renderer = new Renderer(window, camera);
 		renderer.init();
 
-		camera = new Camera(window, 0.06f);
+		// Load world
+		world = new World();
 
-		window.setClearColor(1.0f, 0.5f, 1.0f, 1.0f);
+		// window.setClearColor(1.0f, 0.5f, 1.0f, 1.0f);
+		window.setClearColor(0.0f, 0.7f, 0.8f, 1.0f);
 	}
 
 	@Override
@@ -60,23 +69,23 @@ public class Game implements IGameLogic {
 			cameraInc.y = 1;
 
 		if(window.isKeyPressed(GLFW.GLFW_KEY_LEFT_CONTROL))
-			doubleSpeed = !doubleSpeed;
+			doubleSpeed = (doubleSpeed) ? false : true;
 	}
 
 	@Override
 	public void update(double delta, MouseInput mouseInput, Window window) {
 		// Move with cameraInc
 		camera.movePosition(cameraInc.x, cameraInc.y, cameraInc.z,
-			doubleSpeed ? 2.0f : 1.0f);
+			(doubleSpeed) ? 2.0f : 1.0f);
 
 
 		// Updates 60 times per second
-		double now = GLFW.glfwGetTime();
-		if(now - prevTime >= (1 / 60)) {
-			rotation += 1.0f;
-			now = prevTime;
-		}
-		camera.setCuberotation(rotation);
+		// double now = GLFW.glfwGetTime();
+		// if(now - prevTime >= (1 / 60)) {
+		// 	rotation += 1.0f;
+		// 	now = prevTime;
+		// }
+		// matrixDraw.setCuberotation(rotation);
 
 
 		// Temp
@@ -103,7 +112,7 @@ public class Game implements IGameLogic {
 
 	@Override
 	public void render(Window window) {
-		renderer.render(camera);
+		renderer.render(world);
 	}
 
 	@Override

@@ -1,4 +1,4 @@
-package com.magenta.render.texture;
+package com.magenta.render;
 
 import java.nio.ByteBuffer;
 import java.nio.IntBuffer;
@@ -12,8 +12,6 @@ import org.lwjgl.opengl.GL20;
 import org.lwjgl.opengl.GL30;
 import org.lwjgl.stb.STBImage;
 import org.lwjgl.system.MemoryStack;
-
-import com.magenta.render.shader.ShaderProgram;
 
 /**
  * Texture Array
@@ -49,8 +47,9 @@ public class TextureManager {
 			width, height, max, 0,
 			GL11.GL_RGBA, GL11.GL_UNSIGNED_BYTE, (ByteBuffer) null);
 		// Data type of pixels -> Most commons -> GL_RGB (jpg/jpeg) and GL_RGBA (png),
+	}
 
-
+	public void generateMipmap() {	
 		GL30.glGenerateMipmap(texType); // Generates mipmap -> Smaller versions of the same texture (used when texture is far away, for example)
 	}
 
@@ -97,12 +96,11 @@ public class TextureManager {
 		// Free memory
 		STBImage.stbi_image_free(texBuffer);
 
-		// System.out.println("[ ] Loaded Texture "+texture);
+		System.out.println("[-] Loaded Texture "+texture);
 	}
 
-	public void generateMipmap() {	
-		GL30.glGenerateMipmap(texType); // Generates mipmap -> Smaller versions of the same texture (used when texture is far away, for example)
-	}
+
+
 
 	public void texUnit(ShaderProgram shader, String uniform, int unit) {
 		int texUni = GL20.glGetUniformLocation(shader.getProgramID(), uniform); // Get uniform texture

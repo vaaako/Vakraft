@@ -2,10 +2,8 @@ package com.magenta.engine;
 
 public class Timer {
 	private double last;
-	private final int TARGET_FPS;
 	
-	public Timer(int targetFPS) {
-		this.TARGET_FPS = targetFPS;
+	public Timer() {
 		last = getTime();
 	}
 
@@ -31,9 +29,5 @@ public class Timer {
 
 	public double getLast() {
 		return last;
-	}
-
-	public int getTargetFPS() {
-		return TARGET_FPS;
 	}
 }

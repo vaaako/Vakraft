@@ -1,4 +1,4 @@
-package com.magenta.render.shader;
+package com.magenta.render;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -15,6 +15,7 @@ public class Engine implements Runnable {
 	private int frames = 0,
 				ticks  = 0;
 	private final double TIME_PER_UPDATE;
+	private final int TARGET_FPS = 60;
 
 	String title = "Just testing around";
 
@@ -24,8 +25,8 @@ public class Engine implements Runnable {
 		window = new Window(title, 640, 480, true);
 		mouseInput = new MouseInput();
 
-		timer = new Timer(60);
-		TIME_PER_UPDATE = 1.0 / timer.getTargetFPS();
+		timer = new Timer();
+		TIME_PER_UPDATE = 1.0 / TARGET_FPS;
 	}
 
 	@Override

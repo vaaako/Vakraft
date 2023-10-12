@@ -3,7 +3,7 @@ package com.magenta.game.block;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.magenta.render.texture.TextureManager;
+import com.magenta.render.TextureManager;
 
 public class BlockManager {
 	private final TextureManager texManager;
@@ -36,16 +36,16 @@ public class BlockManager {
 		// addBlock("devblock",    new String[] { "dev/debug2", "dev/debug" });
 	} 
 
-	private void setBlockFace(Block block, int side, int texture) {
+	private void setBlockFace(Block block, int face, int texture) {
 		// Set block face
 		for(int v=0; v < 4; v++) { // v -> vertex
-			block.texCoords[side * 12 + v * 3 + 2] = texture; // Change texCord to adjust to the texture
+			block.texCoords[face * 12 + v * 3 + 2] = texture; // Change texCord to adjust to the texture
 			// This way on selecting a block the texture is alredy applied
 		}
 	}
 
 
-	public void addBlock(String name, String[] blockFaces) {
+	public Block addBlock(String name, String[] blockFaces) {
 		Block newBlock = new Block(name, blockFaces);
 		blocks.put(name, newBlock);
 
@@ -102,8 +102,8 @@ public class BlockManager {
 			// System.out.println("[ ] Applyed Texture "+face+"\n");
 		}
 
+		return newBlock;
 	}
-
 
 	public Block getBlock(String name) {
 		return blocks.get(name);

@@ -1,30 +1,21 @@
 package com.magenta.engine;
 
-import org.joml.Matrix4f;
 import org.joml.Vector2f;
 import org.joml.Vector3f;
-
-import com.magenta.render.shader.ShaderProgram;
 
 public class Camera {
 	private int width, height;
 
-	// Camera options
-	private final float sensitivity;
-
-	// Movement vectors
+	// Camera movement vectors
 	private Vector3f position = new Vector3f(0.0f, 0.0f, -3.0f);
 	private Vector2f rotation = new Vector2f((float) Math.TAU / 4, 0.0f);
 
-	// Render Matrices
-	private Matrix4f mvMatrix, pMatrix;
+	// Camera config
+	private final float fovDeg, sensitivity;
+	private final float nearPlane = 0.01f, farPlane = 100.0f;
 
-	// Temp rotation
-	private float cuberotation = 0.5f;
-	private Matrix4f cubeModelMatrix4f = new Matrix4f();
-	private Matrix4f finalModelViewRotationMatrix = new Matrix4f();
-
-	public Camera(Window window, float sensitivity) {
+	public Camera(Window window, float fovDeg, float sensitivity) {
+		this.fovDeg = fovDeg;
 		this.sensitivity = sensitivity;
 
 		width = window.getWidth();
@@ -32,9 +23,6 @@ public class Camera {
 
 		position = new Vector3f(0.0f, 0.0f, -3.0f);
 		rotation = new Vector2f((float) Math.TAU / 4, 0.0f);
-
-		mvMatrix  = new Matrix4f();
-		pMatrix   = new Matrix4f();
 	}
 
 	public void setRotation(float x, float y, float z) {
@@ -68,63 +56,35 @@ public class Camera {
 		position.y += offsetY * 0.1f;
 	}
 
-
-
-
-
-	private void rotate2D(Matrix4f matrix, float x, float y) {
-		matrix.rotate(x, 0.0f, 1.0f, 0.0f);
-		matrix.rotate(-y, (float) Math.cos(x), 0.0f, (float) Math.sin(x));
+	public float getNearPlane() {
+		return nearPlane;
 	}
 
-	public void matrix(float FOVdeg, float nearPlane, float farPlane, ShaderProgram shaderProgram) {
-		pMatrix.identity(); // Create matrix
-		pMatrix.perspective((float) Math.toRadians(FOVdeg), (float)width / height, nearPlane, farPlane); // Adds perspective to the scene
-		// Last two args: Closest/Furthest that can see = If something is closer than 0.1 units then it will clipped, if is further away than 100.0 units it will again get clipped
-
-		mvMatrix.identity();
-
-		/**
-		 * 
-		 * Rotate before translate creates a first person camera
-		 * the opposite creates a orbital camera
-		 * 
-		 * */
-		// Moving whole world instead of camera	
-		// It needs to be negative because technically is the scene that is moving arround the camera
-		rotate2D(mvMatrix, (float) -(rotation.x - Math.TAU / 4), (float) rotation.y);
-
-		mvMatrix.translate(-position.x, -position.y, position.z); // Move camera (minus = away, positive = zoom)	
-		// ^ Translates plugging on view / Indicating in which direction and how much to move the world
-
-
-		// Temp rotation
-		cubeModelMatrix4f.identity();
-		cubeModelMatrix4f.rotateY((float) Math.toRadians(cuberotation));
-		finalModelViewRotationMatrix = mvMatrix.mul(cubeModelMatrix4f);
-
-		// Exports the camera amtrix to the Vertex Shader (proj * view)
-		// shaderProgram.uniformMatrix(shaderProgram.findUniform("camMatrix"), pMatrix.mul(mvMatrix));
-		shaderProgram.uniformMatrix(shaderProgram.findUniform("camMatrix"), pMatrix.mul(finalModelViewRotationMatrix));
+	public float getFarPlane() {
+		return farPlane;
 	}
 
-
-
-
-
-
-	public void setCuberotation(float cuberotation) {
-		this.cuberotation = cuberotation;
+	public int getWidth() {
+		return width;
 	}
 
+	public int getHeight() {
+		return height;
+	}
+
+	public Vector2f getRotation() {
+		return rotation;
+	}
+
+	public Vector3f getPosition() {
+		return position;
+	}
+	
+	public float getFovDeg() {
+		return fovDeg;
+	}
 
 	public float getSensitivity() {
-	    return sensitivity;
+		return sensitivity;
 	}
-
-	// Update on resize
-	// public void updateSize(int width, int height) {
-	// 	this.width = width;
-	// 	this.height = height;
-	// }
 }

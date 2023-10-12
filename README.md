@@ -5,7 +5,7 @@ This project is currently in an active development phase. It is in its early sta
  Thank you for your interest in this provisional-named project, and please stay tuned for further developments!
 
 # Overview
-Mynecraft is developed using the *Lightweight Java Game Library* (`LWJL`).
+Mynecraft is developed using the *Lightweight Java Game Library* (`LWJGL`).
 This project aims to create a Minecraft-inspired game for the purpose of learning `OpenGL`.
 
 # Current state
@@ -27,7 +27,7 @@ The game's core functionality is divided into key components:
 - **render/:** In this directory, you'll discover all the necessary methods for rendering in-game elements,
  including textures, shaders, and meshes.
 
-# How to Compile and Play (Provisional Name)
+# How to Compile and Play
 Please ensure that you have `Gradle` installed and are using `Java 8` or newer
 
 ## Compile and Run

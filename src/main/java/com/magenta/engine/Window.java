@@ -79,6 +79,7 @@ public class Window {
 		GL.createCapabilities(); // Finishes the initializing process	
 		GL11.glClearColor(0.0f, 0.0f, 0.0f, 1.0f); // Set the clear color
 		GL11.glEnable(GL11.GL_DEPTH_TEST); // Enable 3D depth
+		GL11.glEnable(GL11.GL_CULL_FACE); // Don't show inside faces
 	}
 
 

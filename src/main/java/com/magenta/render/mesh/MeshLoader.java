@@ -101,9 +101,4 @@ public class MeshLoader {
 		GL30.glBindVertexArray(0); // Delete
 		return new Mesh(vao, indices.length);
 	}
-
-	// public static void createTextuer(float[] texCoords) {
-	// 	storeData(1, 3, texCoords); // Store texture coords
-	// 	GL30.glBindVertexArray(0); // Delete
-	// }
 }
