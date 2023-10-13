@@ -7,8 +7,8 @@ public class Camera {
 	private int width, height;
 
 	// Camera movement vectors
-	private Vector3f position = new Vector3f(0.0f, 0.0f, -3.0f);
-	private Vector2f rotation = new Vector2f((float) Math.TAU / 4, 0.0f);
+	private Vector3f position = new Vector3f(0.0f, 0.0f, 0.0f);
+	private Vector3f rotation = new Vector3f((float) Math.TAU / 4, 0.0f, 0.0f);
 
 	// Camera config
 	private final float fovDeg, sensitivity;
@@ -20,15 +20,12 @@ public class Camera {
 
 		width = window.getWidth();
 		height = window.getHeight();
-
-		position = new Vector3f(0.0f, 0.0f, -3.0f);
-		rotation = new Vector2f((float) Math.TAU / 4, 0.0f);
 	}
 
 	public void setRotation(float x, float y, float z) {
 		rotation.x = x;
 		rotation.y = y;
-		// rotation.z = z;
+		rotation.z = z;
 	}
 
 	public void setPosition(float x, float y, float z) {
@@ -38,12 +35,15 @@ public class Camera {
 	}
 
 	public void moveRotation(double xpos, double ypos) {
-		rotation.x -= xpos * sensitivity;
+		// rotation.x -= xpos * sensitivity;
+		rotation.x += xpos * sensitivity;
 		rotation.y += ypos * sensitivity;
 		// rotation.z += offsetZ;
 
 		// Avoid 360º spin (Y only duurh)
-		rotation.y = Math.max((float) (-Math.TAU / 4), Math.min((float) (Math.TAU / 4), rotation.y));
+		rotation.y = Math.max((float) (-Math.TAU / 4),
+			Math.min((float) (Math.TAU / 4), rotation.y)
+		);
 	}
 	
 	public void movePosition(float offsetX, float offsetY, float offsetZ, float speed) {
@@ -72,7 +72,7 @@ public class Camera {
 		return height;
 	}
 
-	public Vector2f getRotation() {
+	public Vector3f getRotation() {
 		return rotation;
 	}
 

@@ -8,7 +8,7 @@ import com.magenta.engine.MouseInput;
 public class Engine implements Runnable {
 	private final Window window;
 	private final IGameLogic gameLogic;
-	
+
 	private final Timer timer;
 	private final MouseInput mouseInput;
 
@@ -22,7 +22,8 @@ public class Engine implements Runnable {
 	public Engine(IGameLogic gameLogic) throws Exception {
 		this.gameLogic = gameLogic;
 
-		window = new Window(title, 640, 480, true);
+		// window = new Window(title, 640, 480, true);
+		window = new Window(title, 800, 600, true);
 		mouseInput = new MouseInput();
 
 		timer = new Timer();
@@ -46,7 +47,7 @@ public class Engine implements Runnable {
 		// Init All
 		window.initGLFW();
 		mouseInput.init(window);
-		gameLogic.init(window);
+		gameLogic.init(window, mouseInput);
 	}
 
 	private void loop() {

@@ -66,9 +66,7 @@ dependencies {
 
     implementation "org.joml:joml:$jomlVersion"
 
-    // implementation 'io.github.java-graphics:glm:1.0.1'
-    // implementation 'com.github.kotlin-graphics:glm:v1.0.1'
-    implementation 'com.github.java-graphics:glm:80ed879f8a'
+    implementation 'org.slick2d:slick2d-core:1.0.0'
 }
 
 application {

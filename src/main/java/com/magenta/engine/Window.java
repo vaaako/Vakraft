@@ -46,7 +46,11 @@ public class Window {
 		GLFW.glfwSetFramebufferSizeCallback(windowHandle, (window, width, height) -> {
 			// Tells OpenGL size of rendering window
 			GL11.glViewport(0, 0, width, height); // Rendering startX, startX, width and height
-			
+		
+			// float aspectRatio = (float) width / height;
+			// GL30.glOrtho(-0.5f * aspectRatio, 0.5f * aspectRatio, 0.0f, 1.0f, 0.1f, 100f);
+
+
 			this.width = width;
 			this.height = height;
 		});

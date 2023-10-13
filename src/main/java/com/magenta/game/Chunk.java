@@ -19,27 +19,20 @@ public class Chunk {
 	private LinkedList<Float> texCoords = new LinkedList<>();
 	private LinkedList<Integer> indices = new LinkedList<>();
 	private LinkedList<Float> shadingValues = new LinkedList<>();
+	private int meshIndexCounter = 0;
 
 	private Vector3f chunkPosition;
 	private final Vector3f realPosition;
 
-	private int meshIndexCounter = 0;
-
 	private World world;
-	public int[][][] blocks;
+	private int[][][] blocks;
 
 	private Mesh mesh;
 
 	public Chunk(World world, Vector3f chunkPosition) {
-		// this.chunkPosition = new Vector3f(
-		// 	chunkPosition.x * CHUNK_WIDTH,
-		// 	chunkPosition.y * CHUNK_HEIGHT,
-		// 	chunkPosition.z * CHUNK_LENGTH
-		// );
-
 		this.world = world;
 		this.chunkPosition = chunkPosition;
-		this.realPosition = new Vector3f(chunkPosition).mul(CHUNK_WIDTH, CHUNK_HEIGHT, CHUNK_LENGTH);
+		this.realPosition = new Vector3f(chunkPosition).mul(CHUNK_WIDTH, CHUNK_HEIGHT, CHUNK_LENGTH); // World-space position for the chunk
 		this.blocks = new int[CHUNK_WIDTH][CHUNK_HEIGHT][CHUNK_LENGTH]; // 0 -> air (default)
 	}
 
@@ -64,7 +57,7 @@ public class Chunk {
 
 					// Not air
 					if(blockNumber > 0) {
-						BlockType block = this.world.getBlockTypes().get(blockNumber);
+						BlockType blockType = this.world.getBlockTypes().get(blockNumber);
 
 						// Get the world-space position of the block
 						float x = realPosition.x + localX;
@@ -72,20 +65,20 @@ public class Chunk {
 						float z = realPosition.z + localZ;
 
 						// Check for each block face, if it's hidden by another block, and add that face to the chunk mesh if not
-						if(world.getBlockNumber(x + 1, y, z) == 0)
-							addFace(0, block, x, y, z);
-						if(world.getBlockNumber(x - 1, y, z) == 0)
-							addFace(1, block, x, y, z);
+						if(!world.isOpaqueBlock(x + 1, y, z))
+							addFace(0, blockType, x, y, z);
+						if(!world.isOpaqueBlock(x - 1, y, z))
+							addFace(1, blockType, x, y, z);
 
-						if(world.getBlockNumber(x, y + 1, z) == 0)
-							addFace(2, block, x, y, z);
-						if(world.getBlockNumber(x, y - 1, z) == 0)
-							addFace(3, block, x, y, z);
+						if(!world.isOpaqueBlock(x, y + 1, z))
+							addFace(2, blockType, x, y, z);
+						if(!world.isOpaqueBlock(x, y - 1, z))
+							addFace(3, blockType, x, y, z);
 
-						if(world.getBlockNumber(x, y, z + 1) == 0)
-							addFace(4, block, x, y, z);
-						if(world.getBlockNumber(x, y, z - 1) == 0)
-							addFace(5, block, x, y, z);
+						if(!world.isOpaqueBlock(x, y, z + 1))
+							addFace(4, blockType, x, y, z);
+						if(!world.isOpaqueBlock(x, y, z - 1))
+							addFace(5, blockType, x, y, z);
 					}
 				}
 			}
@@ -164,6 +157,10 @@ public class Chunk {
 		return mesh;
 	}
 
+	public World getWorld() {
+		return world;
+	}
+
 
 
 	private float[] convertFloats(LinkedList<Float> floats) {
@@ -183,8 +180,6 @@ public class Chunk {
 		}
 		return ret;
 	}
-
-
 
 	// Render chunk
 	public void draw() {
