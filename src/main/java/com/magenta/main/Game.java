@@ -1,5 +1,7 @@
 package com.magenta.main;
 
+import java.util.Random;
+
 import org.joml.Vector2f;
 import org.joml.Vector3f;
 import org.lwjgl.glfw.GLFW;
@@ -89,8 +91,8 @@ public class Game implements IGameLogic {
 		else if(keyboardInput.isPressingKey(GLFW.GLFW_KEY_SPACE))
 			cameraInc.y = 1;
 
-		if(keyboardInput.isPressingKey(GLFW.GLFW_KEY_LEFT_CONTROL))
-			doubleSpeed = (doubleSpeed) ? false : true;
+		if(keyboardInput.isKeyPressed(GLFW.GLFW_KEY_LEFT_CONTROL))
+			doubleSpeed = !doubleSpeed;
 
 
 		// Change block //

@@ -8,6 +8,7 @@ import java.util.Random;
 import org.joml.Math;
 import org.joml.Vector3f;
 
+import com.magenta.engine.NoiseGenerator;
 import com.magenta.engine.Timer;
 import com.magenta.game.block.BlockType;
 import com.magenta.game.block.BlocksEnum;
@@ -18,7 +19,7 @@ public class World {
 	private LinkedList<BlockType> blockTypes = new LinkedList<>();
 	private Map<Vector3f, Chunk> chunks = new LinkedHashMap<>();
 
-	private final int WORLD_SIZE = 1; // this * this = WORLD_SIZE
+	private final int WORLD_SIZE = 2; // this * this = WORLD_SIZE
 	private final int WORLD_CENTER = WORLD_SIZE / 2; // Used to spawn at the center of the world
 
 	public World() {
@@ -30,47 +31,21 @@ public class World {
 		blockTypes.add(BlocksEnum.AIR.getId(), null); // Id = 0	
 		for(int i = 1; i < BlocksEnum.values().length; i++) {
 			BlocksEnum blockEnum = BlocksEnum.values()[i];
-			blockTypes.add(blockEnum.getId(), new BlockType(blockEnum.getName(), blockEnum.getTextures(), texManager) );
+			blockTypes.add(blockEnum.getId(), new BlockType(blockEnum.getName(), blockEnum.getTextures(), blockEnum.getModel(), texManager) );
 		}
 		
 		texManager.generateMipmap();
 
-		// int[] firstRnd = {0, 9, 10};
-		int[] firstRnd = {0, 7, 8};
-		Random random = new Random();
+		// NoiseGenerator noiseGenerator = new NoiseGenerator();
+		// int terrainHeight = (int)(noiseGenerator.noise(wx, wz)); // Adjust parameters as needed
 
 		// Generate chunk randomly
 		for(int xw = 0; xw < WORLD_SIZE; xw++) { // xw -> X World
 			for(int zw = 0; zw < WORLD_SIZE; zw++) {
-				// Chunk currentChunk = new Chunk(this, new Vector3f(xw - 4, -1, zw - 4));
 				Chunk currentChunk = new Chunk(this, new Vector3f(xw - WORLD_CENTER, -1, zw - WORLD_CENTER)); // Y: -1 = Start at -1 (camera spawns at Y:0)
 				int[][][] blocks = currentChunk.getBlocks();
-
-				for(int x = 0; x < Chunk.CHUNK_WIDTH; x++) {
-					for(int y = 0; y < Chunk.CHUNK_HEIGHT; y++) {
-						int terrainHeight = (int)(PerlinNoise(xw * 0.1, zw * 0.1) * 10 + 20); // Adjust parameters as needed
-						for(int z = 0; z < Chunk.CHUNK_LENGTH; z++) {
-							if (y > terrainHeight) // Above Y=13 choose random in list of [ air, grass ] aka [0, 3] (block index 3)
-								blocks[x][y][z] = (random.nextInt(2) == 0) ? BlocksEnum.AIR.getId() : BlocksEnum.GRASS.getId();
-							else // Bellow Y=13 choose random in list of [air, air, cooblestone]
-								blocks[x][y][z] = (random.nextInt(3) == 2) ? BlocksEnum.STONE.getId() : BlocksEnum.AIR.getId();
-
-							// Flowers //
-							// if(y == 15)
-							// 	blocks[x][y][z] = firstRnd[random.nextInt(firstRnd.length)];
-							// else if(y == 14)
-							// 	blocks[x][y][z] = 2;
-							// else if(y > 10)
-							// 	blocks[x][y][z] = 4;
-							// else
-							// 	blocks[x][y][z] = 5;
-
-							// Big block chunk //
-							// blocks[x][y][z] = BlocksEnum.COBBLESTONE;
-						}
-					}
-				}
-
+			
+				generateChunk(blocks);
 				chunks.put(currentChunk.getChunkPosition(), currentChunk); // Add to chunks list
 			}
 		}
@@ -90,6 +65,44 @@ public class World {
 		float elapsed = (float) timer.getElapsedTime();
 		System.out.println("=> Loaded world in: " + elapsed + " seconds");
 		System.out.println("Average: " + elapsed / chunks.size() + " per chunk\n");
+	}
+
+
+	public void generateChunk(int[][][] blocks) {
+		// int[] firstRnd = { BlocksEnum.AIR.getId(), BlocksEnum.AIR.getId(), BlocksEnum.DAISY.getId(), BlocksEnum.ROSE.getId() }; // Plants
+		int[] firstRnd = { BlocksEnum.AIR.getId(), BlocksEnum.AIR.getId(), BlocksEnum.LOG.getId(), BlocksEnum.ROSE.getId() }; // Plants
+		// int[] firstRnd = { BlocksEnum.AIR.getId(), BlocksEnum.CACTUS.getId(), BlocksEnum.DEAD_BUSH.getId() }; // Desert
+		// int[] firstRnd = { BlocksEnum.AIR.getId(), BlocksEnum.RED_MUSHROOM.getId(), BlocksEnum.BROWN_MUSHROOM.getId() }; // Mushroom
+		Random random = new Random();
+
+		for(int x = 0; x < Chunk.CHUNK_WIDTH; x++) {
+			for(int y = 0; y < Chunk.CHUNK_HEIGHT; y++) {
+				for(int z = 0; z < Chunk.CHUNK_LENGTH; z++) {
+					// Big block chunk //
+					// blocks[x][y][z] = BlocksEnum.COBBLESTONE.getId();
+					
+					// if (y > 13) // Above Y=13 choose random in list of [ air, grass ] aka [0, 3] (block index 3)
+					// 	blocks[x][y][z] = ((random.nextInt(2) == 0) ? BlocksEnum.AIR : BlocksEnum.GRASS).getId();
+					// else // Bellow Y=13 choose random in list of [air, air, cooblestone]
+					// 	blocks[x][y][z] = ((random.nextInt(3) == 2) ? BlocksEnum.COBBLESTONE : BlocksEnum.AIR).getId();
+
+					// Flowers //
+					if(y == 15)
+						blocks[x][y][z] = firstRnd[random.nextInt(firstRnd.length)]; // Choose one of the flowers
+
+					else if(y == 14)
+						blocks[x][y][z] = BlocksEnum.GRASS.getId();
+					else if(y > 10)
+						blocks[x][y][z] = BlocksEnum.DIRT.getId();
+					
+					// else if(y > 10)
+					// 	blocks[x][y][z] = BlocksEnum.SAND.getId();
+
+					else
+						blocks[x][y][z] = BlocksEnum.STONE.getId();
+				}
+			}
+		}
 	}
 
 
@@ -133,7 +146,7 @@ public class World {
 	public boolean isOpaqueBlock(Vector3f position) {
 		// Air counts as a transparent block, so test for that or not
 		int blockTypeID = getBlockInChunk(position.x, position.y, position.z);
-		if(blockTypes.get(blockTypeID) != null)
+		if(blockTypes.get(blockTypeID) != null) // Block exists
 			return !blockTypes.get(blockTypeID).isTransparent(); // Not transparent = Opaque
 		return false; // Air
 	}

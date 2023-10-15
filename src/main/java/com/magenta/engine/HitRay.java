@@ -46,7 +46,7 @@ public class HitRay {
 	// Check and step both return true if something is hit, and false if not
 	public boolean check(Function<Vector3f[], Integer> hitCallback, float distance, Vector3f currBlock, Vector3f nextBlock) {
 		if(world.getBlockInChunk(nextBlock.x, nextBlock.y, nextBlock.z) != 0) {
-			hitCallback.apply(new Vector3f[]{ currBlock, nextBlock });
+			hitCallback.apply(new Vector3f[] { currBlock, nextBlock });
 			return true;
 		} else {
 			position.add(vector.x * distance, vector.y * distance, vector.z * distance);

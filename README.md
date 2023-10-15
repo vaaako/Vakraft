@@ -50,6 +50,12 @@ bash run.sh -r # Use -c to compile to a JAR file
 java -jar mynecraft.jar
 ```
 
+# TODO
+- [ ] Add subchunks (*maybe*)
+- [ ] Collision
+- [ ] Gravity
+- [ ] Load blocks from file (*maybe*)
+- [ ] Save/Load (*maybe*)
 
 # Credits
 Made by me<br>

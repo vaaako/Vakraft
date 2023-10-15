@@ -56,21 +56,30 @@ public class Chunk {
 		for(int localX = 0; localX < CHUNK_WIDTH; localX++) {	
 			for(int localY = 0; localY < CHUNK_HEIGHT; localY++) {
 				for(int localZ = 0; localZ < CHUNK_LENGTH; localZ++) {
-					int blockEnum = this.blocks[localX][localY][localZ];
+					int blockNumber = this.blocks[localX][localY][localZ];
 
-					// System.out.println("Block Number: " + blockEnum + "\nSize: " + this.world.getBlockTypes().size());
+					// System.out.println("Block Number: " + blockNumber + "\nSize: " + this.world.getBlockTypes().size());
 					// Vector3f localPos = new Vector3f(localX, localY, localZ);
 
 					// Not air (not render air duurh)
-					if(blockEnum == 0)
+					if(blockNumber == 0)
 						continue;
 					
-					BlockType blockType = this.world.getBlockTypes().get(blockEnum);
+					BlockType blockType = this.world.getBlockTypes().get(blockNumber);
 
 					// Get the world-space position of the block
 					float x = realPosition.x + localX;
 					float y = realPosition.y + localY;
 					float z = realPosition.z + localZ;
+					
+					// If not a cube render all faces
+					if(!blockType.isCube()) {
+						for(int i = 0; i < blockType.getVertexPositions().length; i++) {
+							addFace(i, blockType, x, y, z);
+						}
+
+						continue;
+					}
 
 					/***
 					 * If block is cube, we want it to check neighbouring blocks so that we don't uselessly render faces
@@ -148,8 +157,9 @@ public class Chunk {
 		if(blockTypeEnum == 0)
 			return 0; // Return air
 
+		// If is transparent (can see through) return air to render visible face
 		BlockType blockType = world.getBlockTypes().get(blockTypeEnum);
-		if(blockType.isTransparent())
+		if(blockType.isTransparent()) 
 			return 0;
 		else
 			return blockTypeEnum;

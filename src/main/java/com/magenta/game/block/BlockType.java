@@ -3,69 +3,39 @@ package com.magenta.game.block;
 import com.magenta.render.TextureManager;
 
 public class BlockType {
-	public final float[][] vertexPositions = { // 12
-		{  0.5f,  0.5f,  0.5f,  0.5f, -0.5f,  0.5f,  0.5f, -0.5f, -0.5f,  0.5f,  0.5f, -0.5f }, // Right / X + 1
-		{ -0.5f,  0.5f, -0.5f, -0.5f, -0.5f, -0.5f, -0.5f, -0.5f,  0.5f, -0.5f,  0.5f,  0.5f }, // Left / X - 1
-		{  0.5f,  0.5f,  0.5f,  0.5f,  0.5f, -0.5f, -0.5f,  0.5f, -0.5f, -0.5f,  0.5f,  0.5f }, // Top / Y + 1
-		{ -0.5f, -0.5f,  0.5f, -0.5f, -0.5f, -0.5f,  0.5f, -0.5f, -0.5f,  0.5f, -0.5f,  0.5f }, // Bottom / Y - 1
-		{ -0.5f,  0.5f,  0.5f, -0.5f, -0.5f,  0.5f,  0.5f, -0.5f,  0.5f,  0.5f,  0.5f,  0.5f }, // Front / Z + 1
-		{  0.5f,  0.5f, -0.5f,  0.5f, -0.5f, -0.5f, -0.5f, -0.5f, -0.5f, -0.5f,  0.5f, -0.5f }  // Back / Z - 1
-	};
-
-	public final float[][] texCoords = {
-		{ 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f, 1.0f, 0.0f },
-		{ 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f, 1.0f, 0.0f },
-		{ 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f, 1.0f, 0.0f },
-		{ 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f, 1.0f, 0.0f },
-		{ 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f, 1.0f, 0.0f },
-		{ 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f, 1.0f, 0.0f }
-	};
-
-	public float[][] shadingValue = {
-		{ 0.6f, 0.6f, 0.6f, 0.6f },
-		{ 0.6f, 0.6f, 0.6f, 0.6f },
-		{ 1.0f, 1.0f, 1.0f, 1.0f },
-		{ 0.4f, 0.4f, 0.4f, 0.4f },
-		{ 0.8f, 0.8f, 0.8f, 0.8f },
-		{ 0.8f, 0.8f, 0.8f, 0.8f }
-	};
-
-	// public final float[] shading = {
-	// 	0.80f, 0.80f, 0.80f, 0.80f,
-	// 	0.80f, 0.80f, 0.80f, 0.80f,
-	// 	1.0f,  1.0f,  1.0f,  1.0f,
-	// 	0.49f, 0.49f, 0.49f, 0.49f,
-	// 	0.92f, 0.92f, 0.92f, 0.92f,
-	// 	0.92f, 0.92f, 0.92f, 0.92f,
-	// };
-
-	// public final int[] indices = {
-	// 	 0,  1,  2,  0,  2,  3, // Right
-	// 	 4,  5,  6,  4,  6,  7, // Left
-	// 	 8,  9, 10,  8, 10, 11, // Top
-	// 	12, 13, 14, 12, 14, 15, // Bottom
-	// 	16, 17, 18, 16, 18, 19, // Front
-	// 	20, 21, 22, 20, 22, 23, // Back
-	// };
-
-
+	// Block specs //
 	private final String name;
 	private final String[] faces; // { top, bottom, sides }
+	// private final Model model;
 
-	// private final TextureManager texManager;
-	// private Map<String, Block> blocks = new HashMap<>();
+	// Model vars //	
+	private final float[][] vertexPositions;
+	private final float[][] texCoords;
+	private final float[][] shadingValue;
 
-	public BlockType(String name, String[] faces, TextureManager texManager) {
+	private final boolean isTransparent;
+	private final boolean isCube;
+
+	public BlockType(String name, String[] faces, Model model, TextureManager texManager) {
+		// Block //
 		this.name = name;
 		this.faces = faces;
-		// this.texManager = texManager;
+		// this.model = model;
 
-		int texIndex;
+		// Model //
+		this.vertexPositions = model.getVertexPositions();
+		this.texCoords = model.getTexCoords();
+		this.shadingValue = model.getShadingValue();
+		this.isTransparent = model.isTransparent();
+		this.isCube = model.isCube();
 
+
+		// Add textures //
 		// Load all block textures
+		int texIndex;
 		for(String face : faces) { // faces => This block textures (array)
-			texManager.addTexture(face); // Adds current texture
-			texIndex = texManager.getTextureIndex(face); // Texture index in All Textures array (grab image)
+			texManager.addTexture("blocks/"+face); // Adds current texture
+			texIndex = texManager.getTextureIndex("blocks/"+face); // Texture index in All Textures array (grab image)
 			// ^ gets current face to apply texture
 
 			switch (faces.length) {
@@ -88,23 +58,18 @@ public class BlockType {
 					setBlockFace(5, texIndex); // Back
 					break;
 				case 3:
-					int topFaceIndex = texManager.getTextureIndex(this.getFace(0));
-					int bottomFaceIndex = texManager.getTextureIndex(this.getFace(1));
-
 					setBlockFace(0, texIndex); // Right
 					setBlockFace(1, texIndex); // Left
 
-					setBlockFace(2, topFaceIndex); // Top
-					setBlockFace(3, bottomFaceIndex); // Bottom
+					setBlockFace(2, texManager.getTextureIndex(this.getFace(0))); // Top
+					setBlockFace(3, texManager.getTextureIndex(this.getFace(1))); // Bottom
 
 					setBlockFace(4, texIndex); // Front
 					setBlockFace(5, texIndex); // Back
 					break;
 				case 6:
-					int faceIndex;
 					for(int i=0; i < 6; i++) {
-						faceIndex = texManager.getTextureIndex(this.getFace(i));
-						setBlockFace( i, faceIndex);
+						setBlockFace(i, texManager.getTextureIndex(this.getFace(i)));
 					}
 					break;
 				default:
@@ -134,7 +99,7 @@ public class BlockType {
 	}
 
 	public String getFace(int index) {
-		return faces[index];
+		return "blocks/" + faces[index]; // Load from blocks/
 	}
 
 
@@ -152,10 +117,10 @@ public class BlockType {
 
 
 	public boolean isTransparent() {
-		return false;
+		return isTransparent;
 	}
 
 	public boolean isCube() {
-		return true;
+		return isCube;
 	}
 }
