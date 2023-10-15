@@ -1,6 +1,7 @@
 package com.magenta.main;
 
 import com.magenta.engine.IGameLogic;
+import com.magenta.engine.KeyboardInput;
 import com.magenta.engine.Timer;
 import com.magenta.engine.Window;
 import com.magenta.engine.MouseInput;
@@ -11,6 +12,7 @@ public class Engine implements Runnable {
 
 	private final Timer timer;
 	private final MouseInput mouseInput;
+	private final KeyboardInput keyboardInput;
 
 	private int frames = 0,
 				ticks  = 0;
@@ -25,6 +27,7 @@ public class Engine implements Runnable {
 		// window = new Window(title, 640, 480, true);
 		window = new Window(title, 800, 600, true);
 		mouseInput = new MouseInput();
+		keyboardInput = new KeyboardInput(window);
 
 		timer = new Timer();
 		TIME_PER_UPDATE = 1.0 / TARGET_FPS;
@@ -47,6 +50,7 @@ public class Engine implements Runnable {
 		// Init All
 		window.initGLFW();
 		mouseInput.init(window);
+		keyboardInput.init();
 		gameLogic.init(window, mouseInput);
 	}
 
@@ -98,7 +102,7 @@ public class Engine implements Runnable {
 	}
 
 	private void input() {
-		gameLogic.input(window, mouseInput);
+		gameLogic.input(window, keyboardInput, mouseInput);
 	}
 
 	private void update(double delta) {

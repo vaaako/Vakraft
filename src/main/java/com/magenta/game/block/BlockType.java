@@ -1,4 +1,4 @@
-package com.magenta.game;
+package com.magenta.game.block;
 
 import com.magenta.render.TextureManager;
 
@@ -21,7 +21,7 @@ public class BlockType {
 		{ 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f, 1.0f, 0.0f }
 	};
 
-	public final float[][] shadingValue = {
+	public float[][] shadingValue = {
 		{ 0.6f, 0.6f, 0.6f, 0.6f },
 		{ 0.6f, 0.6f, 0.6f, 0.6f },
 		{ 1.0f, 1.0f, 1.0f, 1.0f },
@@ -30,23 +30,23 @@ public class BlockType {
 		{ 0.8f, 0.8f, 0.8f, 0.8f }
 	};
 
-	public final float[] shading = {
-		0.80f, 0.80f, 0.80f, 0.80f,
-		0.80f, 0.80f, 0.80f, 0.80f,
-		1.0f,  1.0f,  1.0f,  1.0f,
-		0.49f, 0.49f, 0.49f, 0.49f,
-		0.92f, 0.92f, 0.92f, 0.92f,
-		0.92f, 0.92f, 0.92f, 0.92f,
-	};
+	// public final float[] shading = {
+	// 	0.80f, 0.80f, 0.80f, 0.80f,
+	// 	0.80f, 0.80f, 0.80f, 0.80f,
+	// 	1.0f,  1.0f,  1.0f,  1.0f,
+	// 	0.49f, 0.49f, 0.49f, 0.49f,
+	// 	0.92f, 0.92f, 0.92f, 0.92f,
+	// 	0.92f, 0.92f, 0.92f, 0.92f,
+	// };
 
-	public final int[] indices = {
-		 0,  1,  2,  0,  2,  3, // Right
-		 4,  5,  6,  4,  6,  7, // Left
-		 8,  9, 10,  8, 10, 11, // Top
-		12, 13, 14, 12, 14, 15, // Bottom
-		16, 17, 18, 16, 18, 19, // Front
-		20, 21, 22, 20, 22, 23, // Back
-	};
+	// public final int[] indices = {
+	// 	 0,  1,  2,  0,  2,  3, // Right
+	// 	 4,  5,  6,  4,  6,  7, // Left
+	// 	 8,  9, 10,  8, 10, 11, // Top
+	// 	12, 13, 14, 12, 14, 15, // Bottom
+	// 	16, 17, 18, 16, 18, 19, // Front
+	// 	20, 21, 22, 20, 22, 23, // Back
+	// };
 
 
 	private final String name;
@@ -114,7 +114,7 @@ public class BlockType {
 		}
 	}
 
-	private void setBlockFace(int face, int texture) {
+    private void setBlockFace(int face, int texture) {
 		if(face > (vertexPositions.length) - 1) return;
 		texCoords[face] = texCoords[face].clone();
 
@@ -124,8 +124,6 @@ public class BlockType {
 			// This way on selecting a block the texture is alredy applied
 		}
 	}
-
-
 
 
 
@@ -151,9 +149,6 @@ public class BlockType {
 	public float[][] getShadingValues() {
 	    return shadingValue;
 	}
-
-
-
 
 
 	public boolean isTransparent() {

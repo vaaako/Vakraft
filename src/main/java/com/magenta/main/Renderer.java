@@ -53,7 +53,6 @@ public class Renderer {
 
 		// Load Texture Manager	
 		// texManager = new TextureManager(16, 16, 256);
-		
 	}
 
 
@@ -92,6 +91,8 @@ public class Renderer {
 		// Get camera position/rotation
 		rotation = camera.getRotation();
 		position = camera.getPosition();
+
+		// System.out.println("X: " + position.x + " Y: " + position.y + " Z: " + position.z);
 		
 		// Projection Matrix //
 		pMatrix.identity(); // Create matrix

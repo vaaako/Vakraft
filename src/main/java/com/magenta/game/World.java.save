@@ -51,7 +51,8 @@ public class World {
 						int terrainHeight = (int)(PerlinNoise(xw * 0.1, zw * 0.1) * 10 + 20); // Adjust parameters as needed
 						for(int z = 0; z < Chunk.CHUNK_LENGTH; z++) {
 							if (y > terrainHeight) // Above Y=13 choose random in list of [ air, grass ] aka [0, 3] (block index 3)
-								blocks[x][y][z] = (random.nextInt(2) == 0) ? BlocksEnum.AIR.getId() : BlocksEnum.GRASS.getId();
+				blocks[x][y][z] = (random.nextInt(2) == 0) ? 
+								BlocksEnum.AIR.getId() : BlocksEnum.SAND.getId();
 							else // Bellow Y=13 choose random in list of [air, air, cooblestone]
 								blocks[x][y][z] = (random.nextInt(3) == 2) ? BlocksEnum.STONE.getId() : BlocksEnum.AIR.getId();
 

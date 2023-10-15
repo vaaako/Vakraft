@@ -7,6 +7,8 @@ import org.joml.Vector3f;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL30;
 
+import com.magenta.game.block.BlockType;
+import com.magenta.game.block.BlocksEnum;
 import com.magenta.render.mesh.Mesh;
 import com.magenta.render.mesh.MeshLoader;
 
@@ -15,19 +17,24 @@ public class Chunk {
 	public final static int CHUNK_HEIGHT = 16;
 	public final static int CHUNK_LENGTH = 16;
 
+	// Chunk Meshes //
 	private LinkedList<Float> vertexPositions = new LinkedList<>();
 	private LinkedList<Float> texCoords = new LinkedList<>();
 	private LinkedList<Integer> indices = new LinkedList<>();
 	private LinkedList<Float> shadingValues = new LinkedList<>();
 	private int meshIndexCounter = 0;
+	
+	private Mesh mesh;
 
+
+	// Position //
 	private Vector3f chunkPosition;
 	private final Vector3f realPosition;
 
+	// World //
 	private World world;
-	private int[][][] blocks;
-
-	private Mesh mesh;
+	// private BlocksEnum[][][] blocks; // Chunk blocks
+	private int[][][] blocks; // Chunk blocks
 
 	public Chunk(World world, Vector3f chunkPosition) {
 		this.world = world;
@@ -42,7 +49,6 @@ public class Chunk {
 		texCoords.clear();
 		indices.clear();
 		shadingValues.clear();
-
 		meshIndexCounter = 0;
 
 
@@ -50,36 +56,41 @@ public class Chunk {
 		for(int localX = 0; localX < CHUNK_WIDTH; localX++) {	
 			for(int localY = 0; localY < CHUNK_HEIGHT; localY++) {
 				for(int localZ = 0; localZ < CHUNK_LENGTH; localZ++) {
-					int blockNumber = this.blocks[localX][localY][localZ];
+					int blockEnum = this.blocks[localX][localY][localZ];
 
-					// System.out.println("Block Number: " + blockNumber + "\nSize: " + this.world.getBlockTypes().size());
+					// System.out.println("Block Number: " + blockEnum + "\nSize: " + this.world.getBlockTypes().size());
 					// Vector3f localPos = new Vector3f(localX, localY, localZ);
 
-					// Not air
-					if(blockNumber > 0) {
-						BlockType blockType = this.world.getBlockTypes().get(blockNumber);
+					// Not air (not render air duurh)
+					if(blockEnum == 0)
+						continue;
+					
+					BlockType blockType = this.world.getBlockTypes().get(blockEnum);
 
-						// Get the world-space position of the block
-						float x = realPosition.x + localX;
-						float y = realPosition.y + localY;
-						float z = realPosition.z + localZ;
+					// Get the world-space position of the block
+					float x = realPosition.x + localX;
+					float y = realPosition.y + localY;
+					float z = realPosition.z + localZ;
 
-						// Check for each block face, if it's hidden by another block, and add that face to the chunk mesh if not
-						if(!world.isOpaqueBlock(x + 1, y, z))
-							addFace(0, blockType, x, y, z);
-						if(!world.isOpaqueBlock(x - 1, y, z))
-							addFace(1, blockType, x, y, z);
+					/***
+					 * If block is cube, we want it to check neighbouring blocks so that we don't uselessly render faces
+					 * If block isn't a cube, we just want to render all faces, regardless of neighbouring blocks
+					 * Since the vast majority of blocks are probably anyway going to be cubes, this won't impact performance all that much; the amount of useless faces drawn is going to be minimal
+					 * */
+					if(!world.isOpaqueBlock(x + 1, y, z)) // Block on side is transparent (or air) so draw this face, because it's visible
+						addFace(0, blockType, x, y, z);
+					if(!world.isOpaqueBlock(x - 1, y, z))
+						addFace(1, blockType, x, y, z);
 
-						if(!world.isOpaqueBlock(x, y + 1, z))
-							addFace(2, blockType, x, y, z);
-						if(!world.isOpaqueBlock(x, y - 1, z))
-							addFace(3, blockType, x, y, z);
+					if(!world.isOpaqueBlock(x, y + 1, z))
+						addFace(2, blockType, x, y, z);
+					if(!world.isOpaqueBlock(x, y - 1, z))
+						addFace(3, blockType, x, y, z);
 
-						if(!world.isOpaqueBlock(x, y, z + 1))
-							addFace(4, blockType, x, y, z);
-						if(!world.isOpaqueBlock(x, y, z - 1))
-							addFace(5, blockType, x, y, z);
-					}
+					if(!world.isOpaqueBlock(x, y, z + 1))
+						addFace(4, blockType, x, y, z);
+					if(!world.isOpaqueBlock(x, y, z - 1))
+						addFace(5, blockType, x, y, z);
 				}
 			}
 		}
@@ -131,16 +142,17 @@ public class Chunk {
 
 
 	public int getBlock(int x, int y, int z) {
-		int blockTypeID = blocks[x][y][z];
+		int blockTypeEnum = blocks[x][y][z]; // Getting null
 
-		if(blockTypeID == 0)
+		// System.out.println("blockTypeEnum: " + blockTypeEnum); // Error here (TODO fix)
+		if(blockTypeEnum == 0)
 			return 0; // Return air
 
-		BlockType blockType = world.getBlockTypes().get(blockTypeID);
+		BlockType blockType = world.getBlockTypes().get(blockTypeEnum);
 		if(blockType.isTransparent())
 			return 0;
 		else
-			return blockTypeID;
+			return blockTypeEnum;
 	}
 
 

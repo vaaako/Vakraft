@@ -1,6 +1,5 @@
 package com.magenta.engine;
 
-import org.lwjgl.glfw.GLFWKeyCallback;
 import org.lwjgl.opengl.GL;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.system.MemoryStack;
@@ -20,7 +19,6 @@ public class Window {
 	private long windowHandle;
 	private boolean vSync;
 
-	private GLFWKeyCallback keyboardProcessInput;
 
 	public Window(String title, int width, int height, boolean vSync) {
 		this.title = title;
@@ -47,13 +45,10 @@ public class Window {
 			// Tells OpenGL size of rendering window
 			GL11.glViewport(0, 0, width, height); // Rendering startX, startX, width and height
 		
-			// float aspectRatio = (float) width / height;
-			// GL30.glOrtho(-0.5f * aspectRatio, 0.5f * aspectRatio, 0.0f, 1.0f, 0.1f, 100f);
-
-
 			this.width = width;
 			this.height = height;
 		});
+
 
 		// Get the thread stack and push a new frame
 		// This is just to center the window
@@ -138,15 +133,5 @@ public class Window {
 		// Terminate GLFW and free the error callback
 		GLFW.glfwTerminate();
 		GLFW.glfwSetErrorCallback(null).free();
-	}
-
-	public boolean isKeyPressed(int key) {
-		return GLFW.glfwGetKey(windowHandle, key) == GLFW.GLFW_PRESS;
-	}
-
-
-	public void setKeyboardCallback(GLFWKeyCallback keyboardProcessInput) {
-		this.keyboardProcessInput = keyboardProcessInput;
-		GLFW.glfwSetKeyCallback(windowHandle, this.keyboardProcessInput);
 	}
 }

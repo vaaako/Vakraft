@@ -3,27 +3,30 @@ package com.magenta.main;
 import org.joml.Vector2f;
 import org.joml.Vector3f;
 import org.lwjgl.glfw.GLFW;
-import org.lwjgl.system.windows.HARDWAREINPUT;
 
 import com.magenta.engine.Camera;
 import com.magenta.engine.HitRay;
 import com.magenta.engine.IGameLogic;
+import com.magenta.engine.KeyboardInput;
 import com.magenta.engine.Window;
+import com.magenta.game.Chunk;
 import com.magenta.game.World;
+import com.magenta.game.block.BlocksEnum;
 import com.magenta.engine.MouseInput;
 
 public class Game implements IGameLogic {
+	// Managers //
 	private Renderer renderer;
 	private Camera camera;
 	private static MouseInput mouseInput;
 
+	// World //
 	private HitRay hitRay;
 	private static World world;
 
 	private final Vector3f cameraInc; // Movement
 	private boolean movimentEnable = false,
 					doubleSpeed =  false;
-
 
 	private static int holdingBlock = 1;
 
@@ -33,6 +36,8 @@ public class Game implements IGameLogic {
 
 	@Override
 	public void init(Window window, MouseInput mouseInput) throws Exception {
+		Game.mouseInput = mouseInput; // To use on HitRay callback
+		
 		// Load camera
 		camera = new Camera(window, 90.0f, 0.06f);
 
@@ -43,49 +48,70 @@ public class Game implements IGameLogic {
 		// Load world
 		world = new World();
 
-		Game.mouseInput = mouseInput;
+		// Load in world in chunk
+		
+		Vector3f firstPos = world.getChunkPosition(world.getChunks().entrySet().iterator().next().getKey());
+		// camera.setPosition(firstPos.x, firstPos.y, firstPos.z);
+		
+		Vector3f lastPos = world.getChunkPosition(world.getChunks().keySet().stream().reduce((first, second) -> second).orElse(null));
+		// camera.setPosition(lastPos.x, lastPos.y, lastPos.z);
+	
+		System.out.println("First Position: " + firstPos + "\nLast Position: " + lastPos);	
+		// camera.setPosition(-36.0f, 1.0f, -33.0f);
+		// camera.setPosition((Chunk.CHUNK_WIDTH + Chunk.CHUNK_HEIGHT) * -1, 1.0f, (Chunk.CHUNK_WIDTH + Chunk.CHUNK_HEIGHT) * -1);
 
+		
 		// window.setClearColor(1.0f, 0.5f, 1.0f, 1.0f);
 		window.setClearColor(0.0f, 0.7f, 0.8f, 1.0f);
 	}
 
 	@Override
-	public void input(Window window, MouseInput mouseInput) {
-		if(window.isKeyPressed(GLFW.GLFW_KEY_ESCAPE))
+	public void input(Window window, KeyboardInput keyboardInput, MouseInput mouseInput) {
+		if(keyboardInput.isPressingKey(GLFW.GLFW_KEY_ESCAPE))
 			GLFW.glfwSetWindowShouldClose(window.getWindowHandle(), true);
 
 		cameraInc.set(0, 0, 0); // Reset values
 
 		// Movement //
-		if(window.isKeyPressed(GLFW.GLFW_KEY_W))
+		if(keyboardInput.isPressingKey(GLFW.GLFW_KEY_W))
 			cameraInc.z = 1;
-		else if(window.isKeyPressed(GLFW.GLFW_KEY_S))
+		else if(keyboardInput.isPressingKey(GLFW.GLFW_KEY_S))
 			cameraInc.z = -1;
 
-		if(window.isKeyPressed(GLFW.GLFW_KEY_A))
+		if(keyboardInput.isPressingKey(GLFW.GLFW_KEY_A))
 			cameraInc.x = -1;
-		else if(window.isKeyPressed(GLFW.GLFW_KEY_D))
+		else if(keyboardInput.isPressingKey(GLFW.GLFW_KEY_D))
 			cameraInc.x = 1;
 
-
-		if(window.isKeyPressed(GLFW.GLFW_KEY_LEFT_SHIFT))
+		// Fly
+		if(keyboardInput.isPressingKey(GLFW.GLFW_KEY_LEFT_SHIFT))
 			cameraInc.y = -1;
-		else if(window.isKeyPressed(GLFW.GLFW_KEY_SPACE))
+		else if(keyboardInput.isPressingKey(GLFW.GLFW_KEY_SPACE))
 			cameraInc.y = 1;
 
-		if(window.isKeyPressed(GLFW.GLFW_KEY_LEFT_CONTROL))
+		if(keyboardInput.isPressingKey(GLFW.GLFW_KEY_LEFT_CONTROL))
 			doubleSpeed = (doubleSpeed) ? false : true;
 
 
-		if(window.isKeyPressed(GLFW.GLFW_KEY_E)) {
+		// Change block //
+		if(keyboardInput.isKeyPressed(GLFW.GLFW_KEY_E)) {
 			holdingBlock++;
 			if(world.getBlockTypes().size() <= holdingBlock) holdingBlock = 1;
-			// System.out.println("change block " + holdingBlock);
-		}
-
-		if(window.isKeyPressed(GLFW.GLFW_KEY_Q)) {
+		
+			System.out.println("Holding Block: " + BlocksEnum.getBlockById(holdingBlock));
+		} else if(keyboardInput.isKeyPressed(GLFW.GLFW_KEY_Q)) {
 			holdingBlock--;	
 			if(holdingBlock < 0) holdingBlock = world.getBlockTypes().size() - 1;
+
+			System.out.println("Holding Block: " + BlocksEnum.getBlockById(holdingBlock));
+		}
+
+
+
+		// Exit from moviment //
+		if(keyboardInput.isPressingKey(GLFW.GLFW_KEY_TAB) && movimentEnable) {	
+			movimentEnable = false;
+			GLFW.glfwSetInputMode(window.getWindowHandle(), GLFW.GLFW_CURSOR, GLFW.GLFW_CURSOR_NORMAL);
 		}
 	}
 
@@ -106,11 +132,8 @@ public class Game implements IGameLogic {
 				GLFW.glfwSetCursorPos(window.getWindowHandle(), (int) window.getWidth() / 2, (int) window.getHeight() / 2);
 			}
 		}
-		// else if(mouseInput.isRMBPressed()) {
-		// 	movimentEnable = false;
-		// 	GLFW.glfwSetInputMode(window.getWindowHandle(), GLFW.GLFW_CURSOR, GLFW.GLFW_CURSOR_NORMAL);
-		// }
 
+		// If can use mouse
 		if(movimentEnable) {
 			Vector2f rotVec = mouseInput.getMovement(); // Get the movement the cursor made
 			camera.moveRotation(rotVec.x * camera.getSensitivity(), rotVec.y * camera.getSensitivity()); // Change camera rotation
@@ -120,10 +143,10 @@ public class Game implements IGameLogic {
 			while(hitRay.getDistance() < HitRay.HIT_RANGE) {
 				if(hitRay.step(Game::HitCallback)) break;
 			}
-
 			// GLFW.glfwSetCursorPos(window.getWindowHandle(), (int) window.getWidth() / 2, (int) window.getHeight() / 2);
 		}
 
+		// Dev test
 		// world.setBlock(camera.getPosition(), 7);
 	}
 
@@ -142,14 +165,18 @@ public class Game implements IGameLogic {
 		window.destroy();
 
 		// Other
-		renderer.delete();
+		renderer.delete(); // Shader program
+
+		world.getTexManager().delete();
 	}
 
 	public static Integer HitCallback(Vector3f[] blocks) {
+		// System.out.println("Ray block: " + world.getBlockNumber(blocks[1]));
+
 		if(mouseInput.isLMBPressed()) {
 			mouseInput.releaseLMB(); // Force user to click multiple times
 
-			world.setBlock(blocks[1], 0); // Place air (remove)
+			world.setBlock(blocks[1], BlocksEnum.AIR.getId()); // Place air (remove)
 		} else if(mouseInput.isRMBPressed()) {
 			mouseInput.releaseRMB();
 
