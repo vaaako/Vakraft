@@ -3,7 +3,8 @@ package com.magenta.engine;
 import org.joml.Vector3f;
 
 public class Camera {
-	private int width, height;
+	private final Window window;
+	// private int width, height;
 
 	// Camera movement vectors
 	private Vector3f position = new Vector3f(0.0f, 0.0f, 0.0f);
@@ -14,11 +15,12 @@ public class Camera {
 	private final float nearPlane = 0.01f, farPlane = 100.0f;
 
 	public Camera(Window window, float fovDeg, float sensitivity) {
+		this.window = window;
 		this.fovDeg = fovDeg;
 		this.sensitivity = sensitivity;
 
-		width = window.getWidth();
-		height = window.getHeight();
+		// width = window.getWidth();
+		// height = window.getHeight();
 	}
 
 	public void setRotation(float x, float y, float z) {
@@ -64,11 +66,11 @@ public class Camera {
 	}
 
 	public int getWidth() {
-		return width;
+		return window.getWidth();
 	}
 
 	public int getHeight() {
-		return height;
+		return window.getHeight();
 	}
 
 	public Vector3f getRotation() {

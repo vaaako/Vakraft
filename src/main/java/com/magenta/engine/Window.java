@@ -43,8 +43,12 @@ public class Window {
 		// On resizing window, adjust viewport
 		GLFW.glfwSetFramebufferSizeCallback(windowHandle, (window, width, height) -> {
 			// Tells OpenGL size of rendering window
+			System.out.println("Resizing to: " + width + "x" + height);
+
+			// int aspect = width/height;
+			// GL11.glViewport(0, 0, width * aspect, height * aspect); // Rendering startX, startX, width and height
 			GL11.glViewport(0, 0, width, height); // Rendering startX, startX, width and height
-		
+
 			this.width = width;
 			this.height = height;
 		});
