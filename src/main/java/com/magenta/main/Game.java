@@ -91,21 +91,27 @@ public class Game implements IGameLogic {
 		else if(keyboardInput.isPressingKey(GLFW.GLFW_KEY_SPACE))
 			cameraInc.y = 1;
 
-		if(keyboardInput.isKeyPressed(GLFW.GLFW_KEY_LEFT_CONTROL))
-			doubleSpeed = !doubleSpeed;
+		// if(keyboardInput.isKeyPressed(GLFW.GLFW_KEY_LEFT_CONTROL))
+		// 	doubleSpeed = !doubleSpeed;
 
 
 		// Change block //
+		/**
+		 * Bug, below not workin because of the way isKeyPressed works
+		 * Because it checks then pressed becomes -1, so is aways -1
+		 * */
+
+		// System.out.println("KEY: " + keyboardInput.getPressedKey());
 		if(keyboardInput.isKeyPressed(GLFW.GLFW_KEY_E)) {
 			holdingBlock++;
 			if(world.getBlockTypes().size() <= holdingBlock) holdingBlock = 1;
 		
-			System.out.println("Holding Block: " + BlocksEnum.getBlockById(holdingBlock));
+			System.out.println("Holding Block: " + BlocksEnum.getBlockById(holdingBlock).getName());
 		} else if(keyboardInput.isKeyPressed(GLFW.GLFW_KEY_Q)) {
 			holdingBlock--;	
 			if(holdingBlock < 0) holdingBlock = world.getBlockTypes().size() - 1;
 
-			System.out.println("Holding Block: " + BlocksEnum.getBlockById(holdingBlock));
+			System.out.println("Holding Block: " + BlocksEnum.getBlockById(holdingBlock).getName());
 		}
 
 
@@ -174,11 +180,19 @@ public class Game implements IGameLogic {
 
 	public static Integer HitCallback(Vector3f[] blocks) {
 		// System.out.println("Ray block: " + world.getBlockNumber(blocks[1]));
+		/**
+		 * blocks[0] = current block
+		 * blocks[1] = next block
+		 * */
 
 		if(mouseInput.isLMBPressed()) {
 			mouseInput.releaseLMB(); // Force user to click multiple times
 
 			world.setBlock(blocks[1], BlocksEnum.AIR.getId()); // Place air (remove)
+		} else if(mouseInput.isMMBPressed()) {	
+			mouseInput.releaseMMB();
+
+			holdingBlock = world.getBlockInChunk(blocks[1]);
 		} else if(mouseInput.isRMBPressed()) {
 			mouseInput.releaseRMB();
 

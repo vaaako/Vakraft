@@ -31,7 +31,7 @@ public class World {
 		blockTypes.add(BlocksEnum.AIR.getId(), null); // Id = 0	
 		for(int i = 1; i < BlocksEnum.values().length; i++) {
 			BlocksEnum blockEnum = BlocksEnum.values()[i];
-			blockTypes.add(blockEnum.getId(), new BlockType(blockEnum.getName(), blockEnum.getTextures(), blockEnum.getModel(), texManager) );
+			blockTypes.add(blockEnum.getId(), new BlockType(blockEnum, texManager) );
 		}
 		
 		texManager.generateMipmap();
@@ -69,8 +69,7 @@ public class World {
 
 
 	public void generateChunk(int[][][] blocks) {
-		// int[] firstRnd = { BlocksEnum.AIR.getId(), BlocksEnum.AIR.getId(), BlocksEnum.DAISY.getId(), BlocksEnum.ROSE.getId() }; // Plants
-		int[] firstRnd = { BlocksEnum.AIR.getId(), BlocksEnum.AIR.getId(), BlocksEnum.LOG.getId(), BlocksEnum.ROSE.getId() }; // Plants
+		int[] firstRnd = { BlocksEnum.AIR.getId(), BlocksEnum.AIR.getId(), BlocksEnum.DAISY.getId(), BlocksEnum.ROSE.getId() }; // Plants
 		// int[] firstRnd = { BlocksEnum.AIR.getId(), BlocksEnum.CACTUS.getId(), BlocksEnum.DEAD_BUSH.getId() }; // Desert
 		// int[] firstRnd = { BlocksEnum.AIR.getId(), BlocksEnum.RED_MUSHROOM.getId(), BlocksEnum.BROWN_MUSHROOM.getId() }; // Mushroom
 		Random random = new Random();

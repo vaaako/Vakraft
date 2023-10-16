@@ -2,6 +2,7 @@ package com.magenta.game.block;
 
 import com.magenta.game.block.models.Cactus;
 import com.magenta.game.block.models.Cube;
+import com.magenta.game.block.models.Glass;
 import com.magenta.game.block.models.Plant;
 
 public enum BlocksEnum {
@@ -26,19 +27,21 @@ public enum BlocksEnum {
 		new String[] { "planks" }, new Cube()),	
 	LOG(9, "Log",
 		new String[] { "log_top", "log_side" }, new Cube()),	
-	CACTUS(10, "Cactus",
+	GLASS(10, "Glass",
+		new String[] { "glass" }, new Glass()),
+	CACTUS(11, "Cactus",
 		new String[] { "cactus_top", "cactus_bottom", "cactus_side" }, new Cactus()),
 
 	// Plants
-	DAISY(11, "Daisy",
+	DAISY(12, "Daisy",
 		new String[] { "daisy" }, new Plant()),	
-	ROSE(12, "Rose",
+	ROSE(13, "Rose",
 		new String[] { "rose" }, new Plant()),
-	DEAD_BUSH(13, "Dead Bush",
+	DEAD_BUSH(14, "Dead Bush",
 		new String[] { "dead_bush" }, new Plant()),	
-	BROWN_MUSHROOM(14, "Brown Mushroom",
+	BROWN_MUSHROOM(15, "Brown Mushroom",
 		new String[] { "brown_mushroom" }, new Plant()),
-	RED_MUSHROOM(15, "Red Mushroom",
+	RED_MUSHROOM(16, "Red Mushroom",
 		new String[] { "red_mushroom" }, new Plant());
 
 	private final int id;

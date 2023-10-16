@@ -4,31 +4,23 @@ import com.magenta.render.TextureManager;
 
 public class BlockType {
 	// Block specs //
+	private final int id;
+	// private final BlocksEnum blockEnum;
 	private final String name;
 	private final String[] faces; // { top, bottom, sides }
-	// private final Model model;
+	private final Model model;
 
-	// Model vars //	
-	private final float[][] vertexPositions;
-	private final float[][] texCoords;
-	private final float[][] shadingValue;
 
-	private final boolean isTransparent;
-	private final boolean isCube;
-
-	public BlockType(String name, String[] faces, Model model, TextureManager texManager) {
+	// public BlockType(String name, String[] faces, Model model, TextureManager texManager) {
+	public BlockType(BlocksEnum blockEnum, TextureManager texManager) {
 		// Block //
-		this.name = name;
-		this.faces = faces;
-		// this.model = model;
+		this.id = blockEnum.getId();
+		// this.blockEnum = blockEnum;
+		this.name = blockEnum.getName();
+		this.faces = blockEnum.getTextures();
 
 		// Model //
-		this.vertexPositions = model.getVertexPositions();
-		this.texCoords = model.getTexCoords();
-		this.shadingValue = model.getShadingValue();
-		this.isTransparent = model.isTransparent();
-		this.isCube = model.isCube();
-
+		model = blockEnum.getModel(); // Just for init
 
 		// Add textures //
 		// Load all block textures
@@ -80,12 +72,12 @@ public class BlockType {
 	}
 
     private void setBlockFace(int face, int texture) {
-		if(face > (vertexPositions.length) - 1) return;
-		texCoords[face] = texCoords[face].clone();
+		if(face > (model.vertexPositions.length) - 1) return;
+		model.texCoords[face] = model.texCoords[face].clone();
 
 		// Set block face
 		for(int v=0; v < 4; v++) { // v -> vertex
-			texCoords[face][v * 3 + 2] = texture; // Change texCord to adjust to the texture
+			model.texCoords[face][v * 3 + 2] = texture; // Change texCord to adjust to the texture
 			// This way on selecting a block the texture is alredy applied
 		}
 	}
@@ -94,6 +86,10 @@ public class BlockType {
 
 
 	// Block // 
+	public int getId() {
+		return id;
+	}
+
 	public String[] getFaces() {
 		return faces;
 	}
@@ -103,24 +99,28 @@ public class BlockType {
 	}
 
 
+	// From Model //
 	public float[][] getVertexPositions() {
-		return vertexPositions;
+		return model.vertexPositions;
 	}
 
 	public float[][] getTexCoords() {
-		return texCoords;
+		return model.texCoords;
 	}
 
 	public float[][] getShadingValues() {
-	    return shadingValue;
+	    return model.shadingValue;
 	}
 
-
 	public boolean isTransparent() {
-		return isTransparent;
+		return model.isTransparent();
 	}
 
 	public boolean isCube() {
-		return isCube;
+		return model.isCube();
+	}
+
+	public boolean isGlass() {
+		return model.isGlass();
 	}
 }

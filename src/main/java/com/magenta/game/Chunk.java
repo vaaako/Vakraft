@@ -86,19 +86,19 @@ public class Chunk {
 					 * If block isn't a cube, we just want to render all faces, regardless of neighbouring blocks
 					 * Since the vast majority of blocks are probably anyway going to be cubes, this won't impact performance all that much; the amount of useless faces drawn is going to be minimal
 					 * */
-					if(!world.isOpaqueBlock(x + 1, y, z)) // Block on side is transparent (or air) so draw this face, because it's visible
+					if(canRenderFace(blockNumber, blockType, x + 1, y, z)) // Block on side is transparent (or air) so draw this face, because it's visible
 						addFace(0, blockType, x, y, z);
-					if(!world.isOpaqueBlock(x - 1, y, z))
+					if(canRenderFace(blockNumber, blockType, x - 1, y, z))
 						addFace(1, blockType, x, y, z);
 
-					if(!world.isOpaqueBlock(x, y + 1, z))
+					if(canRenderFace(blockNumber, blockType, x, y + 1, z))
 						addFace(2, blockType, x, y, z);
-					if(!world.isOpaqueBlock(x, y - 1, z))
+					if(canRenderFace(blockNumber, blockType, x, y - 1, z))
 						addFace(3, blockType, x, y, z);
 
-					if(!world.isOpaqueBlock(x, y, z + 1))
+					if(canRenderFace(blockNumber, blockType, x, y, z + 1))
 						addFace(4, blockType, x, y, z);
-					if(!world.isOpaqueBlock(x, y, z - 1))
+					if(canRenderFace(blockNumber, blockType, x, y, z - 1))
 						addFace(5, blockType, x, y, z);
 				}
 			}
@@ -147,6 +147,18 @@ public class Chunk {
 		}
 	}
 
+	// Don't render when next to glass block
+	private boolean canRenderFace(int blockNumber, BlockType block, float x, float y, float z) {
+		// Is solid
+		if(!world.isOpaqueBlock(x, y, z)) {
+			// Is model glass and block in position is a glass
+			if(block.isGlass() && world.getBlockInChunk(x, y, z) == blockNumber) {
+				return false;
+			}
+			return true;
+		}
+		return false;
+	}
 
 
 
@@ -158,10 +170,11 @@ public class Chunk {
 			return 0; // Return air
 
 		// If is transparent (can see through) return air to render visible face
-		BlockType blockType = world.getBlockTypes().get(blockTypeEnum);
-		if(blockType.isTransparent()) 
-			return 0;
-		else
+		// BlockType blockType = world.getBlockTypes().get(blockTypeEnum);	
+		// Then if return 0 when transparent can't interact with some models
+		// if(blockType.isTransparent())
+		// 	return 0;
+		// else
 			return blockTypeEnum;
 	}
 

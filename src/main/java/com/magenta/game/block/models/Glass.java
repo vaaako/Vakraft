@@ -2,9 +2,9 @@ package com.magenta.game.block.models;
 
 import com.magenta.game.block.Model;
 
-public class Cube extends Model {
-	public Cube() {
-		super(false, true, false,
+public class Glass extends Model {
+	public Glass() {
+		super(true, true, true,
 			new float[][] {
 				{  0.5f,  0.5f,  0.5f,    0.5f, -0.5f,  0.5f,    0.5f, -0.5f, -0.5f,    0.5f,  0.5f, -0.5f }, // Right / X + 1
 				{ -0.5f,  0.5f, -0.5f,   -0.5f, -0.5f, -0.5f,   -0.5f, -0.5f,  0.5f,   -0.5f,  0.5f,  0.5f }, // Left / X - 1

@@ -32,9 +32,7 @@ public class KeyboardInput {
 		return currentKey == key;
 	}
 
-	public int getpressedKey() {
-		int currentKey = pressedKey; // Store the current value
-		pressedKey = -1; // Reset the value
-		return currentKey; // Return the stored value
+	public int getPressedKey() {
+		return pressedKey; // Return the stored value
 	}
 }

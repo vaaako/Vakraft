@@ -1,0 +1,5431 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"blockEn",
+				"blockEnum : BlocksEnum"
+			],
+			[
+				"simu",
+				"simulate_round"
+			],
+			[
+				"simulae",
+				"simulate_tournament"
+			],
+			[
+				"get",
+				"getpressedKey() : int"
+			],
+			[
+				"keyIn",
+				"keyboardInput : KeyboardInput"
+			],
+			[
+				"sysou",
+				"sysout"
+			],
+			[
+				"c",
+				"contains(Object o) : boolean"
+			],
+			[
+				"isTrans",
+				"isTransparent() : boolean"
+			],
+			[
+				"blockTyp",
+				"blockType : BlockType"
+			],
+			[
+				"isCu",
+				"isCube() : boolean"
+			],
+			[
+				"is",
+				"isTransparent : boolean"
+			],
+			[
+				"m",
+				"com.magenta.game.block.models"
+			],
+			[
+				"indei",
+				"indices : int[][]"
+			],
+			[
+				"texCooo",
+				"texCoords : float[][]"
+			],
+			[
+				"ma",
+				"com.magenta.game.block.models"
+			],
+			[
+				"Enum",
+				"enum"
+			],
+			[
+				"man",
+				"com.magenta.game.block.models"
+			],
+			[
+				"CHUNK",
+				"CHUNK_HEIGHT : int"
+			],
+			[
+				"CHUNK_",
+				"CHUNK_HEIGHT"
+			],
+			[
+				"WRO",
+				"WORLD_CENTER : int"
+			],
+			[
+				"noiseGen",
+				"noiseGenerator : NoiseGenerator"
+			],
+			[
+				"block",
+				"blockTypeEnum : BlocksEnum"
+			],
+			[
+				"keyb",
+				"keyboardInput : KeyboardInput"
+			],
+			[
+				"geth",
+				"getWindowHandle() : long"
+			],
+			[
+				"Blocks",
+				"BlocksEnum - com.magenta.game.block"
+			],
+			[
+				"sys",
+				"sysout"
+			],
+			[
+				"getBlock",
+				"getBlockTypes() : LinkedList<BlockType>"
+			],
+			[
+				"getBlo",
+				"getBlockTypes"
+			],
+			[
+				"getB",
+				"getBlockTypes() : LinkedList<BlockType>"
+			],
+			[
+				"shader",
+				"shaderProgram : ShaderProgram"
+			],
+			[
+				"rela",
+				"releaseRMB() : void"
+			],
+			[
+				"moue",
+				"mouseInput : MouseInput"
+			],
+			[
+				"set",
+				"step(Function<Vector3f[],Integer> hitCallback) : boolean"
+			],
+			[
+				"sub",
+				"subchunks : Map<org.joml.Vector3f,com.magenta.game.Subchunk>"
+			],
+			[
+				"getMesh",
+				"getMeshIndexCounter() : int"
+			],
+			[
+				"convert",
+				"convertIntegers(LinkedList<Integer> integers) : int[]"
+			],
+			[
+				"verte",
+				"vertexPositions"
+			],
+			[
+				"subchu",
+				"subchunks : Map<org.joml.Vector3f,com.magenta.game.Subchunk>"
+			],
+			[
+				"for",
+				"forEach(BiConsumer<? super Vector3f,? super Subchunk> arg0) : void"
+			],
+			[
+				"SUBCH",
+				"SUBCHUNK_WIDTH : int"
+			],
+			[
+				"getChun",
+				"getChunkPosition(Vector3f position) : Vector3f"
+			],
+			[
+				"com",
+				"com.magenta"
+			],
+			[
+				"am",
+				"com.magenta.engine"
+			],
+			[
+				"Buff",
+				"BufferUtils - org.lwjgl"
+			],
+			[
+				"sysout",
+				"sysout"
+			],
+			[
+				"vl",
+				"values() : Collection<Chunk>"
+			],
+			[
+				"getbl",
+				"getBlockTypes() : LinkedList<Block>"
+			],
+			[
+				"syou",
+				"sysout"
+			],
+			[
+				"Chun",
+				"Chunk - com.magenta.game"
+			],
+			[
+				"getChunk",
+				"getChunkPosition() : Vector3f"
+			],
+			[
+				"shadi",
+				"shadingValues : LinkedList<java.lang.Float>"
+			],
+			[
+				"getShadi",
+				"getShadingValue() : float[][]"
+			],
+			[
+				"MeshMan",
+				"MeshLoader - com.magenta.render.mesh"
+			],
+			[
+				"Math",
+				"Math - org.joml"
+			],
+			[
+				"Mat",
+				"Math - java.lang"
+			],
+			[
+				"chu",
+				"chunks : Map<org.joml.Vector3f,com.magenta.game.Chunk>"
+			],
+			[
+				"magenta",
+				"com.magenta.game"
+			],
+			[
+				"CHUN",
+				"CHUNK_WIDTH : int"
+			],
+			[
+				"shad",
+				"shaderProgram : ShaderProgram"
+			],
+			[
+				"glfwG",
+				"glfwGetTime() : double"
+			],
+			[
+				"final",
+				"finalModelViewRotationMatrix : Matrix4f"
+			],
+			[
+				"gettim",
+				"getTimePerUpdate() : double"
+			],
+			[
+				"targe",
+				"targetFPS : int"
+			],
+			[
+				"getTi",
+				"getCurrentTime() : double"
+			],
+			[
+				"glfwSetcu",
+				"glfwSetCursorPos(long window, double xpos, double ypos) : void"
+			],
+			[
+				"GL_TEXTURE_M",
+				"GL_TEXTURE_MAG_FILTER : int"
+			],
+			[
+				"GL_NEAREST_MIPMAP_",
+				"GL_NEAREST_MIPMAP_NEAREST : int"
+			],
+			[
+				"GL_NEAREST",
+				"GL_NEAREST_MIPMAP_LINEAR : int"
+			],
+			[
+				"GLFW_key_left",
+				"GLFW_KEY_LEFT_CONTROL : int"
+			],
+			[
+				"getWn",
+				"getWindowHandle() : long"
+			],
+			[
+				"last",
+				"lastTime : double"
+			],
+			[
+				"loop",
+				"loopSlot : double"
+			],
+			[
+				"getT",
+				"getTargetFPS() : int"
+			],
+			[
+				"TARGE",
+				"TARGET_UPS : double"
+			],
+			[
+				"Shader",
+				"ShaderProgram - com.magenta.render.shader"
+			],
+			[
+				"magen",
+				"com.magenta.engine"
+			],
+			[
+				"GLFW_CURSOR_",
+				"GLFW_CURSOR_NORMAL : int"
+			],
+			[
+				"rotati",
+				"rotation : Vector3f"
+			],
+			[
+				"Mouse",
+				"MouseInputs - com.magenta.inputs"
+			],
+			[
+				"jpg",
+				"jpg_name"
+			],
+			[
+				"glfwSetcur",
+				"glfwSetCursorPos(long window, double xpos, double ypos) : void"
+			],
+			[
+				"glfwGetkey",
+				"glfwGetKey(long window, int key) : int"
+			],
+			[
+				"wind",
+				"windowShouldClose"
+			],
+			[
+				"glfwSetcurs",
+				"glfwSetCursorPosCallback(long window, GLFWCursorPosCallbackI cbfun) : GLFWCursorPosCallback"
+			],
+			[
+				"GLFWCurs",
+				"GLFWCursorPosCallback - org.lwjgl.glfw"
+			],
+			[
+				"or",
+				"orientationCrossUp : Vector3f"
+			],
+			[
+				"ori",
+				"orientationCrossUp : Vector3f"
+			],
+			[
+				"orie",
+				"orientationCrossUp : Vector3f"
+			],
+			[
+				"orien",
+				"orientationCrossUp : Vecto3f"
+			],
+			[
+				"Quater",
+				"Quaternionf - org.joml"
+			],
+			[
+				"new",
+				"newOrientation : Quaternionf"
+			],
+			[
+				"orientat",
+				"orientation : Vector3f"
+			],
+			[
+				"add",
+				"add(Vector3fc v) : Vector3f"
+			],
+			[
+				"upda",
+				"updateWidth(int width) : void"
+			],
+			[
+				"rota",
+				"rotate2D(Matrix4f matrix, int x, int y) : void"
+			],
+			[
+				"looka",
+				"lookAt(Vector3fc eye, Vector3fc center, Vector3fc up) : Matrix4f"
+			],
+			[
+				"getTex",
+				"getTextureIndex(String texture) : int"
+			],
+			[
+				"Runt",
+				"RuntimeException"
+			],
+			[
+				"hei",
+				"heightBuffer : IntBuffer"
+			],
+			[
+				"widh",
+				"widthBuffer : IntBuffer"
+			],
+			[
+				"alloca",
+				"allocateDirect(int capacity) : ByteBuffer"
+			],
+			[
+				"Runtim",
+				"RuntimeException"
+			],
+			[
+				"getResourc",
+				"getResourceAsStream(String arg0) : InputStream"
+			],
+			[
+				"gettex",
+				"getTexType() : int"
+			],
+			[
+				"tex",
+				"texType : int"
+			],
+			[
+				"glBind",
+				"glBindTexture(int target, int texture) : void"
+			],
+			[
+				"GL_TEXTURE_ARRA",
+				"GL_TEXTURE_2D_ARRAY : int"
+			],
+			[
+				"Texture",
+				"TextureManager - com.magenta.render.texture"
+			],
+			[
+				"blockMana",
+				"blockManager : BlockManager"
+			],
+			[
+				"ge",
+				"get(Object arg0) : Block"
+			],
+			[
+				"getDa",
+				"getData() : Raster"
+			],
+			[
+				"text",
+				"textures : Map<java.lang.String,java.lang.String>"
+			],
+			[
+				"glTexImage3D",
+				"glTexImage3D(int target, int level, int internalformat, int width, int height, int depth, int border, int format, int type, float[] pixels) : void"
+			],
+			[
+				"GL_TEXTURE_2D",
+				"GL_TEXTURE_2D_ARRAY : int"
+			],
+			[
+				"glGentextures",
+				"glGenTextures(int[] textures) : void"
+			],
+			[
+				"candi",
+				"candidate_count"
+			],
+			[
+				"vote",
+				"voter_count"
+			],
+			[
+				"can",
+				"candidate_count"
+			],
+			[
+				"vot",
+				"voter_count"
+			],
+			[
+				"GL_",
+				"GL_CLAMP_TO_BORDER"
+			],
+			[
+				"GL_CLM",
+				"GL_CLAMP_TO_BORDER"
+			],
+			[
+				"Vector3f",
+				"Vector3fc - org.joml"
+			],
+			[
+				"rotate",
+				"rotateLocalY(float ang) : Matrix4f"
+			],
+			[
+				"getBuffer",
+				"get(FloatBuffer buffer) : FloatBuffer"
+			],
+			[
+				"Vector4",
+				"Vector4f - org.joml"
+			],
+			[
+				"glUniformMatrix4fv",
+				"glUniformMatrix4fv(int location, boolean transpose, FloatBuffer value) : void"
+			],
+			[
+				"vec",
+				"Vector3f - org.joml"
+			],
+			[
+				"Ma",
+				"Math - org.joml"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "package com.magenta.game;\n\nimport java.util.Iterator;\nimport java.util.LinkedList;\n\nimport org.joml.Vector3f;\nimport org.lwjgl.opengl.GL11;\nimport org.lwjgl.opengl.GL30;\n\nimport com.magenta.game.block.BlockType;\nimport com.magenta.game.block.BlocksEnum;\nimport com.magenta.render.mesh.Mesh;\nimport com.magenta.render.mesh.MeshLoader;\n\npublic class Chunk {\n\tpublic final static int CHUNK_WIDTH = 16;\n\tpublic final static int CHUNK_HEIGHT = 16;\n\tpublic final static int CHUNK_LENGTH = 16;\n\n\t// Chunk Meshes //\n\tprivate LinkedList<Float> vertexPositions = new LinkedList<>();\n\tprivate LinkedList<Float> texCoords = new LinkedList<>();\n\tprivate LinkedList<Integer> indices = new LinkedList<>();\n\tprivate LinkedList<Float> shadingValues = new LinkedList<>();\n\tprivate int meshIndexCounter = 0;\n\t\n\tprivate Mesh mesh;\n\n\n\t// Position //\n\tprivate Vector3f chunkPosition;\n\tprivate final Vector3f realPosition;\n\n\t// World //\n\tprivate World world;\n\t// private BlocksEnum[][][] blocks; // Chunk blocks\n\tprivate int[][][] blocks; // Chunk blocks\n\n\tpublic Chunk(World world, Vector3f chunkPosition) {\n\t\tthis.world = world;\n\t\tthis.chunkPosition = chunkPosition;\n\t\tthis.realPosition = new Vector3f(chunkPosition).mul(CHUNK_WIDTH, CHUNK_HEIGHT, CHUNK_LENGTH); // World-space position for the chunk\n\t\tthis.blocks = new int[CHUNK_WIDTH][CHUNK_HEIGHT][CHUNK_LENGTH]; // 0 -> air (default)\n\t}\n\n\tpublic void updateMesh() {\n\t\t// Reset values\n\t\tvertexPositions.clear();\n\t\ttexCoords.clear();\n\t\tindices.clear();\n\t\tshadingValues.clear();\n\t\tmeshIndexCounter = 0;\n\n\n\t\t// Iterate throught all local block positions in the chunk\n\t\tfor(int localX = 0; localX < CHUNK_WIDTH; localX++) {\t\n\t\t\tfor(int localY = 0; localY < CHUNK_HEIGHT; localY++) {\n\t\t\t\tfor(int localZ = 0; localZ < CHUNK_LENGTH; localZ++) {\n\t\t\t\t\tint blockNumber = this.blocks[localX][localY][localZ];\n\n\t\t\t\t\t// System.out.println(\"Block Number: \" + blockNumber + \"\\nSize: \" + this.world.getBlockTypes().size());\n\t\t\t\t\t// Vector3f localPos = new Vector3f(localX, localY, localZ);\n\n\t\t\t\t\t// Not air (not render air duurh)\n\t\t\t\t\tif(blockNumber == 0)\n\t\t\t\t\t\tcontinue;\n\t\t\t\t\t\n\t\t\t\t\tBlockType blockType = this.world.getBlockTypes().get(blockNumber);\n\n\t\t\t\t\t// Get the world-space position of the block\n\t\t\t\t\tfloat x = realPosition.x + localX;\n\t\t\t\t\tfloat y = realPosition.y + localY;\n\t\t\t\t\tfloat z = realPosition.z + localZ;\n\t\t\t\t\t\n\t\t\t\t\t// If not a cube render all faces\n\t\t\t\t\tif(!blockType.isCube()) {\n\t\t\t\t\t\tfor(int i = 0; i < blockType.getVertexPositions().length; i++) {\n\t\t\t\t\t\t\taddFace(i, blockType, x, y, z);\n\t\t\t\t\t\t}\n\n\t\t\t\t\t\tcontinue;\n\t\t\t\t\t}\n\n\t\t\t\t\t/***\n\t\t\t\t\t * If block is cube, we want it to check neighbouring blocks so that we don't uselessly render faces\n\t\t\t\t\t * If block isn't a cube, we just want to render all faces, regardless of neighbouring blocks\n\t\t\t\t\t * Since the vast majority of blocks are probably anyway going to be cubes, this won't impact performance all that much; the amount of useless faces drawn is going to be minimal\n\t\t\t\t\t * */\n\t\t\t\t\tif(!world.isOpaqueBlock(x + 1, y, z)) // Block on side is transparent (or air) so draw this face, because it's visible\n\t\t\t\t\t\taddFace(0, blockType, x, y, z);\n\t\t\t\t\tif(!world.isOpaqueBlock(x - 1, y, z))\n\t\t\t\t\t\taddFace(1, blockType, x, y, z);\n\n\t\t\t\t\tif(!world.isOpaqueBlock(x, y + 1, z))\n\t\t\t\t\t\taddFace(2, blockType, x, y, z);\n\t\t\t\t\tif(!world.isOpaqueBlock(x, y - 1, z))\n\t\t\t\t\t\taddFace(3, blockType, x, y, z);\n\n\t\t\t\t\tif(!world.isOpaqueBlock(x, y, z + 1))\n\t\t\t\t\t\taddFace(4, blockType, x, y, z);\n\t\t\t\t\tif(!world.isOpaqueBlock(x, y, z - 1))\n\t\t\t\t\t\taddFace(5, blockType, x, y, z);\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\n\t\t// Pass mesh data to gpu\n\t\tif(meshIndexCounter == 0) // Mak sure there actually is data in the mesh\n\t\t\treturn;\n\n\t\tthis.mesh = MeshLoader.createMesh(convertFloats(vertexPositions), convertIntegers(indices), convertFloats(texCoords), convertFloats(shadingValues));\n\t}\n\n\t// Add a face to the chunk mesh\n\tpublic void addFace(int face, BlockType block, float x, float y, float z) {\n\t\tfloat[] vertexPositions = block.getVertexPositions()[face].clone(); // Get vertex positions of the face to be added\n\n\t\t// Add the world-space position of the face to it's vertex positions\n\t\tfor(int i = 0; i < 4; i++) {\n\t\t\tvertexPositions[i * 3 + 0] += x;\n\t\t\tvertexPositions[i * 3 + 1] += y;\n\t\t\tvertexPositions[i * 3 + 2] += z;\n\t\t}\n\n\t\t// Add those vertex positions to the chunk mesh's vertex positions\n\t\tfor(int i = 0; i < vertexPositions.length; i++) {\n\t\t\tthis.vertexPositions.add(i, vertexPositions[i]);\n\t\t}\n\t\n\t\t// Shift each index by the chunk mesh's index counter so that no two faces share\n\t\tint[] indices = new int[] { 0, 1, 2, 0, 2, 3 }; // Indices for the face's vertices\n\t\tfor(int i = 0; i < indices.length; i++) {\n\t\t\tthis.indices.add(i, indices[i] + meshIndexCounter);\n\t\t}\n\t\tmeshIndexCounter += 4; // Add \"the amount of vertices\" in a face to the chunk\n\n\t\t// Add the face's texture coordinates to the chunk mesh's texture coordinates\n\t\tfloat[] texCoords = block.getTexCoords()[face];\n\t\tfor(int i = 0; i < texCoords.length; i++) {\n\t\t\tthis.texCoords.add(i, texCoords[i]);\n\t\t}\n\n\t\t// Add the face's shading values to the chunk mesh's shading values\n\t\tfloat[] shadingValues = block.getShadingValues()[face];\n\t\tfor(int i = 0; i < shadingValues.length; i++) {\n\t\t\tthis.shadingValues.add(i, shadingValues[i]);\n\t\t}\n\t}\n\n\t// Don't render when next to glass block\n\tprivate boolean canRenderFace(BlockType block, int blockNumber, float x, float y, float z) {\n\t\tif(!world.isOpaqueBlock(x, y, z)) {\n\t\t\t// Is model glass and block in position is a glass\n\t\t\tif(block.getId() == BlocksEnum.GLASS.getId() && world.getBlockInChunk(x, y, z) == blockNumber) {\n\t\t\t\treturn false;\n\t\t\t}\n\t\t\treturn true;\n\t\t}\n\t\treturn false;\n\t}\n\n\n\n\tpublic int getBlock(int x, int y, int z) {\n\t\tint blockTypeEnum = blocks[x][y][z]; // Getting null\n\n\t\t// System.out.println(\"blockTypeEnum: \" + blockTypeEnum); // Error here (TODO fix)\n\t\tif(blockTypeEnum == 0)\n\t\t\treturn 0; // Return air\n\n\t\t// If is transparent (can see through) return air to render visible face\n\t\tBlockType blockType = world.getBlockTypes().get(blockTypeEnum);\n\t\t\n\t\t// Then if return 0 when transparent can't interact with some models\n\t\t// if(blockType.isTransparent())\n\t\t// \treturn 0;\n\t\t// else\n\t\t\treturn blockTypeEnum;\n\t}\n\n\n\n\tpublic int[][][] getBlocks() {\n\t\treturn blocks;\n\t}\n\n\tpublic Vector3f getChunkPosition() {\n\t\treturn chunkPosition;\n\t}\n\n\tpublic Mesh getMesh() {\n\t\treturn mesh;\n\t}\n\n\tpublic World getWorld() {\n\t\treturn world;\n\t}\n\n\n\n\tprivate float[] convertFloats(LinkedList<Float> floats) {\n\t\tfloat[] ret = new float[floats.size()];\n\t\tIterator<Float> iterator = floats.iterator();\n\t\tfor (int i = 0; i < ret.length; i++) {\n\t\t\tret[i] = iterator.next();\n\t\t}\n\t\treturn ret;\n\t}\n\n\tprivate int[] convertIntegers(LinkedList<Integer> integers) {\n\t\tint[] ret = new int[integers.size()];\n\t\tIterator<Integer> iterator = integers.iterator();\n\t\tfor (int i = 0; i < ret.length; i++) {\n\t\t\tret[i] = iterator.next();\n\t\t}\n\t\treturn ret;\n\t}\n\n\t// Render chunk\n\tpublic void draw() {\n\t\t// Make sure there actually is data in mesh\n\t\tif(meshIndexCounter == 0)\n\t\t\treturn;\n\n\t\tGL30.glBindVertexArray(mesh.getVaoID()); // Unloads VAO\n\t\tGL11.glDrawElements(GL11.GL_TRIANGLES, mesh.getVertexCount(), GL11.GL_UNSIGNED_INT, 0); // Draw triangle\t\n\t}\n}\n",
+			"file": "src/main/java/com/magenta/game/Chunk.java",
+			"file_size": 7130,
+			"file_write_time": 133419622506792717,
+			"settings":
+			{
+				"buffer_size": 7184,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			},
+			"undo_stack":
+			[
+				[
+					242,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"nv_vi_big_a",
+								{
+									"count": 1,
+									"mode": "mode_internal_normal",
+									"register": "\""
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "isOp"
+								}
+							],
+							[
+								"delete_word",
+								{
+									"forward": false
+								}
+							],
+							[
+								"delete_word",
+								{
+									"forward": false
+								}
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"delete_word",
+								{
+									"forward": false
+								}
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"insert",
+								{
+									"characters": "*"
+								}
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"insert_snippet",
+								{
+									"contents": "($0)"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "!world.is"
+								}
+							],
+							[
+								"insert_completion",
+								{
+									"completion": "lsp_select_completion {\"index\":2,\"session_name\":\"jdtls\"}",
+									"format": "command",
+									"keep_prefix": true,
+									"must_insert": false,
+									"query_change_id":
+									[
+										33,
+										232,
+										7
+									],
+									"trigger": "isOpaqueBlock(Vector3f position) : boolean"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "float"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " x,"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " float"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " y,"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " float"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " xz"
+								}
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"insert",
+								{
+									"characters": "z"
+								}
+							]
+						]
+					},
+					"NwAAAPMUAAAAAAAA9BQAAAAAAAAAAAAA9BQAAAAAAAD1FAAAAAAAAAAAAAD1FAAAAAAAAPYUAAAAAAAAAAAAAPYUAAAAAAAA9xQAAAAAAAAAAAAA8xQAAAAAAADzFAAAAAAAAAQAAABpc09w8hQAAAAAAADyFAAAAAAAAAEAAAAu8RQAAAAAAADxFAAAAAAAAAEAAABk8BQAAAAAAADwFAAAAAAAAAEAAABs7RQAAAAAAADtFAAAAAAAAAMAAAB3b3LsFAAAAAAAAOwUAAAAAAAAAQAAACDsFAAAAAAAAO0UAAAAAAAAAAAAAOwUAAAAAAAA7BQAAAAAAAABAAAAKuwUAAAAAAAA7hQAAAAAAAAAAAAA7RQAAAAAAADuFAAAAAAAAAAAAADuFAAAAAAAAO8UAAAAAAAAAAAAAO8UAAAAAAAA8BQAAAAAAAAAAAAA8BQAAAAAAADxFAAAAAAAAAAAAADxFAAAAAAAAPIUAAAAAAAAAAAAAPIUAAAAAAAA8xQAAAAAAAAAAAAA8xQAAAAAAAD0FAAAAAAAAAAAAAD0FAAAAAAAAPUUAAAAAAAAAAAAAPUUAAAAAAAA9hQAAAAAAAAAAAAA9RQAAAAAAAD1FAAAAAAAAAEAAABz9BQAAAAAAAD0FAAAAAAAAAEAAABp9BQAAAAAAAALFQAAAAAAAAAAAAACFQAAAAAAAAMVAAAAAAAAAAAAAAMVAAAAAAAAAxUAAAAAAAAIAAAAcG9zaXRpb24DFQAAAAAAAAQVAAAAAAAAAAAAAAQVAAAAAAAABRUAAAAAAAAAAAAABRUAAAAAAAAGFQAAAAAAAAAAAAAGFQAAAAAAAAcVAAAAAAAAAAAAAAcVAAAAAAAACBUAAAAAAAAAAAAACBUAAAAAAAAJFQAAAAAAAAAAAAAJFQAAAAAAAAoVAAAAAAAAAAAAAAoVAAAAAAAACxUAAAAAAAAAAAAACxUAAAAAAAAMFQAAAAAAAAAAAAAMFQAAAAAAAA0VAAAAAAAAAAAAAA0VAAAAAAAADhUAAAAAAAAAAAAADhUAAAAAAAAPFQAAAAAAAAAAAAAPFQAAAAAAABAVAAAAAAAAAAAAABAVAAAAAAAAERUAAAAAAAAAAAAAERUAAAAAAAASFQAAAAAAAAAAAAASFQAAAAAAABMVAAAAAAAAAAAAABMVAAAAAAAAFBUAAAAAAAAAAAAAFBUAAAAAAAAVFQAAAAAAAAAAAAAVFQAAAAAAABYVAAAAAAAAAAAAABYVAAAAAAAAFxUAAAAAAAAAAAAAFxUAAAAAAAAYFQAAAAAAAAAAAAAYFQAAAAAAABkVAAAAAAAAAAAAABkVAAAAAAAAGhUAAAAAAAAAAAAAGhUAAAAAAAAbFQAAAAAAAAAAAAAbFQAAAAAAABwVAAAAAAAAAAAAABsVAAAAAAAAGxUAAAAAAAABAAAAehoVAAAAAAAAGhUAAAAAAAABAAAAeBoVAAAAAAAAGxUAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA8hQAAAAAAADyFAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					255,
+					1,
+					"nv_vi_s",
+					{
+						"count": 1,
+						"mode": "mode_visual",
+						"register": "\""
+					},
+					"AwAAABQVAAAAAAAAFBUAAAAAAAAFAAAAZmxvYXQLFQAAAAAAAAsVAAAAAAAABQAAAGZsb2F0AhUAAAAAAAACFQAAAAAAAAUAAABmbG9hdA",
+					"AQAAAAAAAAADAAAAAhUAAAAAAAAHFQAAAAAAAAAAAAAAAPC/CxUAAAAAAAAQFQAAAAAAAAAAAAAAAPC/FBUAAAAAAAAZFQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					259,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"nv_vi_a",
+								{
+									"count": 1,
+									"mode": "mode_internal_normal",
+									"register": "\""
+								}
+							],
+							[
+								"left_delete",
+								null
+							]
+						]
+					},
+					"AwAAAAoVAAAAAAAAChUAAAAAAAABAAAAIAYVAAAAAAAABhUAAAAAAAABAAAAIAIVAAAAAAAAAhUAAAAAAAABAAAAIA",
+					"AQAAAAAAAAADAAAAAhUAAAAAAAACFQAAAAAAAAAAAAAAAPC/BhUAAAAAAAAGFQAAAAAAAAAAAAAAAPC/ChUAAAAAAAAKFQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					272,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"nv_vi_big_a",
+								{
+									"count": 1,
+									"mode": "mode_internal_normal",
+									"register": "\""
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "\nif"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " block"
+								}
+							],
+							[
+								"delete_word",
+								{
+									"forward": false
+								}
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"insert",
+								{
+									"characters": "*"
+								}
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"insert_snippet",
+								{
+									"contents": "($0)"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "blockTYpe"
+								}
+							]
+						]
+					},
+					"GgAAAAsVAAAAAAAADBUAAAAAAAAAAAAADBUAAAAAAAAOFQAAAAAAAAAAAAAMFQAAAAAAAAwVAAAAAAAAAgAAAAkJDBUAAAAAAAAPFQAAAAAAAAAAAAAPFQAAAAAAABAVAAAAAAAAAAAAABAVAAAAAAAAERUAAAAAAAAAAAAAERUAAAAAAAASFQAAAAAAAAAAAAASFQAAAAAAABMVAAAAAAAAAAAAABMVAAAAAAAAFBUAAAAAAAAAAAAAFBUAAAAAAAAVFQAAAAAAAAAAAAAVFQAAAAAAABYVAAAAAAAAAAAAABYVAAAAAAAAFxUAAAAAAAAAAAAAEhUAAAAAAAASFQAAAAAAAAUAAABibG9jaxEVAAAAAAAAERUAAAAAAAABAAAAIBEVAAAAAAAAEhUAAAAAAAAAAAAAERUAAAAAAAARFQAAAAAAAAEAAAAqERUAAAAAAAATFQAAAAAAAAAAAAASFQAAAAAAABMVAAAAAAAAAAAAABMVAAAAAAAAFBUAAAAAAAAAAAAAFBUAAAAAAAAVFQAAAAAAAAAAAAAVFQAAAAAAABYVAAAAAAAAAAAAABYVAAAAAAAAFxUAAAAAAAAAAAAAFxUAAAAAAAAYFQAAAAAAAAAAAAAYFQAAAAAAABkVAAAAAAAAAAAAABkVAAAAAAAAGhUAAAAAAAAAAAAAGhUAAAAAAAAbFQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAARUAAAAAAAABFQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					285,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"insert",
+								{
+									"characters": "block"
+								}
+							],
+							[
+								"delete_word",
+								{
+									"forward": false
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "BlockTyep"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " "
+								}
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"insert",
+								{
+									"characters": "pe"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " block,"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " "
+								}
+							]
+						]
+					},
+					"HQAAAMsUAAAAAAAAzBQAAAAAAAAAAAAAzBQAAAAAAADNFAAAAAAAAAAAAADNFAAAAAAAAM4UAAAAAAAAAAAAAM4UAAAAAAAAzxQAAAAAAAAAAAAAzxQAAAAAAADQFAAAAAAAAAAAAADLFAAAAAAAAMsUAAAAAAAABQAAAGJsb2NryxQAAAAAAADMFAAAAAAAAAAAAADMFAAAAAAAAM0UAAAAAAAAAAAAAM0UAAAAAAAAzhQAAAAAAAAAAAAAzhQAAAAAAADPFAAAAAAAAAAAAADPFAAAAAAAANAUAAAAAAAAAAAAANAUAAAAAAAA0RQAAAAAAAAAAAAA0RQAAAAAAADSFAAAAAAAAAAAAADSFAAAAAAAANMUAAAAAAAAAAAAANMUAAAAAAAA1BQAAAAAAAAAAAAA1BQAAAAAAADVFAAAAAAAAAAAAADUFAAAAAAAANQUAAAAAAAAAQAAACDTFAAAAAAAANMUAAAAAAAAAQAAAHDSFAAAAAAAANIUAAAAAAAAAQAAAGXSFAAAAAAAANMUAAAAAAAAAAAAANMUAAAAAAAA1BQAAAAAAAAAAAAA1BQAAAAAAADVFAAAAAAAAAAAAADVFAAAAAAAANYUAAAAAAAAAAAAANYUAAAAAAAA1xQAAAAAAAAAAAAA1xQAAAAAAADYFAAAAAAAAAAAAADYFAAAAAAAANkUAAAAAAAAAAAAANkUAAAAAAAA2hQAAAAAAAAAAAAA2hQAAAAAAADbFAAAAAAAAAAAAADbFAAAAAAAANwUAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAyxQAAAAAAADLFAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					294,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"nv_vi_s",
+								{
+									"count": 1,
+									"mode": "mode_visual",
+									"register": "\""
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "block"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "."
+								}
+							],
+							[
+								"left_delete",
+								null
+							]
+						]
+					},
+					"CAAAACMVAAAAAAAAIxUAAAAAAAAJAAAAYmxvY2tUWXBlIxUAAAAAAAAkFQAAAAAAAAAAAAAkFQAAAAAAACUVAAAAAAAAAAAAACUVAAAAAAAAJhUAAAAAAAAAAAAAJhUAAAAAAAAnFQAAAAAAAAAAAAAnFQAAAAAAACgVAAAAAAAAAAAAACgVAAAAAAAAKRUAAAAAAAAAAAAAKBUAAAAAAAAoFQAAAAAAAAEAAAAu",
+					"AQAAAAAAAAABAAAAIxUAAAAAAAAsFQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					300,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"nv_vi_a",
+								{
+									"count": 1,
+									"mode": "mode_internal_normal",
+									"register": "\""
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "."
+								}
+							]
+						]
+					},
+					"AQAAACgVAAAAAAAAKRUAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAJxUAAAAAAAAnFQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					306,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"nv_vi_a",
+								{
+									"count": 1,
+									"mode": "mode_internal_normal",
+									"register": "\""
+								}
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"insert",
+								{
+									"characters": "."
+								}
+							]
+						]
+					},
+					"AgAAACgVAAAAAAAAKBUAAAAAAAABAAAALigVAAAAAAAAKRUAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAKBUAAAAAAAAoFQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					318,
+					1,
+					"paste",
+					null,
+					"AgAAAMsUAAAAAAAA1BQAAAAAAAAAAAAA1BQAAAAAAADUFAAAAAAAAAkAAABCbG9ja1R5cGU",
+					"AQAAAAAAAAABAAAAyxQAAAAAAADUFAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					327,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"nv_vi_a",
+								{
+									"count": 1,
+									"mode": "mode_internal_normal",
+									"register": "\""
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "."
+								}
+							],
+							[
+								"left_delete",
+								null
+							]
+						]
+					},
+					"AgAAACkVAAAAAAAAKhUAAAAAAAAAAAAAKRUAAAAAAAApFQAAAAAAAAEAAAAu",
+					"AQAAAAAAAAABAAAAKBUAAAAAAAAoFQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					404,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"nv_vi_a",
+								{
+									"count": 1,
+									"mode": "mode_internal_normal",
+									"register": "\""
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "getI"
+								}
+							],
+							[
+								"insert_completion",
+								{
+									"completion": "lsp_select_completion {\"index\":3,\"session_name\":\"jdtls\"}",
+									"format": "command",
+									"keep_prefix": true,
+									"must_insert": false,
+									"query_change_id":
+									[
+										76,
+										393,
+										1
+									],
+									"trigger": "getId() : int"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " =="
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " bl"
+								}
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"insert",
+								{
+									"characters": "BlocksEn"
+								}
+							],
+							[
+								"insert_completion",
+								{
+									"completion": "lsp_select_completion {\"index\":1,\"session_name\":\"jdtls\"}",
+									"format": "command",
+									"keep_prefix": true,
+									"must_insert": false,
+									"query_change_id":
+									[
+										81,
+										399,
+										1
+									],
+									"trigger": "BlocksEnum - com.magenta.game.block"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": ".get"
+								}
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"insert",
+								{
+									"characters": "t"
+								}
+							]
+						]
+					},
+					"KAAAACkVAAAAAAAAKhUAAAAAAAAAAAAAKhUAAAAAAAArFQAAAAAAAAAAAAArFQAAAAAAACwVAAAAAAAAAAAAACwVAAAAAAAALRUAAAAAAAAAAAAALBUAAAAAAAAsFQAAAAAAAAEAAABJKxUAAAAAAAArFQAAAAAAAAEAAAB0KhUAAAAAAAAqFQAAAAAAAAEAAABlKRUAAAAAAAApFQAAAAAAAAEAAABnKRUAAAAAAAAwFQAAAAAAAAAAAAAwFQAAAAAAADEVAAAAAAAAAAAAADEVAAAAAAAAMhUAAAAAAAAAAAAAMhUAAAAAAAAzFQAAAAAAAAAAAAAzFQAAAAAAADQVAAAAAAAAAAAAADQVAAAAAAAANRUAAAAAAAAAAAAANRUAAAAAAAA2FQAAAAAAAAAAAAA1FQAAAAAAADUVAAAAAAAAAQAAAGw0FQAAAAAAADQVAAAAAAAAAQAAAGI0FQAAAAAAADUVAAAAAAAAAAAAADUVAAAAAAAANhUAAAAAAAAAAAAANhUAAAAAAAA3FQAAAAAAAAAAAAA3FQAAAAAAADgVAAAAAAAAAAAAADgVAAAAAAAAORUAAAAAAAAAAAAAORUAAAAAAAA6FQAAAAAAAAAAAAA6FQAAAAAAADsVAAAAAAAAAAAAADsVAAAAAAAAPBUAAAAAAAAAAAAAOxUAAAAAAAA7FQAAAAAAAAEAAABuOhUAAAAAAAA6FQAAAAAAAAEAAABFORUAAAAAAAA5FQAAAAAAAAEAAABzOBUAAAAAAAA4FQAAAAAAAAEAAABrNxUAAAAAAAA3FQAAAAAAAAEAAABjNhUAAAAAAAA2FQAAAAAAAAEAAABvNRUAAAAAAAA1FQAAAAAAAAEAAABsNBUAAAAAAAA0FQAAAAAAAAEAAABCNBUAAAAAAAA+FQAAAAAAAAAAAAA+FQAAAAAAAD8VAAAAAAAAAAAAAD8VAAAAAAAAQBUAAAAAAAAAAAAAQBUAAAAAAABBFQAAAAAAAAAAAABBFQAAAAAAAEIVAAAAAAAAAAAAAEEVAAAAAAAAQRUAAAAAAAABAAAAdEEVAAAAAAAAQhUAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAKBUAAAAAAAAoFQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					414,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"nv_vi_a",
+								{
+									"count": 1,
+									"mode": "mode_internal_normal",
+									"register": "\""
+								}
+							],
+							[
+								"delete_word",
+								{
+									"forward": false
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "F"
+								}
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"insert",
+								{
+									"characters": "GLASS"
+								}
+							],
+							[
+								"insert_completion",
+								{
+									"completion": "lsp_select_completion {\"index\":0,\"session_name\":\"jdtls\"}",
+									"format": "command",
+									"keep_prefix": true,
+									"must_insert": false,
+									"query_change_id":
+									[
+										81,
+										410,
+										1
+									],
+									"trigger": "GLASS : BlocksEnum"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": ".getI"
+								}
+							],
+							[
+								"insert_completion",
+								{
+									"completion": "lsp_select_completion {\"index\":1,\"session_name\":\"jdtls\"}",
+									"format": "command",
+									"keep_prefix": true,
+									"must_insert": false,
+									"query_change_id":
+									[
+										83,
+										413,
+										1
+									],
+									"trigger": "getId() : int"
+								}
+							]
+						]
+					},
+					"GAAAAD8VAAAAAAAAPxUAAAAAAAADAAAAZ2V0PxUAAAAAAABAFQAAAAAAAAAAAAA/FQAAAAAAAD8VAAAAAAAAAQAAAEY/FQAAAAAAAEAVAAAAAAAAAAAAAEAVAAAAAAAAQRUAAAAAAAAAAAAAQRUAAAAAAABCFQAAAAAAAAAAAABCFQAAAAAAAEMVAAAAAAAAAAAAAEMVAAAAAAAARBUAAAAAAAAAAAAAQxUAAAAAAABDFQAAAAAAAAEAAABTQhUAAAAAAABCFQAAAAAAAAEAAABTQRUAAAAAAABBFQAAAAAAAAEAAABBQBUAAAAAAABAFQAAAAAAAAEAAABMPxUAAAAAAAA/FQAAAAAAAAEAAABHPxUAAAAAAABEFQAAAAAAAAAAAABEFQAAAAAAAEUVAAAAAAAAAAAAAEUVAAAAAAAARhUAAAAAAAAAAAAARhUAAAAAAABHFQAAAAAAAAAAAABHFQAAAAAAAEgVAAAAAAAAAAAAAEgVAAAAAAAASRUAAAAAAAAAAAAASBUAAAAAAABIFQAAAAAAAAEAAABJRxUAAAAAAABHFQAAAAAAAAEAAAB0RhUAAAAAAABGFQAAAAAAAAEAAABlRRUAAAAAAABFFQAAAAAAAAEAAABnRRUAAAAAAABMFQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAQRUAAAAAAABBFQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					428,
+					1,
+					"nv_commentary",
+					{
+						"action": "c",
+						"count": 1,
+						"mode": "mode_visual",
+						"register": "\""
+					},
+					"BAAAAE8VAAAAAAAAUhUAAAAAAAAAAAAAHhUAAAAAAAAhFQAAAAAAAAAAAAD6FAAAAAAAAP0UAAAAAAAAAAAAAK0UAAAAAAAAsBQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAUBUAAAAAAACsFAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					442,
+					1,
+					"nv_commentary",
+					{
+						"action": "c",
+						"count": 1,
+						"mode": "mode_visual",
+						"register": "\""
+					},
+					"BAAAAFgVAAAAAAAAWBUAAAAAAAADAAAALy8gJBUAAAAAAAAkFQAAAAAAAAMAAAAvLyD9FAAAAAAAAP0UAAAAAAAAAwAAAC8vIK0UAAAAAAAArRQAAAAAAAADAAAALy8g",
+					"AQAAAAAAAAABAAAAXRUAAAAAAACsFAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					455,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"nv_vi_a",
+								{
+									"count": 1,
+									"mode": "mode_internal_normal",
+									"register": "\""
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " &&"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " block"
+								}
+							],
+							[
+								"delete_word",
+								{
+									"forward": false
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "world.getBloc"
+								}
+							],
+							[
+								"insert_completion",
+								{
+									"completion": "lsp_select_completion {\"index\":0,\"session_name\":\"jdtls\"}",
+									"format": "command",
+									"keep_prefix": true,
+									"must_insert": false,
+									"query_change_id":
+									[
+										97,
+										451,
+										10
+									],
+									"trigger": "getBlockInChunk(Vector3f position) : int"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " "
+								}
+							],
+							[
+								"left_delete",
+								null
+							]
+						]
+					},
+					"HwAAAEwVAAAAAAAATRUAAAAAAAAAAAAATRUAAAAAAABOFQAAAAAAAAAAAABOFQAAAAAAAE8VAAAAAAAAAAAAAE8VAAAAAAAAUBUAAAAAAAAAAAAAUBUAAAAAAABRFQAAAAAAAAAAAABRFQAAAAAAAFIVAAAAAAAAAAAAAFIVAAAAAAAAUxUAAAAAAAAAAAAAUxUAAAAAAABUFQAAAAAAAAAAAABUFQAAAAAAAFUVAAAAAAAAAAAAAFAVAAAAAAAAUBUAAAAAAAAFAAAAYmxvY2tQFQAAAAAAAFEVAAAAAAAAAAAAAFEVAAAAAAAAUhUAAAAAAAAAAAAAUhUAAAAAAABTFQAAAAAAAAAAAABTFQAAAAAAAFQVAAAAAAAAAAAAAFQVAAAAAAAAVRUAAAAAAAAAAAAAVRUAAAAAAABWFQAAAAAAAAAAAABWFQAAAAAAAFcVAAAAAAAAAAAAAFcVAAAAAAAAWBUAAAAAAAAAAAAAWBUAAAAAAABZFQAAAAAAAAAAAABZFQAAAAAAAFoVAAAAAAAAAAAAAFoVAAAAAAAAWxUAAAAAAAAAAAAAWxUAAAAAAABcFQAAAAAAAAAAAABcFQAAAAAAAF0VAAAAAAAAAAAAAFwVAAAAAAAAXBUAAAAAAAABAAAAY1sVAAAAAAAAWxUAAAAAAAABAAAAb1oVAAAAAAAAWhUAAAAAAAABAAAAbFYVAAAAAAAAVhUAAAAAAAAEAAAAZ2V0QlYVAAAAAAAAbxUAAAAAAAAAAAAAZhUAAAAAAABnFQAAAAAAAAAAAABnFQAAAAAAAGcVAAAAAAAACAAAAHBvc2l0aW9uZhUAAAAAAABmFQAAAAAAAAEAAAAg",
+					"AQAAAAAAAAABAAAASxUAAAAAAABLFQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					468,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"insert",
+								{
+									"characters": "x,"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " y"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " z"
+								}
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"insert",
+								{
+									"characters": ","
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " z"
+								}
+							]
+						]
+					},
+					"CwAAAGYVAAAAAAAAZxUAAAAAAAAAAAAAZxUAAAAAAABoFQAAAAAAAAAAAABoFQAAAAAAAGkVAAAAAAAAAAAAAGkVAAAAAAAAahUAAAAAAAAAAAAAahUAAAAAAABrFQAAAAAAAAAAAABrFQAAAAAAAGwVAAAAAAAAAAAAAGsVAAAAAAAAaxUAAAAAAAABAAAAemoVAAAAAAAAahUAAAAAAAABAAAAIGoVAAAAAAAAaxUAAAAAAAAAAAAAaxUAAAAAAABsFQAAAAAAAAAAAABsFQAAAAAAAG0VAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAZhUAAAAAAABmFQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					476,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"insert",
+								{
+									"characters": " "
+								}
+							],
+							[
+								"left_delete",
+								null
+							]
+						]
+					},
+					"AgAAAG0VAAAAAAAAbhUAAAAAAAAAAAAAbRUAAAAAAABtFQAAAAAAAAEAAAAg",
+					"AQAAAAAAAAABAAAAbRUAAAAAAABtFQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					481,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"insert",
+								{
+									"characters": " =="
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " "
+								}
+							]
+						]
+					},
+					"BAAAAG4VAAAAAAAAbxUAAAAAAAAAAAAAbxUAAAAAAABwFQAAAAAAAAAAAABwFQAAAAAAAHEVAAAAAAAAAAAAAHEVAAAAAAAAchUAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAbhUAAAAAAABuFQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					488,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"insert",
+								{
+									"characters": "blockType"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "."
+								}
+							]
+						]
+					},
+					"CgAAAHIVAAAAAAAAcxUAAAAAAAAAAAAAcxUAAAAAAAB0FQAAAAAAAAAAAAB0FQAAAAAAAHUVAAAAAAAAAAAAAHUVAAAAAAAAdhUAAAAAAAAAAAAAdhUAAAAAAAB3FQAAAAAAAAAAAAB3FQAAAAAAAHgVAAAAAAAAAAAAAHgVAAAAAAAAeRUAAAAAAAAAAAAAeRUAAAAAAAB6FQAAAAAAAAAAAAB6FQAAAAAAAHsVAAAAAAAAAAAAAHsVAAAAAAAAfBUAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAchUAAAAAAAByFQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					491,
+					1,
+					"delete_word",
+					{
+						"forward": false
+					},
+					"AQAAAHsVAAAAAAAAexUAAAAAAAABAAAALg",
+					"AQAAAAAAAAABAAAAfBUAAAAAAAB8FQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					525,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"insert",
+								{
+									"characters": "int"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " "
+								}
+							],
+							[
+								"paste",
+								null
+							],
+							[
+								"insert",
+								{
+									"characters": ","
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " "
+								}
+							]
+						]
+					},
+					"BwAAANwUAAAAAAAA3RQAAAAAAAAAAAAA3RQAAAAAAADeFAAAAAAAAAAAAADeFAAAAAAAAN8UAAAAAAAAAAAAAN8UAAAAAAAA4BQAAAAAAAAAAAAA4BQAAAAAAADrFAAAAAAAAAAAAADrFAAAAAAAAOwUAAAAAAAAAAAAAOwUAAAAAAAA7RQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA3BQAAAAAAADcFAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					530,
+					1,
+					"paste",
+					null,
+					"AgAAAIMVAAAAAAAAjhUAAAAAAAAAAAAAjhUAAAAAAACOFQAAAAAAAAkAAABibG9ja1R5cGU",
+					"AQAAAAAAAAABAAAAgxUAAAAAAACMFQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					535,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"nv_vi_big_a",
+								{
+									"count": 1,
+									"mode": "mode_internal_normal",
+									"register": "\""
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " "
+								}
+							],
+							[
+								"insert_snippet",
+								{
+									"contents": "{$0}"
+								}
+							],
+							[
+								"run_macro_file",
+								{
+									"file": "res://Packages/Default/Add Line in Braces.sublime-macro"
+								}
+							]
+						]
+					},
+					"CAAAAI8VAAAAAAAAkBUAAAAAAAAAAAAAkBUAAAAAAACSFQAAAAAAAAAAAACRFQAAAAAAAJIVAAAAAAAAAAAAAJIVAAAAAAAAlRUAAAAAAAAAAAAAlRUAAAAAAACWFQAAAAAAAAAAAACWFQAAAAAAAJkVAAAAAAAAAAAAAJIVAAAAAAAAkhUAAAAAAAADAAAACQkJkhUAAAAAAACWFQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAjhUAAAAAAACOFQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					542,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"nv_vi_big_a",
+								{
+									"count": 1,
+									"mode": "mode_internal_normal",
+									"register": "\""
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "return"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " false/"
+								}
+							]
+						]
+					},
+					"DQAAAJYVAAAAAAAAlxUAAAAAAAAAAAAAlxUAAAAAAACYFQAAAAAAAAAAAACYFQAAAAAAAJkVAAAAAAAAAAAAAJkVAAAAAAAAmhUAAAAAAAAAAAAAmhUAAAAAAACbFQAAAAAAAAAAAACbFQAAAAAAAJwVAAAAAAAAAAAAAJwVAAAAAAAAnRUAAAAAAAAAAAAAnRUAAAAAAACeFQAAAAAAAAAAAACeFQAAAAAAAJ8VAAAAAAAAAAAAAJ8VAAAAAAAAoBUAAAAAAAAAAAAAoBUAAAAAAAChFQAAAAAAAAAAAAChFQAAAAAAAKIVAAAAAAAAAAAAAKIVAAAAAAAAoxUAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAlRUAAAAAAACVFQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					546,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"nv_vi_a",
+								{
+									"count": 1,
+									"mode": "mode_internal_normal",
+									"register": "\""
+								}
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"insert",
+								{
+									"characters": ";"
+								}
+							]
+						]
+					},
+					"AgAAAKIVAAAAAAAAohUAAAAAAAABAAAAL6IVAAAAAAAAoxUAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAohUAAAAAAACiFQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					561,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"nv_vi_big_a",
+								{
+									"count": 1,
+									"mode": "mode_internal_normal",
+									"register": "\""
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "\nreturn"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " f"
+								}
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"insert",
+								{
+									"characters": "true;"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "\n"
+								}
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"insert",
+								{
+									"characters": "retur"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " "
+								}
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"insert",
+								{
+									"characters": "rna"
+								}
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"insert",
+								{
+									"characters": " false;"
+								}
+							]
+						]
+					},
+					"JgAAAKgVAAAAAAAAqRUAAAAAAAAAAAAAqRUAAAAAAACsFQAAAAAAAAAAAACsFQAAAAAAAK0VAAAAAAAAAAAAAK0VAAAAAAAArhUAAAAAAAAAAAAArhUAAAAAAACvFQAAAAAAAAAAAACvFQAAAAAAALAVAAAAAAAAAAAAALAVAAAAAAAAsRUAAAAAAAAAAAAAsRUAAAAAAACyFQAAAAAAAAAAAACyFQAAAAAAALMVAAAAAAAAAAAAALMVAAAAAAAAtBUAAAAAAAAAAAAAsxUAAAAAAACzFQAAAAAAAAEAAABmsxUAAAAAAAC0FQAAAAAAAAAAAAC0FQAAAAAAALUVAAAAAAAAAAAAALUVAAAAAAAAthUAAAAAAAAAAAAAthUAAAAAAAC3FQAAAAAAAAAAAAC3FQAAAAAAALgVAAAAAAAAAAAAALgVAAAAAAAAuRUAAAAAAAAAAAAAuRUAAAAAAAC8FQAAAAAAAAAAAAC7FQAAAAAAALsVAAAAAAAAAQAAAAm7FQAAAAAAALwVAAAAAAAAAAAAALwVAAAAAAAAvRUAAAAAAAAAAAAAvRUAAAAAAAC+FQAAAAAAAAAAAAC+FQAAAAAAAL8VAAAAAAAAAAAAAL8VAAAAAAAAwBUAAAAAAAAAAAAAwBUAAAAAAADBFQAAAAAAAAAAAADAFQAAAAAAAMAVAAAAAAAAAQAAACC/FQAAAAAAAL8VAAAAAAAAAQAAAHK/FQAAAAAAAMAVAAAAAAAAAAAAAMAVAAAAAAAAwRUAAAAAAAAAAAAAwRUAAAAAAADCFQAAAAAAAAAAAADBFQAAAAAAAMEVAAAAAAAAAQAAAGHBFQAAAAAAAMIVAAAAAAAAAAAAAMIVAAAAAAAAwxUAAAAAAAAAAAAAwxUAAAAAAADEFQAAAAAAAAAAAADEFQAAAAAAAMUVAAAAAAAAAAAAAMUVAAAAAAAAxhUAAAAAAAAAAAAAxhUAAAAAAADHFQAAAAAAAAAAAADHFQAAAAAAAMgVAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAApxUAAAAAAACnFQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					571,
+					1,
+					"nv_vi_dd",
+					{
+						"count": 1,
+						"mode": "mode_internal_normal",
+						"register": "\""
+					},
+					"AQAAALkVAAAAAAAAuRUAAAAAAAAQAAAACQlyZXR1cm4gZmFsc2U7Cg",
+					"AQAAAAAAAAABAAAAwhUAAAAAAADCFQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					581,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"nv_vi_big_a",
+								{
+									"count": 1,
+									"mode": "mode_internal_normal",
+									"register": "\""
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " "
+								}
+							],
+							[
+								"insert_snippet",
+								{
+									"contents": "{$0}"
+								}
+							],
+							[
+								"right_delete",
+								null
+							]
+						]
+					},
+					"AwAAAC0VAAAAAAAALhUAAAAAAAAAAAAALhUAAAAAAAAwFQAAAAAAAAAAAAAvFQAAAAAAAC8VAAAAAAAAAQAAAH0",
+					"AQAAAAAAAAABAAAALBUAAAAAAAAsFQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					585,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"nv_vi_big_a",
+								{
+									"count": 1,
+									"mode": "mode_internal_normal",
+									"register": "\""
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "\n}"
+								}
+							]
+						]
+					},
+					"BQAAALoVAAAAAAAAuxUAAAAAAAAAAAAAuxUAAAAAAAC+FQAAAAAAAAAAAAC+FQAAAAAAAL8VAAAAAAAAAAAAALsVAAAAAAAAuxUAAAAAAAADAAAACQkJuxUAAAAAAAC9FQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAuRUAAAAAAAC5FQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					593,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"nv_vi_a",
+								{
+									"count": 1,
+									"mode": "mode_internal_normal",
+									"register": "\""
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "\nreturn"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " fasle"
+								}
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"insert",
+								{
+									"characters": "lse."
+								}
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"insert",
+								{
+									"characters": "/"
+								}
+							]
+						]
+					},
+					"FwAAAL4VAAAAAAAAvxUAAAAAAAAAAAAAvxUAAAAAAADBFQAAAAAAAAAAAADBFQAAAAAAAMIVAAAAAAAAAAAAAMIVAAAAAAAAwxUAAAAAAAAAAAAAwxUAAAAAAADEFQAAAAAAAAAAAADEFQAAAAAAAMUVAAAAAAAAAAAAAMUVAAAAAAAAxhUAAAAAAAAAAAAAxhUAAAAAAADHFQAAAAAAAAAAAADHFQAAAAAAAMgVAAAAAAAAAAAAAMgVAAAAAAAAyRUAAAAAAAAAAAAAyRUAAAAAAADKFQAAAAAAAAAAAADKFQAAAAAAAMsVAAAAAAAAAAAAAMsVAAAAAAAAzBUAAAAAAAAAAAAAzBUAAAAAAADNFQAAAAAAAAAAAADMFQAAAAAAAMwVAAAAAAAAAQAAAGXLFQAAAAAAAMsVAAAAAAAAAQAAAGzKFQAAAAAAAMoVAAAAAAAAAQAAAHPKFQAAAAAAAMsVAAAAAAAAAAAAAMsVAAAAAAAAzBUAAAAAAAAAAAAAzBUAAAAAAADNFQAAAAAAAAAAAADNFQAAAAAAAM4VAAAAAAAAAAAAAM0VAAAAAAAAzRUAAAAAAAABAAAALs0VAAAAAAAAzhUAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAvRUAAAAAAAC9FQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					597,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"nv_vi_a",
+								{
+									"count": 1,
+									"mode": "mode_internal_normal",
+									"register": "\""
+								}
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"insert",
+								{
+									"characters": ";"
+								}
+							]
+						]
+					},
+					"AgAAAM0VAAAAAAAAzRUAAAAAAAABAAAAL80VAAAAAAAAzhUAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAzRUAAAAAAADNFQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					701,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"nv_vi_big_a",
+								{
+									"count": 1,
+									"mode": "mode_internal_normal",
+									"register": "\""
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "\n//"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " Is"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " a"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " glass"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " a"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "nd"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " "
+								}
+							],
+							[
+								"delete_word",
+								{
+									"forward": false
+								}
+							],
+							[
+								"delete_word",
+								{
+									"forward": false
+								}
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"insert",
+								{
+									"characters": "model"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " glass"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " and"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " is"
+								}
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"insert",
+								{
+									"characters": "block"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " in"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " possitio"
+								}
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"insert",
+								{
+									"characters": "ition"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " is"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " a"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " glass"
+								}
+							]
+						]
+					},
+					"UwAAAC8VAAAAAAAAMBUAAAAAAAAAAAAAMBUAAAAAAAAyFQAAAAAAAAAAAAAyFQAAAAAAADMVAAAAAAAAAAAAADMVAAAAAAAANBUAAAAAAAAAAAAANBUAAAAAAAA1FQAAAAAAAAAAAAA1FQAAAAAAADYVAAAAAAAAAAAAADYVAAAAAAAANxUAAAAAAAAAAAAANxUAAAAAAAA4FQAAAAAAAAAAAAA4FQAAAAAAADkVAAAAAAAAAAAAADkVAAAAAAAAOhUAAAAAAAAAAAAAOhUAAAAAAAA7FQAAAAAAAAAAAAA7FQAAAAAAADwVAAAAAAAAAAAAADwVAAAAAAAAPRUAAAAAAAAAAAAAPRUAAAAAAAA+FQAAAAAAAAAAAAA+FQAAAAAAAD8VAAAAAAAAAAAAAD8VAAAAAAAAQBUAAAAAAAAAAAAAQBUAAAAAAABBFQAAAAAAAAAAAABBFQAAAAAAAEIVAAAAAAAAAAAAAEIVAAAAAAAAQxUAAAAAAAAAAAAAQxUAAAAAAABEFQAAAAAAAAAAAABEFQAAAAAAAEUVAAAAAAAAAAAAAEEVAAAAAAAAQRUAAAAAAAAEAAAAYW5kIDsVAAAAAAAAOxUAAAAAAAAGAAAAZ2xhc3MgOhUAAAAAAAA6FQAAAAAAAAEAAAAgORUAAAAAAAA5FQAAAAAAAAEAAABhORUAAAAAAAA6FQAAAAAAAAAAAAA6FQAAAAAAADsVAAAAAAAAAAAAADsVAAAAAAAAPBUAAAAAAAAAAAAAPBUAAAAAAAA9FQAAAAAAAAAAAAA9FQAAAAAAAD4VAAAAAAAAAAAAAD4VAAAAAAAAPxUAAAAAAAAAAAAAPxUAAAAAAABAFQAAAAAAAAAAAABAFQAAAAAAAEEVAAAAAAAAAAAAAEEVAAAAAAAAQhUAAAAAAAAAAAAAQhUAAAAAAABDFQAAAAAAAAAAAABDFQAAAAAAAEQVAAAAAAAAAAAAAEQVAAAAAAAARRUAAAAAAAAAAAAARRUAAAAAAABGFQAAAAAAAAAAAABGFQAAAAAAAEcVAAAAAAAAAAAAAEcVAAAAAAAASBUAAAAAAAAAAAAASBUAAAAAAABJFQAAAAAAAAAAAABJFQAAAAAAAEoVAAAAAAAAAAAAAEoVAAAAAAAASxUAAAAAAAAAAAAAShUAAAAAAABKFQAAAAAAAAEAAABzSRUAAAAAAABJFQAAAAAAAAEAAABpSRUAAAAAAABKFQAAAAAAAAAAAABKFQAAAAAAAEsVAAAAAAAAAAAAAEsVAAAAAAAATBUAAAAAAAAAAAAATBUAAAAAAABNFQAAAAAAAAAAAABNFQAAAAAAAE4VAAAAAAAAAAAAAE4VAAAAAAAATxUAAAAAAAAAAAAATxUAAAAAAABQFQAAAAAAAAAAAABQFQAAAAAAAFEVAAAAAAAAAAAAAFEVAAAAAAAAUhUAAAAAAAAAAAAAUhUAAAAAAABTFQAAAAAAAAAAAABTFQAAAAAAAFQVAAAAAAAAAAAAAFQVAAAAAAAAVRUAAAAAAAAAAAAAVRUAAAAAAABWFQAAAAAAAAAAAABWFQAAAAAAAFcVAAAAAAAAAAAAAFcVAAAAAAAAWBUAAAAAAAAAAAAAWBUAAAAAAABZFQAAAAAAAAAAAABZFQAAAAAAAFoVAAAAAAAAAAAAAFkVAAAAAAAAWRUAAAAAAAABAAAAb1gVAAAAAAAAWBUAAAAAAAABAAAAaVcVAAAAAAAAVxUAAAAAAAABAAAAdFYVAAAAAAAAVhUAAAAAAAABAAAAaVUVAAAAAAAAVRUAAAAAAAABAAAAc1UVAAAAAAAAVhUAAAAAAAAAAAAAVhUAAAAAAABXFQAAAAAAAAAAAABXFQAAAAAAAFgVAAAAAAAAAAAAAFgVAAAAAAAAWRUAAAAAAAAAAAAAWRUAAAAAAABaFQAAAAAAAAAAAABaFQAAAAAAAFsVAAAAAAAAAAAAAFsVAAAAAAAAXBUAAAAAAAAAAAAAXBUAAAAAAABdFQAAAAAAAAAAAABdFQAAAAAAAF4VAAAAAAAAAAAAAF4VAAAAAAAAXxUAAAAAAAAAAAAAXxUAAAAAAABgFQAAAAAAAAAAAABgFQAAAAAAAGEVAAAAAAAAAAAAAGEVAAAAAAAAYhUAAAAAAAAAAAAAYhUAAAAAAABjFQAAAAAAAAAAAABjFQAAAAAAAGQVAAAAAAAAAAAAAGQVAAAAAAAAZRUAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAALhUAAAAAAAAuFQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					725,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"nv_vi_big_a",
+								{
+									"count": 1,
+									"mode": "mode_internal_normal",
+									"register": "\""
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "\nblc"
+								}
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"insert",
+								{
+									"characters": "oc"
+								}
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"delete_word",
+								{
+									"forward": false
+								}
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"delete_word",
+								{
+									"forward": false
+								}
+							],
+							[
+								"left_delete",
+								null
+							]
+						]
+					},
+					"EAAAANsVAAAAAAAA3BUAAAAAAAAAAAAA3BUAAAAAAADgFQAAAAAAAAAAAADgFQAAAAAAAOEVAAAAAAAAAAAAAOEVAAAAAAAA4hUAAAAAAAAAAAAA4hUAAAAAAADjFQAAAAAAAAAAAADiFQAAAAAAAOIVAAAAAAAAAQAAAGPiFQAAAAAAAOMVAAAAAAAAAAAAAOMVAAAAAAAA5BUAAAAAAAAAAAAA4xUAAAAAAADjFQAAAAAAAAEAAABj4hUAAAAAAADiFQAAAAAAAAEAAABv4RUAAAAAAADhFQAAAAAAAAEAAABs4BUAAAAAAADgFQAAAAAAAAEAAABi3xUAAAAAAADfFQAAAAAAAAEAAAAJ3hUAAAAAAADeFQAAAAAAAAEAAAAJ3BUAAAAAAADcFQAAAAAAAAIAAAAJCdsVAAAAAAAA2xUAAAAAAAABAAAACg",
+					"AQAAAAAAAAABAAAA2hUAAAAAAADaFQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					729,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"nv_vi_big_a",
+								{
+									"count": 1,
+									"mode": "mode_internal_normal",
+									"register": "\""
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "\nblock."
+								}
+							]
+						]
+					},
+					"CQAAAMkVAAAAAAAAyhUAAAAAAAAAAAAAyhUAAAAAAADNFQAAAAAAAAAAAADNFQAAAAAAAM4VAAAAAAAAAAAAAM4VAAAAAAAAzxUAAAAAAAAAAAAAzxUAAAAAAADQFQAAAAAAAAAAAADQFQAAAAAAANEVAAAAAAAAAAAAANEVAAAAAAAA0hUAAAAAAAAAAAAA0hUAAAAAAADTFQAAAAAAAAAAAADTFQAAAAAAANQVAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAeRUAAAAAAAB5FQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					735,
+					1,
+					"nv_vi_dd",
+					{
+						"count": 1,
+						"mode": "mode_internal_normal",
+						"register": "\""
+					},
+					"AQAAAMoVAAAAAAAAyhUAAAAAAAALAAAACQkJCWJsb2NrLgo",
+					"AQAAAAAAAAABAAAA0xUAAAAAAADTFQAAAAAAAAAAAAAAAPC/"
+				]
+			]
+		},
+		{
+			"file": "src/main/java/com/magenta/game/block/Model.java",
+			"settings":
+			{
+				"buffer_size": 1007,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			},
+			"undo_stack":
+			[
+				[
+					14,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"nv_vi_big_a",
+								{
+									"count": 1,
+									"mode": "mode_internal_normal",
+									"register": "\""
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "\n\nthis.glass"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " ="
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " false;"
+								}
+							]
+						]
+					},
+					"GAAAAFYCAAAAAAAAVwIAAAAAAAAAAAAAVwIAAAAAAABZAgAAAAAAAAAAAABZAgAAAAAAAFoCAAAAAAAAAAAAAFoCAAAAAAAAXAIAAAAAAAAAAAAAVwIAAAAAAABXAgAAAAAAAAIAAAAJCVoCAAAAAAAAWwIAAAAAAAAAAAAAWwIAAAAAAABcAgAAAAAAAAAAAABcAgAAAAAAAF0CAAAAAAAAAAAAAF0CAAAAAAAAXgIAAAAAAAAAAAAAXgIAAAAAAABfAgAAAAAAAAAAAABfAgAAAAAAAGACAAAAAAAAAAAAAGACAAAAAAAAYQIAAAAAAAAAAAAAYQIAAAAAAABiAgAAAAAAAAAAAABiAgAAAAAAAGMCAAAAAAAAAAAAAGMCAAAAAAAAZAIAAAAAAAAAAAAAZAIAAAAAAABlAgAAAAAAAAAAAABlAgAAAAAAAGYCAAAAAAAAAAAAAGYCAAAAAAAAZwIAAAAAAAAAAAAAZwIAAAAAAABoAgAAAAAAAAAAAABoAgAAAAAAAGkCAAAAAAAAAAAAAGkCAAAAAAAAagIAAAAAAAAAAAAAagIAAAAAAABrAgAAAAAAAAAAAABrAgAAAAAAAGwCAAAAAAAAAAAAAGwCAAAAAAAAbQIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAVQIAAAAAAABVAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					39,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"nv_vi_big_a",
+								{
+									"count": 1,
+									"mode": "mode_internal_normal",
+									"register": "\""
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "\n\n\nsetGl"
+								}
+							],
+							[
+								"delete_word",
+								{
+									"forward": false
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "public"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " void"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " gs"
+								}
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"insert",
+								{
+									"characters": "setGl"
+								}
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"insert",
+								{
+									"characters": "IsGlas"
+								}
+							],
+							[
+								"insert_snippet",
+								{
+									"contents": "($0)"
+								}
+							],
+							[
+								"move",
+								{
+									"by": "characters",
+									"forward": true
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " "
+								}
+							],
+							[
+								"insert_snippet",
+								{
+									"contents": "{$0}"
+								}
+							],
+							[
+								"run_macro_file",
+								{
+									"file": "res://Packages/Default/Add Line in Braces.sublime-macro"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "lf"
+								}
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							]
+						]
+					},
+					"OAAAAKEDAAAAAAAAogMAAAAAAAAAAAAAogMAAAAAAACjAwAAAAAAAAAAAACjAwAAAAAAAKQDAAAAAAAAAAAAAKQDAAAAAAAApQMAAAAAAAAAAAAAogMAAAAAAACiAwAAAAAAAAEAAAAJpAMAAAAAAAClAwAAAAAAAAAAAAClAwAAAAAAAKYDAAAAAAAAAAAAAKMDAAAAAAAAowMAAAAAAAABAAAACaUDAAAAAAAApgMAAAAAAAAAAAAApgMAAAAAAACnAwAAAAAAAAAAAACnAwAAAAAAAKgDAAAAAAAAAAAAAKgDAAAAAAAAqQMAAAAAAAAAAAAAqQMAAAAAAACqAwAAAAAAAAAAAAClAwAAAAAAAKUDAAAAAAAABQAAAHNldEdspQMAAAAAAACmAwAAAAAAAAAAAACmAwAAAAAAAKcDAAAAAAAAAAAAAKcDAAAAAAAAqAMAAAAAAAAAAAAAqAMAAAAAAACpAwAAAAAAAAAAAACpAwAAAAAAAKoDAAAAAAAAAAAAAKoDAAAAAAAAqwMAAAAAAAAAAAAAqwMAAAAAAACsAwAAAAAAAAAAAACsAwAAAAAAAK0DAAAAAAAAAAAAAK0DAAAAAAAArgMAAAAAAAAAAAAArgMAAAAAAACvAwAAAAAAAAAAAACvAwAAAAAAALADAAAAAAAAAAAAALADAAAAAAAAsQMAAAAAAAAAAAAAsQMAAAAAAACyAwAAAAAAAAAAAACyAwAAAAAAALMDAAAAAAAAAAAAALIDAAAAAAAAsgMAAAAAAAABAAAAc7EDAAAAAAAAsQMAAAAAAAABAAAAZ7EDAAAAAAAAsgMAAAAAAAAAAAAAsgMAAAAAAACzAwAAAAAAAAAAAACzAwAAAAAAALQDAAAAAAAAAAAAALQDAAAAAAAAtQMAAAAAAAAAAAAAtQMAAAAAAAC2AwAAAAAAAAAAAAC1AwAAAAAAALUDAAAAAAAAAQAAAGy0AwAAAAAAALQDAAAAAAAAAQAAAEe0AwAAAAAAALUDAAAAAAAAAAAAALUDAAAAAAAAtgMAAAAAAAAAAAAAtgMAAAAAAAC3AwAAAAAAAAAAAAC3AwAAAAAAALgDAAAAAAAAAAAAALgDAAAAAAAAuQMAAAAAAAAAAAAAuQMAAAAAAAC6AwAAAAAAAAAAAAC6AwAAAAAAALwDAAAAAAAAAAAAALwDAAAAAAAAvQMAAAAAAAAAAAAAvQMAAAAAAAC/AwAAAAAAAAAAAAC+AwAAAAAAAL8DAAAAAAAAAAAAAL8DAAAAAAAAwAMAAAAAAAAAAAAAwAMAAAAAAADBAwAAAAAAAAAAAADBAwAAAAAAAMIDAAAAAAAAAAAAAL8DAAAAAAAAvwMAAAAAAAABAAAACb8DAAAAAAAAwQMAAAAAAAAAAAAAwQMAAAAAAADCAwAAAAAAAAAAAADCAwAAAAAAAMMDAAAAAAAAAAAAAMIDAAAAAAAAwgMAAAAAAAABAAAAZsEDAAAAAAAAwQMAAAAAAAABAAAAbA",
+					"AQAAAAAAAAABAAAAoAMAAAAAAACgAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					46,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"insert",
+								{
+									"characters": "boolean"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " isGlass"
+								}
+							]
+						]
+					},
+					"EAAAALsDAAAAAAAAvAMAAAAAAAAAAAAAwAMAAAAAAADAAwAAAAAAAAIAAAAJCbwDAAAAAAAAvQMAAAAAAAAAAAAAvQMAAAAAAAC+AwAAAAAAAAAAAAC+AwAAAAAAAL8DAAAAAAAAAAAAAL8DAAAAAAAAwAMAAAAAAAAAAAAAwAMAAAAAAADBAwAAAAAAAAAAAADBAwAAAAAAAMIDAAAAAAAAAAAAAMIDAAAAAAAAwwMAAAAAAAAAAAAAwwMAAAAAAADEAwAAAAAAAAAAAADEAwAAAAAAAMUDAAAAAAAAAAAAAMUDAAAAAAAAxgMAAAAAAAAAAAAAxgMAAAAAAADHAwAAAAAAAAAAAADHAwAAAAAAAMgDAAAAAAAAAAAAAMgDAAAAAAAAyQMAAAAAAAAAAAAAyQMAAAAAAADKAwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAuwMAAAAAAAC7AwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					50,
+					1,
+					"insert",
+					{
+						"characters": "s"
+					},
+					"AQAAALoDAAAAAAAAuwMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAugMAAAAAAAC6AwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					60,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"reindent",
+								null
+							],
+							[
+								"insert",
+								{
+									"characters": "this..i"
+								}
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"insert",
+								{
+									"characters": "isGlass"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " ="
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " is"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "Glass;"
+								}
+							]
+						]
+					},
+					"HAAAAM8DAAAAAAAA0QMAAAAAAAAAAAAA0QMAAAAAAADSAwAAAAAAAAAAAADSAwAAAAAAANMDAAAAAAAAAAAAANMDAAAAAAAA1AMAAAAAAAAAAAAA1AMAAAAAAADVAwAAAAAAAAAAAADVAwAAAAAAANYDAAAAAAAAAAAAANYDAAAAAAAA1wMAAAAAAAAAAAAA1wMAAAAAAADYAwAAAAAAAAAAAADXAwAAAAAAANcDAAAAAAAAAQAAAGnWAwAAAAAAANYDAAAAAAAAAQAAAC7WAwAAAAAAANcDAAAAAAAAAAAAANcDAAAAAAAA2AMAAAAAAAAAAAAA2AMAAAAAAADZAwAAAAAAAAAAAADZAwAAAAAAANoDAAAAAAAAAAAAANoDAAAAAAAA2wMAAAAAAAAAAAAA2wMAAAAAAADcAwAAAAAAAAAAAADcAwAAAAAAAN0DAAAAAAAAAAAAAN0DAAAAAAAA3gMAAAAAAAAAAAAA3gMAAAAAAADfAwAAAAAAAAAAAADfAwAAAAAAAOADAAAAAAAAAAAAAOADAAAAAAAA4QMAAAAAAAAAAAAA4QMAAAAAAADiAwAAAAAAAAAAAADiAwAAAAAAAOMDAAAAAAAAAAAAAOMDAAAAAAAA5AMAAAAAAAAAAAAA5AMAAAAAAADlAwAAAAAAAAAAAADlAwAAAAAAAOYDAAAAAAAAAAAAAOYDAAAAAAAA5wMAAAAAAAAAAAAA5wMAAAAAAADoAwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAzwMAAAAAAADPAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					66,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"nv_vi_s",
+								{
+									"count": 1,
+									"mode": "mode_visual",
+									"register": "\""
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "isGlass"
+								}
+							]
+						]
+					},
+					"CAAAAF8CAAAAAAAAXwIAAAAAAAAFAAAAZ2xhc3NfAgAAAAAAAGACAAAAAAAAAAAAAGACAAAAAAAAYQIAAAAAAAAAAAAAYQIAAAAAAABiAgAAAAAAAAAAAABiAgAAAAAAAGMCAAAAAAAAAAAAAGMCAAAAAAAAZAIAAAAAAAAAAAAAZAIAAAAAAABlAgAAAAAAAAAAAABlAgAAAAAAAGYCAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAXwIAAAAAAABkAgAAAAAAAAAAAAAAAPC/"
+				]
+			]
+		},
+		{
+			"file": "src/main/java/com/magenta/game/block/BlockType.java",
+			"settings":
+			{
+				"buffer_size": 3506,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			},
+			"undo_stack":
+			[
+				[
+					31,
+					1,
+					"nv_vi_paste",
+					{
+						"before_cursor": false,
+						"count": 1,
+						"mode": "mode_internal_normal",
+						"register": "\""
+					},
+					"AQAAABUCAAAAAAAAbgIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA4gEAAAAAAADiAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					33,
+					1,
+					"nv_commentary",
+					{
+						"action": "cc",
+						"count": 1,
+						"mode": "mode_internal_normal",
+						"register": "\""
+					},
+					"AQAAAL0BAAAAAAAAwAEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAvQEAAAAAAAC9AQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					44,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"nv_vi_s",
+								{
+									"count": 1,
+									"mode": "mode_visual",
+									"register": "\""
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "BlocksEnum"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "m"
+								}
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"insert",
+								{
+									"characters": " blockEnum"
+								}
+							]
+						]
+					},
+					"FwAAACoCAAAAAAAAKgIAAAAAAAAoAAAAU3RyaW5nIG5hbWUsIFN0cmluZ1tdIGZhY2VzLCBNb2RlbCBtb2RlbCoCAAAAAAAAKwIAAAAAAAAAAAAAKwIAAAAAAAAsAgAAAAAAAAAAAAAsAgAAAAAAAC0CAAAAAAAAAAAAAC0CAAAAAAAALgIAAAAAAAAAAAAALgIAAAAAAAAvAgAAAAAAAAAAAAAvAgAAAAAAADACAAAAAAAAAAAAADACAAAAAAAAMQIAAAAAAAAAAAAAMQIAAAAAAAAyAgAAAAAAAAAAAAAyAgAAAAAAADMCAAAAAAAAAAAAADMCAAAAAAAANAIAAAAAAAAAAAAANAIAAAAAAAA1AgAAAAAAAAAAAAA0AgAAAAAAADQCAAAAAAAAAQAAAG00AgAAAAAAADUCAAAAAAAAAAAAADUCAAAAAAAANgIAAAAAAAAAAAAANgIAAAAAAAA3AgAAAAAAAAAAAAA3AgAAAAAAADgCAAAAAAAAAAAAADgCAAAAAAAAOQIAAAAAAAAAAAAAOQIAAAAAAAA6AgAAAAAAAAAAAAA6AgAAAAAAADsCAAAAAAAAAAAAADsCAAAAAAAAPAIAAAAAAAAAAAAAPAIAAAAAAAA9AgAAAAAAAAAAAAA9AgAAAAAAAD4CAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAKgIAAAAAAABSAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					60,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"nv_vi_s",
+								{
+									"count": 1,
+									"mode": "mode_visual",
+									"register": "\""
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "blockEnum."
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "getN"
+								}
+							]
+						]
+					},
+					"DwAAAHkCAAAAAAAAeQIAAAAAAAAEAAAAbmFtZXkCAAAAAAAAegIAAAAAAAAAAAAAegIAAAAAAAB7AgAAAAAAAAAAAAB7AgAAAAAAAHwCAAAAAAAAAAAAAHwCAAAAAAAAfQIAAAAAAAAAAAAAfQIAAAAAAAB+AgAAAAAAAAAAAAB+AgAAAAAAAH8CAAAAAAAAAAAAAH8CAAAAAAAAgAIAAAAAAAAAAAAAgAIAAAAAAACBAgAAAAAAAAAAAACBAgAAAAAAAIICAAAAAAAAAAAAAIICAAAAAAAAgwIAAAAAAAAAAAAAgwIAAAAAAACEAgAAAAAAAAAAAACEAgAAAAAAAIUCAAAAAAAAAAAAAIUCAAAAAAAAhgIAAAAAAAAAAAAAhgIAAAAAAACHAgAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAeQIAAAAAAAB9AgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					65,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"nv_vi_a",
+								{
+									"count": 1,
+									"mode": "mode_internal_normal",
+									"register": "\""
+								}
+							],
+							[
+								"delete_word",
+								{
+									"forward": false
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "get"
+								}
+							],
+							[
+								"insert_completion",
+								{
+									"completion": "lsp_select_completion {\"index\":0,\"session_name\":\"jdtls\"}",
+									"format": "command",
+									"keep_prefix": true,
+									"must_insert": false,
+									"query_change_id":
+									[
+										41,
+										64,
+										1
+									],
+									"trigger": "getName() : String"
+								}
+							]
+						]
+					},
+					"CAAAAIMCAAAAAAAAgwIAAAAAAAAEAAAAZ2V0ToMCAAAAAAAAhAIAAAAAAAAAAAAAhAIAAAAAAACFAgAAAAAAAAAAAACFAgAAAAAAAIYCAAAAAAAAAAAAAIUCAAAAAAAAhQIAAAAAAAABAAAAdIQCAAAAAAAAhAIAAAAAAAABAAAAZYMCAAAAAAAAgwIAAAAAAAABAAAAZ4MCAAAAAAAAjAIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAhgIAAAAAAACGAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					73,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"delete_word",
+								{
+									"forward": false
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "blockEnum.get"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "T"
+								}
+							],
+							[
+								"insert_completion",
+								{
+									"completion": "lsp_select_completion {\"index\":0,\"session_name\":\"jdtls\"}",
+									"format": "command",
+									"keep_prefix": true,
+									"must_insert": false,
+									"query_change_id":
+									[
+										44,
+										72,
+										1
+									],
+									"trigger": "getTextures() : String[]"
+								}
+							]
+						]
+					},
+					"EQAAAJ0CAAAAAAAAnQIAAAAAAAAFAAAAZmFjZXOdAgAAAAAAAJ4CAAAAAAAAAAAAAJ4CAAAAAAAAnwIAAAAAAAAAAAAAnwIAAAAAAACgAgAAAAAAAAAAAACgAgAAAAAAAKECAAAAAAAAAAAAAKECAAAAAAAAogIAAAAAAAAAAAAAogIAAAAAAACjAgAAAAAAAAAAAACjAgAAAAAAAKQCAAAAAAAAAAAAAKQCAAAAAAAApQIAAAAAAAAAAAAApQIAAAAAAACmAgAAAAAAAAAAAACmAgAAAAAAAKcCAAAAAAAAAAAAAKcCAAAAAAAAqAIAAAAAAAAAAAAAqAIAAAAAAACpAgAAAAAAAAAAAACpAgAAAAAAAKoCAAAAAAAAAAAAAKoCAAAAAAAAqwIAAAAAAAAAAAAApwIAAAAAAACnAgAAAAAAAAQAAABnZXRUpwIAAAAAAAC0AgAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAogIAAAAAAACiAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					80,
+					1,
+					"nv_commentary",
+					{
+						"action": "cc",
+						"count": 1,
+						"mode": "mode_internal_normal",
+						"register": "\""
+					},
+					"AQAAALgCAAAAAAAAuAIAAAAAAAADAAAALy8g",
+					"AQAAAAAAAAABAAAAzQIAAAAAAADNAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					88,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"nv_vi_s",
+								{
+									"count": 1,
+									"mode": "mode_visual",
+									"register": "\""
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "blockEnu"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "."
+								}
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"insert",
+								{
+									"characters": "m.get"
+								}
+							]
+						]
+					},
+					"EAAAAMUCAAAAAAAAxQIAAAAAAAAFAAAAbW9kZWzFAgAAAAAAAMYCAAAAAAAAAAAAAMYCAAAAAAAAxwIAAAAAAAAAAAAAxwIAAAAAAADIAgAAAAAAAAAAAADIAgAAAAAAAMkCAAAAAAAAAAAAAMkCAAAAAAAAygIAAAAAAAAAAAAAygIAAAAAAADLAgAAAAAAAAAAAADLAgAAAAAAAMwCAAAAAAAAAAAAAMwCAAAAAAAAzQIAAAAAAAAAAAAAzQIAAAAAAADOAgAAAAAAAAAAAADNAgAAAAAAAM0CAAAAAAAAAQAAAC7NAgAAAAAAAM4CAAAAAAAAAAAAAM4CAAAAAAAAzwIAAAAAAAAAAAAAzwIAAAAAAADQAgAAAAAAAAAAAADQAgAAAAAAANECAAAAAAAAAAAAANECAAAAAAAA0gIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAxQIAAAAAAADKAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					92,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"nv_vi_a",
+								{
+									"count": 1,
+									"mode": "mode_internal_normal",
+									"register": "\""
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "Mo"
+								}
+							],
+							[
+								"insert_completion",
+								{
+									"completion": "lsp_select_completion {\"index\":0,\"session_name\":\"jdtls\"}",
+									"format": "command",
+									"keep_prefix": true,
+									"must_insert": false,
+									"query_change_id":
+									[
+										52,
+										91,
+										1
+									],
+									"trigger": "getModel() : Model"
+								}
+							]
+						]
+					},
+					"BQAAANICAAAAAAAA0wIAAAAAAAAAAAAA0wIAAAAAAADUAgAAAAAAAAAAAADTAgAAAAAAANMCAAAAAAAAAQAAAG/PAgAAAAAAAM8CAAAAAAAABAAAAGdldE3PAgAAAAAAANkCAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA0QIAAAAAAADRAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					103,
+					1,
+					"nv_vi_s",
+					{
+						"count": 1,
+						"mode": "mode_visual",
+						"register": "\""
+					},
+					"AQAAALgCAAAAAAAAuAIAAAAAAAAEAAAAdGhpcw",
+					"AQAAAAAAAAABAAAAuAIAAAAAAAC8AgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					108,
+					1,
+					"nv_commentary",
+					{
+						"action": "cc",
+						"count": 1,
+						"mode": "mode_internal_normal",
+						"register": "\""
+					},
+					"AQAAAM4AAAAAAAAAzgAAAAAAAAADAAAALy8g",
+					"AQAAAAAAAAABAAAA6AAAAAAAAADoAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					117,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"left_delete",
+								null
+							],
+							[
+								"insert",
+								{
+									"characters": "Model"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " "
+								}
+							]
+						]
+					},
+					"BwAAALUCAAAAAAAAtQIAAAAAAAABAAAALrUCAAAAAAAAtgIAAAAAAAAAAAAAtgIAAAAAAAC3AgAAAAAAAAAAAAC3AgAAAAAAALgCAAAAAAAAAAAAALgCAAAAAAAAuQIAAAAAAAAAAAAAuQIAAAAAAAC6AgAAAAAAAAAAAAC6AgAAAAAAALsCAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAtgIAAAAAAAC2AgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					123,
+					1,
+					"nv_commentary",
+					{
+						"action": "cc",
+						"count": 1,
+						"mode": "mode_internal_normal",
+						"register": "\""
+					},
+					"AQAAAM4AAAAAAAAA0QAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA5gAAAAAAAADmAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					132,
+					1,
+					"nv_vi_dd",
+					{
+						"count": 1,
+						"mode": "mode_internal_normal",
+						"register": "\""
+					},
+					"AQAAALYCAAAAAAAAtgIAAAAAAAAmAAAACQlNb2RlbCBtb2RlbCA9IGJsb2NrRW51bS5nZXRNb2RlbCgpOwo",
+					"AQAAAAAAAAABAAAAyAIAAAAAAADIAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					134,
+					1,
+					"nv_vi_paste",
+					{
+						"before_cursor": false,
+						"count": 1,
+						"mode": "mode_internal_normal",
+						"register": "\""
+					},
+					"AQAAAMUCAAAAAAAA6wIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAtwIAAAAAAAC3AgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					144,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"nv_vi_big_a",
+								{
+									"count": 1,
+									"mode": "mode_internal_normal",
+									"register": "\""
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " //"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " Just"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " fo"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " "
+								}
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"insert",
+								{
+									"characters": "r"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " init"
+								}
+							]
+						]
+					},
+					"EwAAAOoCAAAAAAAA6wIAAAAAAAAAAAAA6wIAAAAAAADsAgAAAAAAAAAAAADsAgAAAAAAAO0CAAAAAAAAAAAAAO0CAAAAAAAA7gIAAAAAAAAAAAAA7gIAAAAAAADvAgAAAAAAAAAAAADvAgAAAAAAAPACAAAAAAAAAAAAAPACAAAAAAAA8QIAAAAAAAAAAAAA8QIAAAAAAADyAgAAAAAAAAAAAADyAgAAAAAAAPMCAAAAAAAAAAAAAPMCAAAAAAAA9AIAAAAAAAAAAAAA9AIAAAAAAAD1AgAAAAAAAAAAAAD1AgAAAAAAAPYCAAAAAAAAAAAAAPUCAAAAAAAA9QIAAAAAAAABAAAAIPUCAAAAAAAA9gIAAAAAAAAAAAAA9gIAAAAAAAD3AgAAAAAAAAAAAAD3AgAAAAAAAPgCAAAAAAAAAAAAAPgCAAAAAAAA+QIAAAAAAAAAAAAA+QIAAAAAAAD6AgAAAAAAAAAAAAD6AgAAAAAAAPsCAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAxwIAAAAAAADHAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					153,
+					1,
+					"paste",
+					null,
+					"AQAAAGsCAAAAAAAAjgIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAhgIAAAAAAACGAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					160,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"nv_vi_s",
+								{
+									"count": 1,
+									"mode": "mode_visual",
+									"register": "\""
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "id"
+								}
+							]
+						]
+					},
+					"AwAAAHICAAAAAAAAcgIAAAAAAAAEAAAAbmFtZXICAAAAAAAAcwIAAAAAAAAAAAAAcwIAAAAAAAB0AgAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAcgIAAAAAAAB2AgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					175,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"nv_vi_big_a",
+								{
+									"count": 1,
+									"mode": "mode_internal_normal",
+									"register": "\""
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "\nprivate"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " final"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " int"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": " id;"
+								}
+							]
+						]
+					},
+					"FwAAAHcAAAAAAAAAeAAAAAAAAAAAAAAAeAAAAAAAAAB5AAAAAAAAAAAAAAB5AAAAAAAAAHoAAAAAAAAAAAAAAHoAAAAAAAAAewAAAAAAAAAAAAAAewAAAAAAAAB8AAAAAAAAAAAAAAB8AAAAAAAAAH0AAAAAAAAAAAAAAH0AAAAAAAAAfgAAAAAAAAAAAAAAfgAAAAAAAAB/AAAAAAAAAAAAAAB/AAAAAAAAAIAAAAAAAAAAAAAAAIAAAAAAAAAAgQAAAAAAAAAAAAAAgQAAAAAAAACCAAAAAAAAAAAAAACCAAAAAAAAAIMAAAAAAAAAAAAAAIMAAAAAAAAAhAAAAAAAAAAAAAAAhAAAAAAAAACFAAAAAAAAAAAAAACFAAAAAAAAAIYAAAAAAAAAAAAAAIYAAAAAAAAAhwAAAAAAAAAAAAAAhwAAAAAAAACIAAAAAAAAAAAAAACIAAAAAAAAAIkAAAAAAAAAAAAAAIkAAAAAAAAAigAAAAAAAAAAAAAAigAAAAAAAACLAAAAAAAAAAAAAACLAAAAAAAAAIwAAAAAAAAAAAAAAIwAAAAAAAAAjQAAAAAAAAAAAAAAjQAAAAAAAACOAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAZQAAAAAAAABlAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					184,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"nv_vi_s",
+								{
+									"count": 1,
+									"mode": "mode_visual",
+									"register": "\""
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "getI"
+								}
+							],
+							[
+								"insert_completion",
+								{
+									"completion": "lsp_select_completion {\"index\":0,\"session_name\":\"jdtls\"}",
+									"format": "command",
+									"keep_prefix": true,
+									"must_insert": false,
+									"query_change_id":
+									[
+										103,
+										183,
+										3
+									],
+									"trigger": "getId() : int"
+								}
+							]
+						]
+					},
+					"CAAAAJgCAAAAAAAAmAIAAAAAAAAHAAAAZ2V0TmFtZZgCAAAAAAAAmQIAAAAAAAAAAAAAmQIAAAAAAACaAgAAAAAAAAAAAACaAgAAAAAAAJsCAAAAAAAAAAAAAJsCAAAAAAAAnAIAAAAAAAAAAAAAmwIAAAAAAACbAgAAAAAAAAEAAABJmAIAAAAAAACYAgAAAAAAAAMAAABnZXSYAgAAAAAAAJ0CAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAmAIAAAAAAACfAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					196,
+					1,
+					"paste",
+					null,
+					"AQAAAIICAAAAAAAAoQIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAlQIAAAAAAACVAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					201,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"nv_vi_s",
+								{
+									"count": 1,
+									"mode": "mode_visual",
+									"register": "\""
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "enum"
+								}
+							]
+						]
+					},
+					"BQAAAKgCAAAAAAAAqAIAAAAAAAACAAAAaWSoAgAAAAAAAKkCAAAAAAAAAAAAAKkCAAAAAAAAqgIAAAAAAAAAAAAAqgIAAAAAAACrAgAAAAAAAAAAAACrAgAAAAAAAKwCAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAqAIAAAAAAACqAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					204,
+					1,
+					"nv_vi_c",
+					{
+						"count": 1,
+						"mode": "mode_internal_normal",
+						"motion":
+						{
+							"motion": "nv_vi_select_text_object",
+							"motion_args":
+							{
+								"count": 1,
+								"inclusive": false,
+								"mode": "mode_internal_normal",
+								"text_object": "w"
+							}
+						},
+						"register": "\""
+					},
+					"AQAAALkCAAAAAAAAuQIAAAAAAAAFAAAAZ2V0SWQ",
+					"AQAAAAAAAAABAAAAuQIAAAAAAAC5AgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					208,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							]
+						]
+					},
+					"AwAAALoCAAAAAAAAugIAAAAAAAABAAAAKbkCAAAAAAAAuQIAAAAAAAABAAAAKLgCAAAAAAAAuAIAAAAAAAABAAAALg",
+					"AQAAAAAAAAABAAAAuwIAAAAAAAC7AgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					219,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"insert",
+								{
+									"characters": "bo"
+								}
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"insert",
+								{
+									"characters": "lockEnum"
+								}
+							]
+						]
+					},
+					"DwAAAKsCAAAAAAAAqwIAAAAAAAABAAAAbaoCAAAAAAAAqgIAAAAAAAABAAAAdakCAAAAAAAAqQIAAAAAAAABAAAAbqgCAAAAAAAAqAIAAAAAAAABAAAAZagCAAAAAAAAqQIAAAAAAAAAAAAAqQIAAAAAAACqAgAAAAAAAAAAAACpAgAAAAAAAKkCAAAAAAAAAQAAAG+pAgAAAAAAAKoCAAAAAAAAAAAAAKoCAAAAAAAAqwIAAAAAAAAAAAAAqwIAAAAAAACsAgAAAAAAAAAAAACsAgAAAAAAAK0CAAAAAAAAAAAAAK0CAAAAAAAArgIAAAAAAAAAAAAArgIAAAAAAACvAgAAAAAAAAAAAACvAgAAAAAAALACAAAAAAAAAAAAALACAAAAAAAAsQIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAArAIAAAAAAACsAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					226,
+					1,
+					"paste",
+					null,
+					"AQAAAHgAAAAAAAAAjwAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAiwAAAAAAAACLAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					231,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"nv_vi_s",
+								{
+									"count": 1,
+									"mode": "mode_visual",
+									"register": "\""
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "BlockEnum"
+								}
+							]
+						]
+					},
+					"CgAAAJ4AAAAAAAAAngAAAAAAAAADAAAAaW50ngAAAAAAAACfAAAAAAAAAAAAAACfAAAAAAAAAKAAAAAAAAAAAAAAAKAAAAAAAAAAoQAAAAAAAAAAAAAAoQAAAAAAAACiAAAAAAAAAAAAAACiAAAAAAAAAKMAAAAAAAAAAAAAAKMAAAAAAAAApAAAAAAAAAAAAAAApAAAAAAAAAClAAAAAAAAAAAAAAClAAAAAAAAAKYAAAAAAAAAAAAAAKYAAAAAAAAApwAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAngAAAAAAAAChAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					236,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"nv_vi_c",
+								{
+									"count": 1,
+									"mode": "mode_internal_normal",
+									"motion":
+									{
+										"motion": "nv_vi_select_text_object",
+										"motion_args":
+										{
+											"count": 1,
+											"inclusive": false,
+											"mode": "mode_internal_normal",
+											"text_object": "w"
+										}
+									},
+									"register": "\""
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "blockEnu"
+								}
+							],
+							[
+								"insert_completion",
+								{
+									"completion": "blockEnum",
+									"format": "text",
+									"keep_prefix": false,
+									"must_insert": false,
+									"trigger": "blockEnum"
+								}
+							]
+						]
+					},
+					"CwAAAKgAAAAAAAAAqAAAAAAAAAACAAAAaWSoAAAAAAAAAKkAAAAAAAAAAAAAAKkAAAAAAAAAqgAAAAAAAAAAAAAAqgAAAAAAAACrAAAAAAAAAAAAAACrAAAAAAAAAKwAAAAAAAAAAAAAAKwAAAAAAAAArQAAAAAAAAAAAAAArQAAAAAAAACuAAAAAAAAAAAAAACuAAAAAAAAAK8AAAAAAAAAAAAAAK8AAAAAAAAAsAAAAAAAAAAAAAAAqAAAAAAAAACoAAAAAAAAAAgAAABibG9ja0VudagAAAAAAAAAsQAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAqAAAAAAAAACoAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					252,
+					1,
+					"insert",
+					{
+						"characters": "s"
+					},
+					"AQAAAKMAAAAAAAAApAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAowAAAAAAAACjAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					273,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"nv_vi_big_a",
+								{
+									"count": 1,
+									"mode": "mode_internal_normal",
+									"register": "\""
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "\n\n"
+								}
+							]
+						]
+					},
+					"BQAAALsLAAAAAAAAvAsAAAAAAAAAAAAAvAsAAAAAAAC9CwAAAAAAAAAAAAC9CwAAAAAAAL4LAAAAAAAAAAAAAL4LAAAAAAAAvwsAAAAAAAAAAAAAvAsAAAAAAAC8CwAAAAAAAAEAAAAJ",
+					"AQAAAAAAAAABAAAAugsAAAAAAAC6CwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					281,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"reindent",
+								null
+							],
+							[
+								"insert",
+								{
+									"characters": "get"
+								}
+							],
+							[
+								"insert_completion",
+								{
+									"completion": "lsp_select_completion {\"index\":396,\"session_name\":\"jdtls\"}",
+									"format": "command",
+									"keep_prefix": true,
+									"must_insert": false,
+									"query_change_id":
+									[
+										160,
+										278,
+										2
+									],
+									"trigger": "getId() : int"
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "\t"
+								}
+							]
+						]
+					},
+					"CgAAALwLAAAAAAAAvQsAAAAAAAAAAAAAvQsAAAAAAAC+CwAAAAAAAAAAAAC/CwAAAAAAAL8LAAAAAAAAAQAAAAm+CwAAAAAAAL8LAAAAAAAAAAAAAL8LAAAAAAAAwAsAAAAAAAAAAAAAvwsAAAAAAAC/CwAAAAAAAAEAAAB0vgsAAAAAAAC+CwAAAAAAAAEAAABlvQsAAAAAAAC9CwAAAAAAAAEAAABnvQsAAAAAAADkCwAAAAAAAAAAAADkCwAAAAAAAOULAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAvAsAAAAAAAC8CwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					284,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"nv_vi_a",
+								{
+									"count": 1,
+									"mode": "mode_internal_normal",
+									"register": "\""
+								}
+							],
+							[
+								"left_delete",
+								null
+							]
+						]
+					},
+					"AQAAAOQLAAAAAAAA5AsAAAAAAAABAAAACQ",
+					"AQAAAAAAAAABAAAA5AsAAAAAAADkCwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					290,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"delete_word",
+								{
+									"forward": false
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "\t\t"
+								}
+							]
+						]
+					},
+					"AwAAANILAAAAAAAA0gsAAAAAAAAFAAAACSAgICDSCwAAAAAAANMLAAAAAAAAAAAAANMLAAAAAAAA1AsAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA1wsAAAAAAADXCwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					308,
+					1,
+					"nv_commentary",
+					{
+						"action": "cc",
+						"count": 1,
+						"mode": "mode_internal_normal",
+						"register": "\""
+					},
+					"AQAAAMgCAAAAAAAAywIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA0AIAAAAAAADQAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					314,
+					1,
+					"nv_commentary",
+					{
+						"action": "cc",
+						"count": 1,
+						"mode": "mode_internal_normal",
+						"register": "\""
+					},
+					"AQAAAJAAAAAAAAAAkwAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAsAAAAAAAAACwAAAAAAAAAAAAAAAAAPC/"
+				]
+			]
+		},
+		{
+			"contents": "package com.magenta.game.block;\n\nimport com.magenta.game.block.models.Cactus;\nimport com.magenta.game.block.models.Cube;\nimport com.magenta.game.block.models.Plant;\n\npublic enum BlocksEnum {\n\tAIR(0, null,\n\t\tnull, null),\n\tNOTFOUND(1, \"Not Found\", // When query for a texture and not found, the default texture is the first added (aka this)\n\t\tnew String[] { \"notfound\" }, new Cube()),\n\t\n\tCOBBLESTONE(2, \"Cobblestone\",\n\t\tnew String[] { \"cobblestone\" }, new Cube()),\n\tGRASS(3, \"Grass\",\n\t\tnew String[] { \"grass\", \"dirt\", \"grass_side\" }, new Cube()),\t\n\tFULLGRASS(4, \"Fullgrass\",\n\t\tnew String[] { \"grass\" }, new Cube()),\t\n\tDIRT(5, \"Dirt\",\n\t\tnew String[] { \"dirt\" }, new Cube()),\t\n\tSTONE(6, \"Stone\",\n\t\tnew String[] { \"stone\" }, new Cube()),\t\n\tSAND(7, \"Sand\",\n\t\tnew String[] { \"sand\" }, new Cube()),\t\n\tPLANKS(8, \"Planks\",\n\t\tnew String[] { \"planks\" }, new Cube()),\t\n\tLOG(9, \"Log\",\n\t\tnew String[] { \"log_top\", \"log_side\" }, new Cube()),\t\n\tGLASS(10, \"Glass\",\n\t\tnew String[] { \"glass\" }, new Cube()),\n\tCACTUS(11, \"Cactus\",\n\t\tnew String[] { \"cactus_top\", \"cactus_bottom\", \"cactus_side\" }, new Cactus()),\n\n\t// Plants\n\tDAISY(12, \"Daisy\",\n\t\tnew String[] { \"daisy\" }, new Plant()),\t\n\tROSE(13, \"Rose\",\n\t\tnew String[] { \"rose\" }, new Plant()),\n\tDEAD_BUSH(14, \"Dead Bush\",\n\t\tnew String[] { \"dead_bush\" }, new Plant()),\t\n\tBROWN_MUSHROOM(15, \"Brown Mushroom\",\n\t\tnew String[] { \"brown_mushroom\" }, new Plant()),\n\tRED_MUSHROOM(16, \"Red Mushroom\",\n\t\tnew String[] { \"red_mushroom\" }, new Plant());\n\n\tprivate final int id;\n\tprivate String name;\n\tprivate String[] textures;\n\tprivate Model model;\n\n\n\tBlocksEnum(int id, String name, String[] textures, Model model) {\n\t\tthis.id = id;\n\t\tthis.name = name;\n\t\tthis.textures = textures;\n\t\tthis.model = model;\n\t}\n\n\tpublic int getId() {\n\t\treturn id;\n\t}\n\t\n\tpublic String getName() {\n\t\treturn name;\n\t}\n\n\tpublic String[] getTextures() {\n\t\treturn textures;\n\t}\n\n\tpublic Model getModel() {\n\t\treturn model;\n\t}\n\n\tpublic static BlocksEnum getBlockById(int id) {\n\t\treturn BlocksEnum.values()[id];\n\t}\n}\n",
+			"file": "src/main/java/com/magenta/game/block/BlocksEnum.java",
+			"file_size": 2003,
+			"file_write_time": 133419617326831642,
+			"settings":
+			{
+				"buffer_size": 2003,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			},
+			"undo_stack":
+			[
+				[
+					13,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"insert",
+								{
+									"characters": "\n\n"
+								}
+							],
+							[
+								"paste",
+								null
+							]
+						]
+					},
+					"BgAAANAHAAAAAAAA0QcAAAAAAAAAAAAA0QcAAAAAAADSBwAAAAAAAAAAAADSBwAAAAAAANMHAAAAAAAAAAAAANMHAAAAAAAA1AcAAAAAAAAAAAAA0QcAAAAAAADRBwAAAAAAAAEAAAAJ0wcAAAAAAAAoCAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA0AcAAAAAAADQBwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					18,
+					1,
+					"left_delete",
+					null,
+					"AQAAANMHAAAAAAAA0wcAAAAAAAABAAAACQ",
+					"AQAAAAAAAAABAAAA1AcAAAAAAADUBwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					26,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"nv_vi_s",
+								{
+									"count": 1,
+									"mode": "mode_visual",
+									"register": "\""
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "getBlcok"
+								}
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"insert",
+								{
+									"characters": "ockByName"
+								}
+							]
+						]
+					},
+					"FQAAAOwHAAAAAAAA7AcAAAAAAAAMAAAAZ2V0QmxvY2tCeUlk7AcAAAAAAADtBwAAAAAAAAAAAADtBwAAAAAAAO4HAAAAAAAAAAAAAO4HAAAAAAAA7wcAAAAAAAAAAAAA7wcAAAAAAADwBwAAAAAAAAAAAADwBwAAAAAAAPEHAAAAAAAAAAAAAPEHAAAAAAAA8gcAAAAAAAAAAAAA8gcAAAAAAADzBwAAAAAAAAAAAADzBwAAAAAAAPQHAAAAAAAAAAAAAPMHAAAAAAAA8wcAAAAAAAABAAAAa/IHAAAAAAAA8gcAAAAAAAABAAAAb/EHAAAAAAAA8QcAAAAAAAABAAAAY/EHAAAAAAAA8gcAAAAAAAAAAAAA8gcAAAAAAADzBwAAAAAAAAAAAADzBwAAAAAAAPQHAAAAAAAAAAAAAPQHAAAAAAAA9QcAAAAAAAAAAAAA9QcAAAAAAAD2BwAAAAAAAAAAAAD2BwAAAAAAAPcHAAAAAAAAAAAAAPcHAAAAAAAA+AcAAAAAAAAAAAAA+AcAAAAAAAD5BwAAAAAAAAAAAAD5BwAAAAAAAPoHAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA7AcAAAAAAAD4BwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					31,
+					1,
+					"nv_vi_big_d",
+					{
+						"count": 1,
+						"mode": "mode_visual",
+						"register": "\""
+					},
+					"AQAAAAUIAAAAAAAABQgAAAAAAAAlAAAACQlyZXR1cm4gQmxvY2tzRW51bS52YWx1ZXMoKVtpZF07Cgl9Cg",
+					"AQAAAAAAAAABAAAAKQgAAAAAAAAGCAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					33,
+					1,
+					"nv_vi_dd",
+					{
+						"count": 1,
+						"mode": "mode_internal_normal",
+						"register": "\""
+					},
+					"AQAAANIHAAAAAAAA0gcAAAAAAAAzAAAACXB1YmxpYyBzdGF0aWMgQmxvY2tzRW51bSBnZXRCbG9ja0J5TmFtZShpbnQgaWQpIHsK",
+					"AQAAAAAAAAABAAAA0gcAAAAAAADSBwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					35,
+					1,
+					"nv_vi_dd",
+					{
+						"count": 1,
+						"mode": "mode_internal_normal",
+						"register": "\""
+					},
+					"AQAAANEHAAAAAAAA0QcAAAAAAAABAAAACg",
+					"AQAAAAAAAAABAAAA0QcAAAAAAADRBwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					59,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"nv_vi_a",
+								{
+									"count": 1,
+									"mode": "mode_internal_normal",
+									"register": "\""
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": ".is"
+								}
+							],
+							[
+								"delete_word",
+								{
+									"forward": false
+								}
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"insert",
+								{
+									"characters": ".set"
+								}
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							]
+						]
+					},
+					"DQAAANkDAAAAAAAA2gMAAAAAAAAAAAAA2gMAAAAAAADbAwAAAAAAAAAAAADbAwAAAAAAANwDAAAAAAAAAAAAANoDAAAAAAAA2gMAAAAAAAACAAAAaXPZAwAAAAAAANkDAAAAAAAAAQAAAC7ZAwAAAAAAANoDAAAAAAAAAAAAANoDAAAAAAAA2wMAAAAAAAAAAAAA2wMAAAAAAADcAwAAAAAAAAAAAADcAwAAAAAAAN0DAAAAAAAAAAAAANwDAAAAAAAA3AMAAAAAAAABAAAAdNsDAAAAAAAA2wMAAAAAAAABAAAAZdoDAAAAAAAA2gMAAAAAAAABAAAAc9kDAAAAAAAA2QMAAAAAAAABAAAALg",
+					"AQAAAAAAAAABAAAA2AMAAAAAAADYAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					68,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"nv_vi_big_a",
+								{
+									"count": 1,
+									"mode": "mode_internal_normal",
+									"register": "\""
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "\n\n"
+								}
+							],
+							[
+								"delete_word",
+								{
+									"forward": false
+								}
+							],
+							[
+								"delete_word",
+								{
+									"forward": false
+								}
+							],
+							[
+								"left_delete",
+								null
+							]
+						]
+					},
+					"CAAAALkGAAAAAAAAugYAAAAAAAAAAAAAugYAAAAAAAC8BgAAAAAAAAAAAAC8BgAAAAAAAL0GAAAAAAAAAAAAAL0GAAAAAAAAvwYAAAAAAAAAAAAAugYAAAAAAAC6BgAAAAAAAAIAAAAJCbsGAAAAAAAAuwYAAAAAAAACAAAACQm6BgAAAAAAALoGAAAAAAAAAQAAAAq5BgAAAAAAALkGAAAAAAAAAQAAAAo",
+					"AQAAAAAAAAABAAAAuAYAAAAAAAC4BgAAAAAAAAAAAAAAAPC/"
+				]
+			]
+		},
+		{
+			"file": "src/main/java/com/magenta/game/World.java",
+			"settings":
+			{
+				"buffer_size": 8281,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			},
+			"undo_stack":
+			[
+				[
+					27,
+					1,
+					"sequence",
+					{
+						"commands":
+						[
+							[
+								"nv_vi_s",
+								{
+									"count": 1,
+									"mode": "mode_visual",
+									"register": "\""
+								}
+							],
+							[
+								"insert",
+								{
+									"characters": "bo"
+								}
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"insert",
+								{
+									"characters": "lcok"
+								}
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"left_delete",
+								null
+							],
+							[
+								"insert",
+								{
+									"characters": "ockEn"
+								}
+							],
+							[
+								"insert_completion",
+								{
+									"completion": "lsp_select_completion {\"index\":0,\"session_name\":\"jdtls\"}",
+									"format": "command",
+									"keep_prefix": true,
+									"must_insert": false,
+									"query_change_id":
+									[
+										7,
+										20,
+										1
+									],
+									"trigger": "blockEnum : BlocksEnum"
+								}
+							]
+						]
+					},
+					"IAAAAC4EAAAAAAAALgQAAAAAAABCAAAAYmxvY2tFbnVtLmdldE5hbWUoKSwgYmxvY2tFbnVtLmdldFRleHR1cmVzKCksIGJsb2NrRW51bS5nZXRNb2RlbCgpLgQAAAAAAAAvBAAAAAAAAAAAAAAvBAAAAAAAADAEAAAAAAAAAAAAAC8EAAAAAAAALwQAAAAAAAABAAAAby8EAAAAAAAAMAQAAAAAAAAAAAAAMAQAAAAAAAAxBAAAAAAAAAAAAAAxBAAAAAAAADIEAAAAAAAAAAAAADIEAAAAAAAAMwQAAAAAAAAAAAAAMgQAAAAAAAAyBAAAAAAAAAEAAABrMQQAAAAAAAAxBAAAAAAAAAEAAABvMAQAAAAAAAAwBAAAAAAAAAEAAABjMAQAAAAAAAAxBAAAAAAAAAAAAAAxBAAAAAAAADIEAAAAAAAAAAAAADIEAAAAAAAAMwQAAAAAAAAAAAAAMwQAAAAAAAA0BAAAAAAAAAAAAAA0BAAAAAAAADUEAAAAAAAAAAAAADQEAAAAAAAANAQAAAAAAAABAAAAbjMEAAAAAAAAMwQAAAAAAAABAAAARTIEAAAAAAAAMgQAAAAAAAABAAAAazEEAAAAAAAAMQQAAAAAAAABAAAAYzAEAAAAAAAAMAQAAAAAAAABAAAAbzAEAAAAAAAAMQQAAAAAAAAAAAAAMQQAAAAAAAAyBAAAAAAAAAAAAAAyBAAAAAAAADMEAAAAAAAAAAAAADIEAAAAAAAAMgQAAAAAAAABAAAAazEEAAAAAAAAMQQAAAAAAAABAAAAbzAEAAAAAAAAMAQAAAAAAAABAAAAYy8EAAAAAAAALwQAAAAAAAABAAAAbC8EAAAAAAAAMAQAAAAAAAAAAAAALwQAAAAAAAAvBAAAAAAAAAEAAABvLgQAAAAAAAAuBAAAAAAAAAEAAABiLgQAAAAAAAA3BAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAcAQAAAAAAAAuBAAAAAAAAAAAAAAAAPC/"
+				]
+			]
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/C++/C Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C Single File.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/C++/C Single File.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/C++/C++ Single File.sublime-build",
+				"Run"
+			]
+		],
+		[
+			[
+				[
+					"Packages/Java/Ant.sublime-build",
+					""
+				],
+				[
+					"Packages/Java/JavaC.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/Java/JavaC.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"en",
+				"LSP: Enable Language Server in Project"
+			],
+			[
+				"enable",
+				"LSP: Enable Language Server in Project"
+			],
+			[
+				"lsp dis",
+				"LSP: Disable Language Server in Project"
+			],
+			[
+				"eanble",
+				"LSP: Enable Language Server in Project"
+			],
+			[
+				"disal",
+				"LSP: Disable Language Server in Project"
+			],
+			[
+				"disable",
+				"LSP: Disable Language Server in Project"
+			],
+			[
+				"enal",
+				"LSP: Enable Language Server in Project"
+			],
+			[
+				"enabe",
+				"LSP: Enable Language Server Globally"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"rmeove",
+				"BracketHighlighter: Remove Brackets"
+			],
+			[
+				"jtdls",
+				"Preferences: LSP-jdtls Settings"
+			],
+			[
+				"enab",
+				"LSP: Enable Language Server in Project"
+			],
+			[
+				"lsp di",
+				"LSP: Disable Language Server in Project"
+			],
+			[
+				"liverela",
+				"LiveReload: Enable/disable plug-ins"
+			],
+			[
+				"lsp en",
+				"LSP: Enable Language Server in Project"
+			],
+			[
+				"lsp: enabl",
+				"LSP: Enable Language Server in Project"
+			],
+			[
+				"lsp: ",
+				"LSP: Toggle Log Panel"
+			],
+			[
+				"lsp ena",
+				"LSP: Enable Language Server in Project"
+			],
+			[
+				"lsp-jt",
+				"LSP-jdtls: Clear data"
+			],
+			[
+				"enabl",
+				"LSP: Enable Language Server in Project"
+			],
+			[
+				"lsp",
+				"LSP: Disable Language Server in Project"
+			],
+			[
+				"d",
+				"LSP: Disable Language Server in Project"
+			],
+			[
+				"disble",
+				"LSP: Disable Language Server in Project"
+			],
+			[
+				"lsp disa",
+				"LSP: Disable Language Server in Project"
+			],
+			[
+				"lsp enab",
+				"LSP: Enable Language Server in Project"
+			],
+			[
+				"git",
+				"Git: Push"
+			],
+			[
+				"build",
+				"LSP-jdtls: Build Workspace"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"glsl",
+				"Set Syntax: GLSL"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"jtd",
+				"LSP-jdtls: Clear data"
+			],
+			[
+				"package",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"jtdsl",
+				"LSP-jdtls: Build Workspace"
+			],
+			[
+				"markdown",
+				"Set Syntax: Markdown"
+			],
+			[
+				"color",
+				"UI: Select Color Scheme"
+			],
+			[
+				"jdtls",
+				"Preferences: LSP-jdtls Settings"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"brow",
+				"Preferences: Browse Packages"
+			],
+			[
+				"reove",
+				"BracketHighlighter: Remove Brackets"
+			],
+			[
+				"jd",
+				"Preferences: LSP-jdtls Settings"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"c++",
+				"Set Syntax: C++"
+			],
+			[
+				"todo",
+				"Set Syntax: Todo"
+			],
+			[
+				"theme",
+				"UI: Select Theme"
+			],
+			[
+				"thee",
+				"Material Theme: Extras"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"temrinus open",
+				"Terminus: Open Default Shell in Tab (View)"
+			],
+			[
+				"terminus",
+				"Terminus: Open Default Shell in Panel"
+			],
+			[
+				"line",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"isntal",
+				"Package Control: Install Package"
+			],
+			[
+				"c",
+				"Set Syntax: C++"
+			],
+			[
+				"termi",
+				"Preferences: Terminal Key Bindings"
+			],
+			[
+				"terminus: op",
+				"Terminus: Open Default Shell in Tab (View)"
+			],
+			[
+				"synteax",
+				"Set Syntax: TeX"
+			],
+			[
+				"syntext",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"syntex",
+				"Set Syntax: TeX"
+			],
+			[
+				"terminal",
+				"Preferences: Terminal Key Bindings"
+			],
+			[
+				"gitsta",
+				"Git: Status"
+			],
+			[
+				"stat",
+				"Git: Status"
+			],
+			[
+				"status",
+				"Git: Status"
+			],
+			[
+				"colo",
+				"UI: Select Color Scheme"
+			],
+			[
+				"comm",
+				"Git: Commit history"
+			],
+			[
+				"ejs",
+				"Set Syntax: EJS (<% %>)"
+			],
+			[
+				"colo\t",
+				"UI: Select Color Scheme"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"LiveReload: Enable/disable plugins",
+				"LiveReload: Enable/disable plug-ins"
+			],
+			[
+				"syntax ejs",
+				"Set Syntax: EJS (<% %>)"
+			],
+			[
+				"lsp:",
+				"LSP: Enable Language Server in Project"
+			],
+			[
+				"REMOVE",
+				"Package Control: Remove Package"
+			],
+			[
+				"livereload",
+				"Snippet: Create new LiveReload plugin"
+			],
+			[
+				"lisp",
+				"Set Syntax: Lisp"
+			],
+			[
+				"htm",
+				"Set Syntax: HTML (Erlang)"
+			],
+			[
+				"javas",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"INSTA",
+				"Package Control: Install Package"
+			],
+			[
+				"set syntax:er",
+				"Set Syntax: HTML (Erlang)"
+			],
+			[
+				"rust",
+				"Set Syntax: Rust"
+			],
+			[
+				"set syntax c",
+				"Set Syntax: C"
+			],
+			[
+				"clangd",
+				"LSP-clangd: Switch to Source/Header"
+			],
+			[
+				"coffe",
+				"Set Syntax: CoffeScript"
+			],
+			[
+				"forma",
+				"LSP: Format File"
+			],
+			[
+				"wor",
+				"Word Wrap: Toggle"
+			],
+			[
+				"word",
+				"Word Wrap: Toggle"
+			],
+			[
+				"js",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"syntax",
+				"Set Syntax: Python"
+			],
+			[
+				"pyrith",
+				"Preferences: LSP-pyright Settings"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 124.0,
+		"history":
+		[
+			"ls"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/vako/Documents/java/Mynecraft",
+		"/home/vako/Documents/java/Mynecraft/src",
+		"/home/vako/Documents/java/Mynecraft/src/main",
+		"/home/vako/Documents/java/Mynecraft/src/main/java",
+		"/home/vako/Documents/java/Mynecraft/src/main/java/com",
+		"/home/vako/Documents/java/Mynecraft/src/main/java/com/magenta",
+		"/home/vako/Documents/java/Mynecraft/src/main/java/com/magenta/engine",
+		"/home/vako/Documents/java/Mynecraft/src/main/java/com/magenta/game",
+		"/home/vako/Documents/java/Mynecraft/src/main/java/com/magenta/main",
+		"/home/vako/Documents/java/Mynecraft/src/main/java/com/magenta/render",
+		"/home/vako/Documents/java/Mynecraft/src/main/java/com/magenta/render/mesh"
+	],
+	"file_history":
+	[
+		"/home/vako/Documents/java/Mynecraft/settings.gradle",
+		"/home/vako/Documents/java/lasdif/src/main/java/com/magenta/engine/HitRay.java",
+		"/home/vako/Documents/java/lasdif/src/main/java/com/magenta/game/block/BlocksEnum.java",
+		"/home/vako/Documents/java/lasdif/src/main/java/com/magenta/game/block/BlockType.java",
+		"/home/vako/Documents/java/lasdif/src/main/java/com/magenta/main/Renderer.java",
+		"/home/vako/Documents/java/lasdif/src/main/java/com/magenta/main/Game.java",
+		"/home/vako/Documents/java/lasdif/src/main/java/com/magenta/engine/KeyboardInput.java",
+		"/home/vako/Documents/java/lasdif/src/main/java/com/magenta/game/World.java",
+		"/home/vako/Documents/java/lasdif/src/main/java/com/magenta/game/Chunk.java",
+		"/home/vako/Downloads/data-structure.md",
+		"/home/vako/Documents/java/lasdif/src/main/java/com/magenta/game/block/models/Cube.java",
+		"/home/vako/Documents/java/lasdif/src/main/java/com/magenta/game/block/models/Plant.java",
+		"/home/vako/Documents/java/lasdif/src/main/java/com/magenta/game/block/models/Cactus.java",
+		"/home/vako/Documents/cpp/opengl/pyramid/main.cpp",
+		"/home/vako/Documents/cs50/week6/world-cup/answers.txt",
+		"/home/vako/Documents/cs50/week6/world-cup/tournament.py",
+		"/home/vako/Documents/cs50/week6/sentimental-readability/readability.py",
+		"/home/vako/Documents/cs50/week6/sentimental-cash/cash.py",
+		"/home/vako/Documents/java/lasdif/README.md",
+		"/home/vako/Documents/java/lasdif/src/main/java/com/magenta/engine/NoiseGenerator.java",
+		"/home/vako/Documents/cs50/week6/sentimental-mario-less/mario.py",
+		"/home/vako/Documents/java/lasdif/src/main/java/com/magenta/render/TextureManager.java",
+		"/home/vako/Documents/java/lasdif/src/main/resources/shaders/fragment.glsl",
+		"/home/vako/Documents/java/lasdif/src/main/java/com/magenta/game/block/Model.java",
+		"/home/vako/Documents/java/lasdif/src/main/java/com/magenta/game/block/models/plant.py",
+		"/home/vako/Documents/java/lasdif/src/main/java/com/magenta/game/block/models/cactus.py",
+		"/home/vako/Documents/java/lasdif/src/main/java/com/magenta/game/block/models/cube.py",
+		"/home/vako/Documents/java/lasdif/src/main/java/com/magenta/game/block/models/Models.java",
+		"/home/vako/Documents/java/lasdif/src/main/java/com/magenta/game/block/models/IModel.java",
+		"/home/vako/Documents/java/lasdif/src/main/java/com/magenta/engine/Camera.java",
+		"/home/vako/Documents/java/lasdif/src/main/java/com/magenta/main/Engine.java",
+		"/home/vako/Documents/java/lasdif/src/main/java/com/magenta/engine/IGameLogic.java",
+		"/home/vako/Documents/java/lasdif/src/main/java/com/magenta/engine/Window.java",
+		"/home/vako/Documents/java/lasdif/src/main/java/com/magenta/engine/MouseInput.java",
+		"/home/vako/Documents/java/lasdif/src/main/java/com/magenta/game/backup",
+		"/home/vako/Documents/java/lasdif/src/main/java/com/magenta/engine/BlocksEnum.java",
+		"/home/vako/Documents/java/lasdif/src/main/java/com/magenta/game/BlockType.java",
+		"/home/vako/Documents/java/Mynecraft/Chunks/src/main/java/com/magenta/game/Chunk.java",
+		"/home/vako/Documents/java/lasdif/src/main/java/com/magenta/render/ShaderProgram.java",
+		"/home/vako/Documents/java/lasdif/src/main/java/com/magenta/engine/FontRender.java",
+		"/home/vako/Documents/java/lasdif/src/main/java/com/magenta/game/Subchunk.java",
+		"/home/vako/Documents/java/testes/src/main/java/com/magenta/main/Main.java",
+		"/home/vako/Documents/java/testes/src/main/java/com/magenta/main/BitmapFont.java",
+		"/home/vako/Documents/java/testes/src/main/java/com/magenta/main/FontDemo.java",
+		"/home/vako/Documents/java/testes/src/main/java/com/magenta/main/FontLoader.java",
+		"/home/vako/Documents/java/lasdif/src/main/java/com/magenta/game/block/BlockManager.java",
+		"/home/vako/Documents/java/lasdif/src/main/java/com/magenta/engine/FontMetrics.java",
+		"/home/vako/Documents/java/lasdif/src/main/java/com/magenta/engine/font/Font.java",
+		"/home/vako/Documents/java/lasdif/src/main/java/com/magenta/engine/Font.java",
+		"/home/vako/Documents/java/lasdif/src/main/java/com/magenta/render/mesh/MeshLoader.java",
+		"/home/vako/Documents/java/Mynecraft/Moviment-SpinningCube/src/main/java/com/magenta/game/block/BlockManager.java",
+		"/home/vako/Documents/java/Mynecraft/Moviment-SpinningCube/src/main/java/com/magenta/main/Renderer.java",
+		"/home/vako/Documents/java/lasdif/src/main/java/com/magenta/render/MatrixDraw.java",
+		"/home/vako/Documents/java/lasdif/src/main/java/com/magenta/game/block/Block.java",
+		"/home/vako/Documents/java/lasdif/src/main/java/com/magenta/render/mesh/Mesh.java",
+		"/home/vako/Documents/java/lasdif/src/main/java/com/magenta/engine/Timer.java",
+		"/home/vako/Documents/java/lasdif/src/main/java/com/magenta/main/Main.java",
+		"/home/vako/Documents/java/lasdif/src/main/resources/shaders/old_frag.glsl",
+		"/home/vako/Documents/java/lasdif/src/main/java/com/magenta/render/texture/TextureManager.java",
+		"/home/vako/Documents/java/lasdif/src/main/java/com/magenta/render/shader/ShaderProgram.java",
+		"/home/vako/Documents/java/lasdif/src/main/java/com/magenta/engine/input/MouseInput.java",
+		"/home/vako/Documents/cpp/opengl/3d/camera.cpp",
+		"/home/vako/Documents/cpp/opengl/3d/shaders/default.frag",
+		"/home/vako/Documents/cpp/opengl/3d/shaders/default.vert",
+		"/home/vako/Documents/java/lasdif/src/main/resources/shaders/vertex.glsl",
+		"/home/vako/Documents/java/lasdif/bin/main/shaders/vertex.glsl",
+		"/home/vako/Documents/java/lasdif/bin/main/shaders/fragment.glsl",
+		"/home/vako/Documents/java/lasdif/src/main/java/com/magenta/main/Boot.jav",
+		"/home/vako/Documents/java/Mynecraft/Spinning-Cube-With-Textures/src/main/java/com/magenta/main/Boot.java",
+		"/home/vako/Documents/java/Mynecraft/Spinning-Cube-With-Textures/src/main/java/com/magenta/main/Camera.java",
+		"/home/vako/Documents/java/lasdif/src/main/java/com/magenta/engine/Engine.javaa",
+		"/home/vako/Documents/java/2d-game/gamelearnings/src/main/Game.java",
+		"/home/vako/Documents/java/lasdif/src/main/java/com/magenta/main/Boot.java",
+		"/home/vako/Documents/java/gamelearnings/src/main/Game.java",
+		"/home/vako/Documents/java/lasdif/src/main/java/com/magenta/main/MouseInputs.java",
+		"/home/vako/Documents/java/lasdif/src/main/java/com/magenta/engine/inputs/MouseInput.java",
+		"/home/vako/Documents/java/lasdif/src/main/java/com/magenta/main/Camera.java",
+		"/home/vako/Documents/java/lasdif/src/main/java/com/magenta/main/Window.java",
+		"/home/vako/Documents/java/lasdif/src/main/java/com/magenta/inputs/MouseInputs.java",
+		"/home/vako/Documents/cpp/opengl/3d/main.cpp",
+		"/home/vako/Documents/cpp/opengl/3d/headers/camera.h",
+		"/home/vako/Documents/cs50/week4/recover/recover.c",
+		"/home/vako/Documents/cpp/opengl/3d/include/glm/gtx/vector_angle.inl",
+		"/home/vako/Documents/cpp/opengl/3d/include/glm/ext/quaternion_geometric.hpp",
+		"/home/vako/Documents/cpp/opengl/3d/include/glm/detail/func_geometric.inl",
+		"/home/vako/Documents/cpp/opengl/pyramid/shaders/default.vert",
+		"/home/vako/Documents/cpp/opengl/pyramid/shaders/default.frag",
+		"/home/vako/Documents/java/Minecraft/Spinning-Square/src/main/java/com/magenta/main/Boot.java",
+		"/home/vako/Downloads/minecraft/recipes/blue_bed.json",
+		"/home/vako/Documents/cpp/opengl/3d/texture.cpp",
+		"/home/vako/Documents/cpp/opengl/3d/shader.cpp",
+		"/home/vako/Documents/cpp/opengl/3d/headers/texture.h",
+		"/home/vako/Documents/java/notch/notch/src/com/magenta/main/Main.java",
+		"/home/vako/Documents/java/notch/notch/src/com/magenta/main/SpriteSheet.java",
+		"/home/vako/Documents/java/lasdif/src/main/java/com/magenta/render/shader/Shader.java",
+		"/home/vako/Documents/java/gamelearnings/src/sprite/AnimationManager.java",
+		"/home/vako/Documents/java/lasdif/src/main/java/com/magenta/game/Block.java",
+		"/home/vako/Documents/cs50/week4/smiley/colorize.c",
+		"/home/vako/Documents/cs50/week4/smiley/helpers.c",
+		"/home/vako/Documents/cs50/week4/smiley/bmp.h",
+		"/home/vako/Documents/cs50/week3/runoff/runoff.c",
+		"/home/vako/Documents/cs50/week4/smiley/helpers.h",
+		"/home/vako/Documents/cpp/opengl/freecodecamp/3d/shaders/default.vert",
+		"/home/vako/Documents/cpp/opengl/freecodecamp/3d/camera.cpp",
+		"/home/vako/Documents/cpp/opengl/freecodecamp/pyramid/main.cpp",
+		"/home/vako/Documents/java/lasdif/src/main/java/com/magenta/render/Matrix.java",
+		"/home/vako/Documents/cpp/opengl/freecodecamp/3d/texture.cpp",
+		"/home/vako/Documents/cpp/opengl/freecodecamp/3d/texture",
+		"/home/vako/Documents/cpp/opengl/freecodecamp/3d/main.cpp",
+		"/home/vako/Documents/java/lasdif/src/main/java/com/magenta/render/Texture.java",
+		"/home/vako/Documents/java/lasdif/src/main/java/com/magenta/lib/mat/_4/funcMatrix.java",
+		"/home/vako/Documents/java/lasdif/src/main/java/com/magenta/lib/mat/_4/Mat4.java",
+		"/home/vako/Documents/java/lasdif/src/main/java/com/magenta/lib/mat/_4/matrixQuery.java",
+		"/home/vako/Documents/java/lasdif/src/main/java/com/magenta/lib/mat/_4/matrixTransform.java",
+		"/home/vako/Documents/cpp/opengl/freecodecamp/pre-3d/shaders/default.vert",
+		"/home/vako/Documents/cpp/opengl/freecodecamp/pyramid/shaders/default.vert",
+		"/home/vako/Documents/java/lasdif/build.gradle",
+		"/home/vako/Documents/cpp/opengl/freecodecamp/pyramid/include/glm/gtc/type_ptr.inl",
+		"/home/vako/Documents/cpp/opengl/freecodecamp/pyramid/include/glm/glm.hpp",
+		"/home/vako/Documents/java/lasdif/settings.gradle",
+		"/home/vako/Documents/cs50/week2/scrabble/scrabble.c",
+		"/home/vako/Documents/cs50/week2/wordle/wordle.c",
+		"/home/vako/Documents/java/lçasdjf/src/main/resources/shaders/fragment.glsl",
+		"/home/vako/Documents/java/lçasdjf/src/main/resources/shaders/vertex.glsl",
+		"/home/vako/Documents/java/lçasdjf/src/main/java/com/magenta/render/shader/Shader.java",
+		"/home/vako/Documents/java/lçasdjf/src/main/java/com/magenta/render/MeshLoader.java",
+		"/home/vako/Documents/java/lçasdjf/src/main/java/com/magenta/main/Boot.java",
+		"/usr/local/include/cs50.h"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 169.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"float"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "src/main/java/com/magenta/game/Chunk.java",
+					"selected": true,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7184,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5331,
+								5331
+							]
+						],
+						"settings":
+						{
+							"_nv_visual_sel_mode": "mode_visual",
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html, text.xml"
+								},
+								{
+									"rhs_empty": true,
+									"selector": "punctuation.accessor"
+								},
+								{
+									"characters": ".@#* ",
+									"registration_id": "70172ddf-502b-4799-9db1-1ab53953ef68",
+									"selector": "meta.tag, source - comment - string.quoted.double.block - string.quoted.single.block - string.unquoted.heredoc",
+									"server": "jdtls"
+								}
+							],
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content"
+							],
+							"highlight_gutter": true,
+							"highlight_line": true,
+							"lsp_active": true,
+							"lsp_hover_provider_count": 1,
+							"lsp_uri": "file:///home/vako/Documents/java/Mynecraft/src/main/java/com/magenta/game/Chunk.java",
+							"show_definitions": false,
+							"syntax": "Packages/Java/Java.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2185.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/main/java/com/magenta/game/block/Model.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1007,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								599,
+								599
+							]
+						],
+						"settings":
+						{
+							"_nv_visual_sel_mode": "mode_visual",
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content"
+							],
+							"highlight_gutter": false,
+							"highlight_line": false,
+							"lsp_uri": "file:///home/vako/Documents/java/Mynecraft/src/main/java/com/magenta/game/block/Model.java",
+							"syntax": "Packages/Java/Java.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 51.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/main/java/com/magenta/game/block/BlockType.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3506,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								708,
+								708
+							]
+						],
+						"settings":
+						{
+							"_nv_visual_sel_mode": "mode_visual",
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html, text.xml"
+								},
+								{
+									"rhs_empty": true,
+									"selector": "punctuation.accessor"
+								},
+								{
+									"characters": ".@#* ",
+									"selector": "meta.tag, source - comment - string.quoted.double.block - string.quoted.single.block - string.unquoted.heredoc",
+									"server": "jdtls"
+								}
+							],
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content"
+							],
+							"highlight_gutter": false,
+							"highlight_line": false,
+							"lsp_active": true,
+							"lsp_hover_provider_count": 2,
+							"lsp_uri": "file:///home/vako/Documents/java/Mynecraft/src/main/java/com/magenta/game/block/BlockType.java",
+							"show_definitions": false,
+							"syntax": "Packages/Java/Java.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 39.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/main/java/com/magenta/game/block/BlocksEnum.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2003,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1720,
+								1720
+							]
+						],
+						"settings":
+						{
+							"_nv_visual_sel_mode": "mode_visual",
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html, text.xml"
+								},
+								{
+									"rhs_empty": true,
+									"selector": "punctuation.accessor"
+								},
+								{
+									"characters": ".@#* ",
+									"selector": "meta.tag, source - comment - string.quoted.double.block - string.quoted.single.block - string.unquoted.heredoc",
+									"server": "jdtls"
+								}
+							],
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content"
+							],
+							"highlight_gutter": false,
+							"highlight_line": false,
+							"lsp_active": true,
+							"lsp_hover_provider_count": 2,
+							"lsp_uri": "file:///home/vako/Documents/java/Mynecraft/src/main/java/com/magenta/game/block/BlocksEnum.java",
+							"show_definitions": false,
+							"syntax": "Packages/Java/Java.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 561.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/main/java/com/magenta/game/World.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8281,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1070,
+								1079
+							]
+						],
+						"settings":
+						{
+							"_nv_visual_sel_mode": "mode_visual",
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html, text.xml"
+								},
+								{
+									"rhs_empty": true,
+									"selector": "punctuation.accessor"
+								},
+								{
+									"characters": ".@#* ",
+									"registration_id": "70172ddf-502b-4799-9db1-1ab53953ef68",
+									"selector": "meta.tag, source - comment - string.quoted.double.block - string.quoted.single.block - string.unquoted.heredoc",
+									"server": "jdtls"
+								}
+							],
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content"
+							],
+							"highlight_gutter": false,
+							"highlight_line": false,
+							"lsp_active": true,
+							"lsp_hover_provider_count": 1,
+							"lsp_uri": "file:///home/vako/Documents/java/Mynecraft/src/main/java/com/magenta/game/World.java",
+							"show_definitions": false,
+							"syntax": "Packages/Java/Java.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 816.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"stack_multiselect": false,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 71.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.LSP Log Panel":
+	{
+		"height": 120.0
+	},
+	"output.Terminus":
+	{
+		"height": 108.0
+	},
+	"output.diagnostics":
+	{
+		"height": 421.0
+	},
+	"output.exec":
+	{
+		"height": 102.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 120.0
+	},
+	"output.mdpopups":
+	{
+		"height": 0.0
+	},
+	"output.mdpopups-dummy":
+	{
+		"height": 0.0
+	},
+	"output.references":
+	{
+		"height": 120.0
+	},
+	"pinned_build_system": "Packages/User/BashRun.sublime-build",
+	"project": "mynecraft.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"model",
+				"src/main/java/com/magenta/game/block/Model.java"
+			],
+			[
+				"block",
+				"src/main/java/com/magenta/game/block/BlocksEnum.java"
+			],
+			[
+				"worl",
+				"src/main/java/com/magenta/game/World.java"
+			],
+			[
+				"render",
+				"src/main/java/com/magenta/main/Renderer.java"
+			],
+			[
+				"cac",
+				"src/main/java/com/magenta/game/block/models/Cactus.java"
+			],
+			[
+				"cub",
+				"src/main/java/com/magenta/game/block/models/Cube.java"
+			],
+			[
+				"pla",
+				"src/main/java/com/magenta/game/block/models/Plant.java"
+			],
+			[
+				"key",
+				"src/main/java/com/magenta/engine/KeyboardInput.java"
+			],
+			[
+				"tex",
+				"src/main/java/com/magenta/render/TextureManager.java"
+			],
+			[
+				"fragm",
+				"src/main/resources/shaders/fragment.glsl"
+			],
+			[
+				"game",
+				"src/main/java/com/magenta/main/Game.java"
+			],
+			[
+				"camra",
+				"src/main/java/com/magenta/engine/Camera.java"
+			],
+			[
+				"chu",
+				"src/main/java/com/magenta/game/Chunk.java"
+			],
+			[
+				"en",
+				"src/main/java/com/magenta/main/Engine.java"
+			],
+			[
+				"win",
+				"src/main/java/com/magenta/engine/Window.java"
+			],
+			[
+				"igam",
+				"src/main/java/com/magenta/engine/IGameLogic.java"
+			],
+			[
+				"engi",
+				"src/main/java/com/magenta/main/Engine.java"
+			],
+			[
+				"mou",
+				"src/main/java/com/magenta/engine/MouseInput.java"
+			],
+			[
+				"wind",
+				"src/main/java/com/magenta/engine/Window.java"
+			],
+			[
+				"camera",
+				"src/main/java/com/magenta/engine/Camera.java"
+			],
+			[
+				"hit",
+				"src/main/java/com/magenta/engine/HitRay.java"
+			],
+			[
+				"rende",
+				"src/main/java/com/magenta/main/Renderer.java"
+			],
+			[
+				"bloc",
+				"src/main/java/com/magenta/game/block/BlocksEnum.java"
+			],
+			[
+				"bac",
+				"src/main/java/com/magenta/game/backup"
+			],
+			[
+				"ch",
+				"src/main/java/com/magenta/game/Chunk.java"
+			],
+			[
+				"chunk",
+				"src/main/java/com/magenta/game/Chunk.java"
+			],
+			[
+				"wor",
+				"src/main/java/com/magenta/game/World.java"
+			],
+			[
+				"frag",
+				"src/main/resources/shaders/fragment.glsl"
+			],
+			[
+				"shad",
+				"src/main/java/com/magenta/render/ShaderProgram.java"
+			],
+			[
+				"windo",
+				"src/main/java/com/magenta/engine/Window.java"
+			],
+			[
+				"engine",
+				"src/main/java/com/magenta/main/Engine.java"
+			],
+			[
+				"iga",
+				"src/main/java/com/magenta/engine/IGameLogic.java"
+			],
+			[
+				"came",
+				"src/main/java/com/magenta/engine/Camera.java"
+			],
+			[
+				"re",
+				"src/main/java/com/magenta/main/Renderer.java"
+			],
+			[
+				"mesh",
+				"src/main/java/com/magenta/render/mesh/MeshLoader.java"
+			],
+			[
+				"blockma",
+				"src/main/java/com/magenta/game/block/BlockManager.java"
+			],
+			[
+				"window",
+				"src/main/java/com/magenta/engine/Window.java"
+			],
+			[
+				"matrix",
+				"src/main/java/com/magenta/render/MatrixDraw.java"
+			],
+			[
+				"ren",
+				"src/main/java/com/magenta/main/Renderer.java"
+			],
+			[
+				"tu",
+				"src/main/java/com/magenta/render/TextureManager.java"
+			],
+			[
+				"engin",
+				"src/main/java/com/magenta/main/Engine.java"
+			],
+			[
+				"eng",
+				"src/main/java/com/magenta/main/Engine.java"
+			],
+			[
+				"timer",
+				"src/main/java/com/magenta/engine/Timer.java"
+			],
+			[
+				"blockman",
+				"src/main/java/com/magenta/game/block/BlockManager.java"
+			],
+			[
+				"rede",
+				"src/main/java/com/magenta/main/Renderer.java"
+			],
+			[
+				"main",
+				"src/main/java/com/magenta/main/Main.java"
+			],
+			[
+				"game.",
+				"src/main/java/com/magenta/main/Game.java"
+			],
+			[
+				"ver",
+				"src/main/resources/shaders/vertex.glsl"
+			],
+			[
+				"mouse",
+				"src/main/java/com/magenta/engine/input/MouseInput.java"
+			],
+			[
+				"gmae",
+				"src/main/java/com/magenta/main/Game.java"
+			],
+			[
+				"toke",
+				"src/tokenizer.cpp"
+			],
+			[
+				"shader",
+				"shader.cpp"
+			],
+			[
+				"vao",
+				"headers/VAO.h"
+			],
+			[
+				"vbo",
+				"VBO.cpp"
+			],
+			[
+				"homeco",
+				"controller/HomeController.js"
+			],
+			[
+				"db",
+				"database/db.js"
+			],
+			[
+				"datam",
+				"database/dataManipulation.js"
+			],
+			[
+				"hom",
+				"controller/HomeController.js"
+			],
+			[
+				"data",
+				"database/dataManipulation.js"
+			],
+			[
+				"postcon",
+				"controller/PostController.js"
+			],
+			[
+				"user",
+				"controller/UserController.js"
+			],
+			[
+				"home",
+				"controller/HomeController.js"
+			],
+			[
+				"valida",
+				"database/validator.js"
+			],
+			[
+				"login",
+				"controller/LoginController.js"
+			],
+			[
+				"base",
+				"public/styles/base.css"
+			],
+			[
+				"confi",
+				"controller/ConfigController.js"
+			],
+			[
+				"loginc",
+				"controller/LoginController.js"
+			],
+			[
+				"reac",
+				"public/scripts/reaction.js"
+			],
+			[
+				"routes",
+				"routes/routes.js"
+			],
+			[
+				"mails",
+				"views/partials/mails.ejs"
+			],
+			[
+				"post.css",
+				"public/styles/posts.css"
+			],
+			[
+				"idne",
+				"views/index.ejs"
+			],
+			[
+				"post.ejs",
+				"views/post.ejs"
+			],
+			[
+				"inde",
+				"index.js"
+			],
+			[
+				"postcss",
+				"public/styles/posts.css"
+			],
+			[
+				"postocn",
+				"controller/PostController.js"
+			],
+			[
+				"posts",
+				"views/partials/posts.ejs"
+			],
+			[
+				"post",
+				"views/post.ejs"
+			],
+			[
+				"base.c",
+				"public/styles/base.css"
+			],
+			[
+				"post.cs",
+				"public/styles/posts.css"
+			],
+			[
+				"intera",
+				"public/scripts/interaction.js"
+			],
+			[
+				"home.js",
+				"public/scripts/home.js"
+			],
+			[
+				"pos",
+				"controller/PostController.js"
+			],
+			[
+				"mail",
+				"controller/MailController.js"
+			],
+			[
+				"db.sj",
+				"database/db.js"
+			],
+			[
+				"index",
+				"index.js"
+			],
+			[
+				"db.js",
+				"database/db.js"
+			],
+			[
+				".en",
+				".env"
+			],
+			[
+				"index.js",
+				"index.js"
+			],
+			[
+				".env",
+				".env"
+			],
+			[
+				"config",
+				"views/configs.ejs"
+			],
+			[
+				"user.s",
+				"models/User.js"
+			],
+			[
+				"message",
+				"controller/MessageTool.js"
+			],
+			[
+				"side",
+				"public/styles/sidebar.css"
+			],
+			[
+				"sidebar",
+				"views/partials/sidebar.ejs"
+			],
+			[
+				"base.cs",
+				"public/styles/base.css"
+			],
+			[
+				"poste",
+				"views/post.ejs"
+			],
+			[
+				"other",
+				"controller/OtherController.js"
+			],
+			[
+				"usercontro",
+				"controller/UserController.js"
+			],
+			[
+				"userejs",
+				"views/user.ejs"
+			],
+			[
+				"user.css",
+				"public/styles/user.css"
+			],
+			[
+				"config.css",
+				"public/styles/configs.css"
+			],
+			[
+				"homejs",
+				"public/scripts/home.js"
+			],
+			[
+				"idnex",
+				"views/index.ejs"
+			],
+			[
+				"dbjs",
+				"database/db.js"
+			],
+			[
+				"usercon",
+				"controller/UserController.js"
+			],
+			[
+				"usercontr",
+				"controller/UserController.js"
+			],
+			[
+				"post.js",
+				"models/Post.js"
+			],
+			[
+				"controller",
+				"controller/PostController.js"
+			],
+			[
+				"postcontr",
+				"controller/PostController.js"
+			],
+			[
+				"basec",
+				"public/styles/base.css"
+			],
+			[
+				"user.ejs",
+				"views/user.ejs"
+			],
+			[
+				"postcontro",
+				"controller/PostController.js"
+			],
+			[
+				"postejs",
+				"views/partials/posts.ejs"
+			],
+			[
+				"load",
+				"public/styles/loadmore.css"
+			],
+			[
+				"index.ej",
+				"views/index.ejs"
+			],
+			[
+				"psotejs",
+				"views/partials/post.ejs"
+			],
+			[
+				"Post.js",
+				"models/Post.js"
+			],
+			[
+				"post.ej",
+				"views/partials/post.ejs"
+			],
+			[
+				"iindex.ejs",
+				"views/index.ejs"
+			],
+			[
+				"home.css",
+				"public/styles/home.css"
+			],
+			[
+				"loadmore",
+				"views/partials/loadmore-posts.ejs"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 251.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 592.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+		"_vintageous_last_char_search_character": ")",
+		"_vintageous_last_char_search_command": "vi_f"
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 219.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
