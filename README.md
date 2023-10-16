@@ -50,10 +50,24 @@ bash run.sh -r # Use -c to compile to a JAR file
 java -jar mynecraft.jar
 ```
 
+# Controls
+- `WASD` - Movement
+- `E` - Next block
+- `Q` - Previous block
+- `Shift` - Fly down
+- `Space` - Fly up
+- `TAB` - Cursor exit
+- `ESC` - Close window
+
 # TODO
-- [ ] Add subchunks (*maybe*)
 - [ ] Collision
 - [ ] Gravity
+- [ ] Fix mouse movement
+- [ ] Fix "*Keyboard Input*" bug
+- [ ] Light
+- [ ] Shader improvement
+- [ ] Terrain generation
+- [ ] Add subchunks (*maybe*)
 - [ ] Load blocks from file (*maybe*)
 - [ ] Save/Load (*maybe*)
 
