@@ -19,7 +19,7 @@ public class Engine implements Runnable {
 	private final double TIME_PER_UPDATE;
 	private final int TARGET_FPS = 60;
 
-	String title = "Just testing around";
+	String title = "Vakraft";
 
 	public Engine(IGameLogic gameLogic) throws Exception {
 		this.gameLogic = gameLogic;
