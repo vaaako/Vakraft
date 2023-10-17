@@ -8,7 +8,7 @@ import org.lwjgl.BufferUtils;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL30;
 
-import com.magenta.engine.Camera;
+import com.magenta.engine.Player;
 import com.magenta.engine.Window;
 import com.magenta.game.World;
 import com.magenta.game.block.BlockType;
@@ -28,8 +28,8 @@ public class Renderer {
 	// Render Matrices
 	private Matrix4f mvMatrix, pMatrix;
 
-	// Camera
-	private final Camera camera;
+	// Player
+	private final Player camera;
 	private final float nearPlane, farPlane;
 
 	// Matrices
@@ -42,7 +42,7 @@ public class Renderer {
 	// private final int[] indices = {0, 0, 0};
 	// private final Mesh mesh = new MeshLoader(blockType.getVertexPositions(), indices, blockType.getTexCoords(), blockType.getShadingValues());
 
-	public Renderer(Window window, Camera camera) {
+	public Renderer(Window window, Player camera) {
 		this.window = window;
 		this.camera = camera;
 
@@ -55,7 +55,7 @@ public class Renderer {
 		mvMatrix  = new Matrix4f();
 		pMatrix   = new Matrix4f();
 
-		// Camera position/rotatio
+		// Player position/rotatio
 		position = new Vector3f();
 		rotation = new Vector3f();
 	}
@@ -175,12 +175,12 @@ public class Renderer {
 		
 		// Projection Matrix //
 		pMatrix.identity(); // Create matrix
-		pMatrix.perspective((float) Math.toRadians(camera.getFovDeg()), (float)camera.getWidth() / camera.getHeight(), nearPlane, farPlane); // Adds perspective to the scene
+		pMatrix.perspective((float) Math.toRadians(camera.getFovWithVelocity()), (float)camera.getViewWidth() / camera.getViewHeight(), nearPlane, farPlane); // Adds perspective to the scene
 
 		// Model view matrix //
 		mvMatrix.identity();
 		rotate2D(mvMatrix, (float) (rotation.x + Math.TAU / 4), (float) rotation.y);
-		mvMatrix.translate(-position.x, -position.y, -position.z); // Move camera (minus = away, positive = zoom)	
+		mvMatrix.translate(-position.x, -position.y - camera.getEyelevel(), -position.z); // Move camera (minus = away, positive = zoom)	
 
 		// Exports the camera amtrix to the Vertex Shader (proj * view)
 		shaderProgram.uniformMatrix(shaderProgram.findUniform("camMatrix"), pMatrix.mul(mvMatrix));

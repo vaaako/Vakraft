@@ -1,10 +1,15 @@
 package com.magenta.engine;
 
 import org.joml.Vector3f;
+import com.magenta.game.Entity;
+import com.magenta.game.World;
 
-public class Camera {
+public class Player extends Entity {
 	private final Window window;
-	// private int width, height;
+
+	// Physics
+	private final float WALKING_SPEED = 4.317f;
+	private final float SPRINTING_SPEED = 7.0f;
 
 	// Camera movement vectors
 	private Vector3f position = new Vector3f(0.0f, 0.0f, 0.0f);
@@ -14,7 +19,14 @@ public class Camera {
 	private final float fovDeg, sensitivity;
 	private final float nearPlane = 0.01f, farPlane = 100.0f;
 
-	public Camera(Window window, float fovDeg, float sensitivity) {
+	// Player
+	private final float eyelevel = this.viewHeight - 0.2f; 
+	private final float targetSpeed    = WALKING_SPEED;
+	private float speed                = targetSpeed;
+
+	public Player(Window window, float fovDeg, float sensitivity, World world) {
+		super(world);
+
 		this.window = window;
 		this.fovDeg = fovDeg;
 		this.sensitivity = sensitivity;
@@ -47,14 +59,20 @@ public class Camera {
 		);
 	}
 	
-	public void movePosition(float offsetX, float offsetY, float offsetZ, float speed) {
-		float angle = (float)(rotation.x - Math.atan2(offsetZ, offsetX) + (Math.TAU / 4));
+	public void movePosition(double delta, float offsetX, float offsetY, float offsetZ, boolean doubleSpeed) {
+		this.speed += (float) ((this.targetSpeed - this.speed) * delta * 20);
+		
+
+		float angle = (float) (rotation.x - Math.atan2(offsetZ, offsetX) + (Math.TAU / 4));
 		if(offsetX != 0.0f || offsetZ != 0.0f) {
-			position.x += (float) Math.cos(angle) * speed * 0.1f;
-			position.z += (float) Math.sin(angle) * speed * 0.1f;
+			// position.x += (float) Math.cos(angle) * speed;
+			// position.z += (float) Math.sin(angle) * speed;
+
+			velocity[0] = (float) Math.cos(angle) * speed;
+			velocity[2] = (float) Math.sin(angle) * speed;
 		}
 
-		position.y += offsetY * 0.1f;
+		velocity[1] = offsetY * 0.1f;
 	}
 
 	public float getNearPlane() {
@@ -65,12 +83,12 @@ public class Camera {
 		return farPlane;
 	}
 
-	public int getWidth() {
-		return window.getWidth();
+	public float getViewWidth() {
+		return viewWidth;
 	}
 
-	public int getHeight() {
-		return window.getHeight();
+	public float getViewHeight() {
+		return viewHeight;
 	}
 
 	public Vector3f getRotation() {
@@ -85,7 +103,15 @@ public class Camera {
 		return fovDeg;
 	}
 
+	public float getFovWithVelocity() {
+		return fovDeg + 20 * (speed - WALKING_SPEED) / (SPRINTING_SPEED - WALKING_SPEED);
+	}
+
 	public float getSensitivity() {
 		return sensitivity;
+	}
+
+	public float getEyelevel() {
+	    return eyelevel;
 	}
 }

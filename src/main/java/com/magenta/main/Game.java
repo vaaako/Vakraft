@@ -6,7 +6,7 @@ import org.joml.Vector2f;
 import org.joml.Vector3f;
 import org.lwjgl.glfw.GLFW;
 
-import com.magenta.engine.Camera;
+import com.magenta.engine.Player;
 import com.magenta.engine.HitRay;
 import com.magenta.engine.IGameLogic;
 import com.magenta.engine.KeyboardInput;
@@ -19,7 +19,7 @@ import com.magenta.engine.MouseInput;
 public class Game implements IGameLogic {
 	// Managers //
 	private Renderer renderer;
-	private Camera camera;
+	private Player camera;
 	private static MouseInput mouseInput;
 
 	// World //
@@ -39,22 +39,20 @@ public class Game implements IGameLogic {
 	@Override
 	public void init(Window window, MouseInput mouseInput) throws Exception {
 		Game.mouseInput = mouseInput; // To use on HitRay callback
+	
+		// Load world
+		world = new World();
 		
 		// Load camera
-		camera = new Camera(window, 90.0f, 0.06f);
+		camera = new Player(window, 90.0f, 0.06f, world);
 
 		// Load renderer
 		renderer = new Renderer(window, camera);
 		renderer.init();
 
-		// Load world
-		world = new World();
-
-		// Load in world in chunk
-		
+		// Load in world in chunk	
 		Vector3f firstPos = world.getChunkPosition(world.getChunks().entrySet().iterator().next().getKey());
 		// camera.setPosition(firstPos.x, firstPos.y, firstPos.z);
-		
 		Vector3f lastPos = world.getChunkPosition(world.getChunks().keySet().stream().reduce((first, second) -> second).orElse(null));
 		// camera.setPosition(lastPos.x, lastPos.y, lastPos.z);
 	
@@ -126,8 +124,11 @@ public class Game implements IGameLogic {
 	@Override
 	public void update(double delta, MouseInput mouseInput, Window window) {
 		// Move with cameraInc
-		camera.movePosition(cameraInc.x, cameraInc.y, cameraInc.z,
-			(doubleSpeed) ? 2.0f : 1.0f);
+
+		camera.updateEntity(delta);
+
+		// TODO Change later
+		camera.movePosition(delta, cameraInc.x, cameraInc.y, cameraInc.z, doubleSpeed);
 
 
 		if(mouseInput.isLMBPressed()) {
@@ -147,6 +148,8 @@ public class Game implements IGameLogic {
 			camera.moveRotation(rotVec.x * camera.getSensitivity(), rotVec.y * camera.getSensitivity()); // Change camera rotation
 
 			// Handle block breaking
+
+			camera.getPosition().y += camera.getEyelevel();
 			hitRay = new HitRay(world, new Vector3f(camera.getRotation()), new Vector3f(camera.getPosition()));
 			while(hitRay.getDistance() < HitRay.HIT_RANGE) {
 				if(hitRay.step(Game::HitCallback)) break;
@@ -156,6 +159,7 @@ public class Game implements IGameLogic {
 
 		// Dev test
 		// world.setBlock(camera.getPosition(), 7);
+
 	}
 
 	@Override
