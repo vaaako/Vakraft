@@ -1,11 +1,11 @@
-# Mynecraft (Provisional Name)
+# Vakraft
 
 # Current State
 This project is currently in an active development phase. It is in its early stages of creation and is not yet considered playable.
  Thank you for your interest in this provisional-named project, and please stay tuned for further developments!
 
 # Overview
-Mynecraft is developed using the *Lightweight Java Game Library* (`LWJGL`).
+Vakraft is developed using the *Lightweight Java Game Library* (`LWJGL`).
 This project aims to create a Minecraft-inspired game for the purpose of learning `OpenGL`.
 
 # Current state
@@ -47,7 +47,7 @@ bash run.sh -r # Use -c to compile to a JAR file
 
 ### Running the JAR File
 ```sh
-java -jar mynecraft.jar
+java -jar vakraft.jar
 ```
 
 # Controls
@@ -70,6 +70,7 @@ java -jar mynecraft.jar
 - [ ] Add subchunks (*maybe*)
 - [ ] Load blocks from file (*maybe*)
 - [ ] Save/Load (*maybe*)
+- [ ] Change `Model` to interface (*maybe*)
 
 # Credits
 Made by me<br>

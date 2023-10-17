@@ -42,7 +42,9 @@ public enum BlocksEnum {
 	BROWN_MUSHROOM(15, "Brown Mushroom",
 		new String[] { "brown_mushroom" }, new Plant()),
 	RED_MUSHROOM(16, "Red Mushroom",
-		new String[] { "red_mushroom" }, new Plant());
+		new String[] { "red_mushroom" }, new Plant()),
+	AHIRO(17, "Ahiro viado",
+		new String[] { "ahiro" }, new Plant());
 
 	private final int id;
 	private String name;

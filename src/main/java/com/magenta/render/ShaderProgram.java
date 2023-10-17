@@ -80,8 +80,9 @@ public class ShaderProgram {
 
 		// Handle any GLSL error
 		if(GL20.glGetShaderi(shaderProgram, GL20.GL_COMPILE_STATUS) == GL11.GL_FALSE) {
-			System.out.println(GL20.glGetShaderInfoLog(shaderProgram, 512));
-			System.err.println("Couldn't compile the shader of type: " + type);
+			System.err.println("\n=> Couldn't compile " + file);
+			System.err.println(GL20.glGetShaderInfoLog(shaderProgram, 512));
+			System.err.println("=> Couldn't compile the shader of type: " + ((type == 35632) ? "Fragment Shader" : "Vertex Shader"));
 			System.exit(-1);
 		}
 

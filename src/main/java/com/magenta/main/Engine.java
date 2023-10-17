@@ -75,7 +75,7 @@ public class Engine implements Runnable {
 			render();
 			frames++;
 
-			if(!window.isvSync()) sync();
+			// if(!window.isvSync()) sync();
 			// System.out.println(timer.getCurrentTime() - timer.getLast());
 
 			// Updte FPS display each second

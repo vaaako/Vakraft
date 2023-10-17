@@ -101,4 +101,13 @@ public class MeshLoader {
 		GL30.glBindVertexArray(0); // Delete
 		return new Mesh(vao, indices.length);
 	}
+
+	public static Mesh createMesh(float[] vertices, int[] indices) {
+		// UV -> Area on the txture the Mesh is using
+		int vao = genVAO(); // Gen VAO
+		storeData(0, 3, vertices);  // Store vertices positions
+		bindIndices(indices); // Bind
+		GL30.glBindVertexArray(0); // Delete
+		return new Mesh(vao, indices.length);
+	}
 }

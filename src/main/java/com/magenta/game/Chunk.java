@@ -8,7 +8,6 @@ import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL30;
 
 import com.magenta.game.block.BlockType;
-import com.magenta.game.block.BlocksEnum;
 import com.magenta.render.mesh.Mesh;
 import com.magenta.render.mesh.MeshLoader;
 

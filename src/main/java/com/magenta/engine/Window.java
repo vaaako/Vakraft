@@ -75,7 +75,7 @@ public class Window {
 
 		GLFW.glfwMakeContextCurrent(windowHandle); // Make the OpenGL context current
 		
-		GLFW.glfwSwapInterval(1); // Enable V-Sync
+		if(vSync) GLFW.glfwSwapInterval(1); // Enable V-Sync
 		GLFW.glfwShowWindow(windowHandle); // Make window visible
 
 		// Begining of the start
