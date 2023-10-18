@@ -1,26 +1,31 @@
 // Blocks
 null name "air" - textures null - model null // 0
-name "Not Found" - textures notfound - model Cube
-name "Bedrock" - textures bedrock - model Cube // 2
-name "Cobblestone" - textures cobblestone - model Cube // 3
-name "Grass" - textures grass, dirt, grass_side - model Cube // 4
+// name "Not Found" - textures notfound - model Cube
+name "Bedrock" - textures bedrock - model Cube // 1
+name "Cobblestone" - textures cobblestone - model Cube // 2
+name "Grass" - textures grass, dirt, grass_side - model Cube // 3
+
 name "Full Grass" - textures grass - model Cube
 name "Dirt"  - textures dirt - model Cube
 name "Stone" - textures stone - model Cube
-name "Sand" - textures sand - model Cube
+
+name "Sand" - textures sand - model Cube // 7
 name "Planks" - textures planks - model Cube
-name "Log" - textures log_top, log_side - model Cube // 10
+name "Log" - textures log_top, log_side - model Cube
 
 // Test only
 
 // Flowers
-name "Daisy" - textures daisy - model Plant // 11
+name "Daisy" - textures daisy - model Plant // 10
 name "Rose" - textures rose - model Plant 
 name "Dead Bush" - textures dead_bush - model Plant
-name "Brown Mushroom" - textures brown_mushroom - model Plant
+
+name "Brown Mushroom" - textures brown_mushroom - model Plant // 13
 name "Red Mushroom" - textures red_mushroom - model Plant
 name "Ahiro Viado" - textures ahiro - model Plant
 
 // Others
-name "Cactus" - textures cactus_top, cactus_bottom, cactus_side - model Cactus
+name "Cactus" - textures cactus_top, cactus_bottom, cactus_side - model Cactus // 16
 name "Glass" - textures glass - model Glass
+name "Water" - textures water - model Liquid
+name "Leaves" - textures leaves - model Leaves

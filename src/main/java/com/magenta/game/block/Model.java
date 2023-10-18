@@ -8,18 +8,30 @@ public abstract class Model {
 
 	// Mesh
 	protected float[][] vertexPositions;
-	protected float[][] texCoords;
-	protected float[][] shadingValue;
+	protected float[][] texCoords = {
+		{ 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f, 1.0f, 0.0f },
+		{ 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f, 1.0f, 0.0f },
+		{ 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f, 1.0f, 0.0f },
+		{ 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f, 1.0f, 0.0f },
+		{ 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f, 1.0f, 0.0f },
+		{ 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f, 1.0f, 0.0f }	
+	};
+
+	protected float[][] shadingValue = {
+		{ 0.6f, 0.6f, 0.6f, 0.6f },
+		{ 0.6f, 0.6f, 0.6f, 0.6f },
+		{ 1.0f, 1.0f, 1.0f, 1.0f },
+		{ 0.4f, 0.4f, 0.4f, 0.4f },
+		{ 0.8f, 0.8f, 0.8f, 0.8f },
+		{ 0.8f, 0.8f, 0.8f, 0.8f }
+	};
 	
-	public Model(boolean isTransparent, boolean isCube, boolean isGlass, float[][] vertexPositions, float[][] texCoords, float[][] shadingValue) {
+	public Model(boolean isTransparent, boolean isCube, boolean isGlass, float[][] vertexPositions) {
 		this.isTransparent = isTransparent;
 		this.isCube = isCube;
 		this.isGlass = isGlass;
 
 		this.vertexPositions = vertexPositions;
-		this.texCoords = texCoords;
-		this.shadingValue = shadingValue;
-
 	}
 
 	public boolean isTransparent() {
@@ -47,9 +59,8 @@ public abstract class Model {
 	}
 
 
-	// This is to be made when creating a model, so there is why is returning itself
-	// public Model setIsGlass(boolean isGlass) {
-	// 	this.isGlass = isGlass;
-	// 	return this;
-	// }
+	// Vertex and Texture almost always are the same
+	protected void setShadingValue(float[][] newShadingValue) {
+		this.shadingValue = newShadingValue;
+	}
 }

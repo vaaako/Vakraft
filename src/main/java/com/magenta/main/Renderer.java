@@ -1,10 +1,8 @@
 package com.magenta.main;
 
-import java.nio.FloatBuffer;
 
 import org.joml.Matrix4f;
 import org.joml.Vector3f;
-import org.lwjgl.BufferUtils;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL30;
 
@@ -12,12 +10,7 @@ import com.magenta.engine.Camera;
 import com.magenta.engine.Window;
 import com.magenta.game.Aim;
 import com.magenta.game.World;
-import com.magenta.game.block.BlockType;
-import com.magenta.game.block.BlocksEnum;
 import com.magenta.render.ShaderProgram;
-import com.magenta.render.TextureManager;
-import com.magenta.render.mesh.Mesh;
-import com.magenta.render.mesh.MeshLoader;
 
 
 

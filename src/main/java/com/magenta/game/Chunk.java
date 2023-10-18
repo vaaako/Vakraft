@@ -13,7 +13,7 @@ import com.magenta.render.mesh.MeshLoader;
 
 public class Chunk {
 	public final static int CHUNK_SIZE = 16;
-	public final static int CHUNK_HEIGHT = 128;
+	public final static int CHUNK_HEIGHT = 58;
 
 	// Chunk Meshes //
 	private LinkedList<Float> vertexPositions = new LinkedList<>();

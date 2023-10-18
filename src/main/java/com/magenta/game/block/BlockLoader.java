@@ -4,8 +4,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.LinkedList;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 import com.magenta.game.block.models.*;
 import com.magenta.render.TextureManager;
@@ -24,57 +22,62 @@ public class BlockLoader {
 	}
 
 	public void loadContent(LinkedList<BlockType> blockTypes, TextureManager texManager) {
-		String sline;
-		int line = 0;
+		String line;
+		int lineNumber = 0;
 
-		// Default value
+		// Default values
 		String name = "Unknown";
-		String[] textures = null;
-		Model model = null;
+		String[] textures = { "unknown" };
+		Model model = new Cube();
 
 		try {
-			while((sline = reader.readLine()) != null) {
-				if(sline.startsWith("//") || sline.isBlank() || sline.isEmpty()) continue;
-				else if(sline.startsWith("null")) {
+			while((line = reader.readLine()) != null) {
+				if(line.startsWith("//") || line.isBlank()) {
+					continue; // Skip comments and empty lines
+				} else if(line.startsWith("null")) {
 					blockTypes.add(0, null);
-					line++;
+					lineNumber++;
 					continue;
 				}
 
-				for(String props : sline.split("-")) {
-					props = props.strip();
-					String[] prop = props.split(" ");
-
-					if(prop[0].equals("name")) {
-						name = extractStringInQuotes(props);
-
-					} else if(prop[0].equals("textures")) {
-						textures = extractAllTextures(props);
-
-					} else if(prop[0].equals("model")) {
-						// model = new eval(prop[1]);
-						model = extractModel(prop[1]);
-						if(model == null) throw new RuntimeException("Model in line " + line + "doesn't exists");
-
-					} else {
-						throw new RuntimeException("Unexpected keyword in file " + filename + " at line " + line + "\n> " + prop[0]);
-					}
-				}
-
-				blockTypes.add(line, new BlockType(name, textures, model, texManager));
-				line++;
+				processLine(line, blockTypes, texManager, name, textures, model, lineNumber);
+				lineNumber++;
 			}
 			reader.close();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
 
+	private void processLine(String line, LinkedList<BlockType> blockTypes, TextureManager texManager, String name, String[] textures, Model model, int lineNumber) {
+		String[] props = line.split("-");
+		for (String prop : props) {
+			prop = prop.strip();
+			String[] parts = prop.split(" ");
+			
+			if(parts[0].equals("name")) {
+				name = extractStringInQuotes(prop);
+
+			} else if(parts[0].equals("textures")) {
+				textures = extractAllTextures(prop);
+
+			} else if(parts[0].equals("model")) {
+				model = extractModel(parts[1]);
+				if(model == null) throw new RuntimeException("Model in line " + lineNumber + " doesn't exist");
+
+			} else {
+				throw new RuntimeException("Unexpected keyword" + parts[0] + " in file " + filename + " at line " + lineNumber);
+			}
+		}
+
+		blockTypes.add(lineNumber, new BlockType(name, textures, model, texManager));
+	}
+
+
 	private String extractStringInQuotes(String input) {
 		int start = input.indexOf("\"");
 		int end = input.lastIndexOf("\"");
-		if (start != -1 && end != -1 && start < end) {
+		if(start != -1 && end != -1 && start < end) {
 			return input.substring(start + 1, end);
 		} else {
 			return null; // or handle the case when there are no double quotes in the input
@@ -99,6 +102,10 @@ public class BlockLoader {
 			return new Cactus();
 		else if(stringModel.equals("Glass"))
 			return new Glass();
+		else if(stringModel.equals("Liquid"))
+			return new Liquid();
+		else if(stringModel.equals("Leaves"))
+			return new Leaves();
 		else
 			return null;
 

@@ -98,12 +98,12 @@ public class Game implements IGameLogic {
 			holdingBlock++;
 			if(world.getBlockTypes().size() <= holdingBlock) holdingBlock = 1;
 		
-			System.out.println("Holding Block: " + world.getBlockTypes().get(holdingBlock).getName());
+			System.out.println("Holding Block: (" + holdingBlock + ") " + world.getBlockTypes().get(holdingBlock).getName());
 		} else if(keyboardInput.isKeyDown(GLFW.GLFW_KEY_Q)) {
 			holdingBlock--;	
 			if(holdingBlock <= 0) holdingBlock = world.getBlockTypes().size() - 1;
 
-			System.out.println("Holding Block: " + world.getBlockTypes().get(holdingBlock).getName());
+			System.out.println("Holding Block: (" + holdingBlock + ") " + world.getBlockTypes().get(holdingBlock).getName());
 		}
 
 

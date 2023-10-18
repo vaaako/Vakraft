@@ -2,8 +2,6 @@ package com.magenta.game;
 
 import java.util.Random;
 
-import com.magenta.game.noise.NoiseGenerator;
-
 // import com.magenta.engine.NoiseGenerator;
 import com.magenta.game.noise.PerlinNoiseGenerator;
 
@@ -22,7 +20,7 @@ public class TerrainGeneration {
 
 	private final Random random = new Random();
 	public TerrainGeneration(int seed, int chunkSize, int chunkHeight) {
-		this.seed = (seed == 0) ? random.nextInt(1000000) + 1 : seed;
+		this.seed = (seed == 0) ? random.nextInt(1000000) + 1 : seed; // 1 - 1000
 		this.CHUNK_SIZE = chunkSize;
 		this.CHUNK_HEIGHT = chunkHeight;
 		this.heightMap = new double[CHUNK_SIZE][CHUNK_HEIGHT];
@@ -30,15 +28,13 @@ public class TerrainGeneration {
 		Random random = new Random(this.seed);
 		noiseGenerator = new PerlinNoiseGenerator(this.seed);
 
-		
-		// 1 - 1000000
 
 		// Noise offsets
 		this.offsetX = random.nextDouble() * 1000000;
 		this.offsetZ = random.nextDouble() * 1000000;
 	}
 
-	public int generateHeight(int wx, int wz) {
+	private int generateHeight(int wx, int wz) {
 		double x = wx + offsetX;
 		double z = wz + offsetZ;
 
@@ -61,7 +57,7 @@ public class TerrainGeneration {
 	}
 
 
-	public void generateHeightMap(int wx, int wz) {
+	private void generateHeightMap(int wx, int wz) {
 		for (int i = 0; i < CHUNK_SIZE; i++) {
 			for (int j = 0; j < CHUNK_SIZE; j++) {
 				int x = wx + i - 1;
@@ -71,7 +67,62 @@ public class TerrainGeneration {
 		}
 	}
 
-	public void carveCaves(int[][][] blocks) {
+
+	private void addWater(int[][][] blocks) {
+		for(int i = 0; i < CHUNK_SIZE; i++) {
+			for(int k = 0; k < CHUNK_SIZE; k++) {
+				int height = (int) heightMap[i][k];
+
+				for (int j = height - 1; j <= WATER_HEIGHT; j++) {
+					int block = blocks[i][j][k];
+					if(block == 0)
+						blocks[i][j][k] = 18; // Water
+					else 
+						blocks[i][j][k] = 7; // Sand
+				}
+			}
+		}
+	}
+
+   
+	private void addTrees(int[][][] blocks) {
+		int amount = random.nextInt(3);
+		for (int i = 0; i < amount; i++) {
+			int x = random.nextInt(4, CHUNK_SIZE - 4);
+			int z = random.nextInt(4, CHUNK_SIZE - 4);
+			int height = (int) heightMap[x][z];
+			int treeHeight = random.nextInt(3, 5);
+			
+			if (height > WATER_HEIGHT && height < CHUNK_HEIGHT - 10) {
+				for (int j = 1; j <= treeHeight; j++) {
+					blocks[x][height + j][z] = 9; // Woord
+				}
+				
+				for (int a = -2; a <= 2; a++) {
+					for (int b = -2; b <= 2; b++) {
+						for (int j = 1; j <= 3; j++) {
+							boolean shouldPlace = true;
+							if ((a == 2 && b == -2 && j != 2) || (a == -2 && b == -2 && j != 2)) {
+								shouldPlace = random.nextInt(6) == 0;
+							}
+							if (shouldPlace) {
+								blocks[x + a][height + treeHeight + j][z + b] = 19; // Leaves
+							}
+						}
+					}
+				}
+				
+				for (int a = -1; a <= 1; a++) {
+					for (int b = -1; b <= 1; b++) {
+						blocks[x + a][height + treeHeight + 4][z + b] = 19; // Leaves
+					}
+				}
+			}
+		}
+	}
+
+
+	private void carveCaves(int[][][] blocks) {
 		for (int i = 0; i < CHUNK_SIZE; i++) {
 			for (int j = 0; j < CHUNK_HEIGHT; j++) {
 				for (int k = 0; k < CHUNK_SIZE; k++) {
@@ -87,6 +138,21 @@ public class TerrainGeneration {
 		}
 	}
 
+	private void addPlants(int[][][] blocks) {
+		int[] plants = { 15, 10, 11 }; // Plants
+		for (int i = 0; i < CHUNK_SIZE; i++) {
+			for (int j = 0; j < CHUNK_HEIGHT; j++) {
+				for (int k = 0; k < CHUNK_SIZE; k++) {
+
+					// Block of grass and 5% chance
+					if(blocks[i][j][k] == 3 && random.nextInt(100) <= 5) {
+						// Spawn above grass
+						blocks[i][j+1][k] = plants[random.nextInt(plants.length)];
+					}
+				}
+			}
+		}
+	}
 
 	public int[][][] generateChunk(int wx, int wz) {
 		int[][][] blocks = new int[CHUNK_SIZE][CHUNK_HEIGHT][CHUNK_SIZE];
@@ -100,12 +166,13 @@ public class TerrainGeneration {
 					double noise = noiseGenerator.noise(i * 0.1, j * 0.1, k * 0.1);
 					double stoneThreshold = 24 + noise * 12;
 
+					// 4 6 7 0 -> alternative
 					if (j == height) {
-						blocks[i][j][k] = 4; // Grass
+						blocks[i][j][k] = 3; // Grass
 					} else if (j < height && j > stoneThreshold) {
-						blocks[i][j][k] = 6;
+						blocks[i][j][k] = 5;
 					} else if (j < height) {
-						blocks[i][j][k] = 7;
+						blocks[i][j][k] = 6;
 					} else {
 						blocks[i][j][k] = 0;
 					}
@@ -114,13 +181,14 @@ public class TerrainGeneration {
 		}
 
 		carveCaves(blocks);
-		// addWater(blocks);
-		// addTrees(blocks);
+		addPlants(blocks);
+		addWater(blocks);
+		addTrees(blocks);
 
 		// set bottom layer to bedrock
 		for (int i = 0; i < CHUNK_SIZE; i++) {
 			for (int k = 0; k < CHUNK_SIZE; k++) {
-				blocks[i][0][k] = 2; // Bedrock
+				blocks[i][0][k] = 1; // Bedrock
 			}
 		}
 
@@ -129,7 +197,7 @@ public class TerrainGeneration {
 
 	public int[][][] bigBlock() {
 		int[][][] blocks = new int[CHUNK_SIZE][CHUNK_HEIGHT][CHUNK_SIZE];
-		int[] firstRnd = { 0, 0, 11, 12 }; // Plants
+		int[] plants = { 0, 0, 10, 11 }; // Plants
 		Random random = new Random();
 
 		for(int x = 0; x < CHUNK_SIZE; x++) {
@@ -148,7 +216,7 @@ public class TerrainGeneration {
 					else
 						blocks[x][y][z] = 7;
 					
-					blocks[x][CHUNK_HEIGHT - 1][z] = firstRnd[random.nextInt(firstRnd.length)]; // Choose one of the flowers
+					blocks[x][CHUNK_HEIGHT - 1][z] = plants[random.nextInt(plants.length)]; // Choose one of the flowers
 					blocks[x][CHUNK_HEIGHT - 2][z] = 4; // Fill grass
 					blocks[x][0][z] = 2; // Bedrock
 				}
