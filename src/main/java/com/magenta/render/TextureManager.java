@@ -64,7 +64,7 @@ public class TextureManager {
 			String texPath = "src/main/resources/textures/"+texture+".png";
 			ByteBuffer texBuffer = STBImage.stbi_load(texPath, widthBuffer, heightBuffer, channelsBuffer, 0); // Loads
 			STBImage.stbi_set_flip_vertically_on_load(true); // Image is loaded flipped by default
-			if(texBuffer==null) throw new RuntimeException("Failed to load texture: " + texPath + " / " + STBImage.stbi_failure_reason());
+			if(texBuffer==null) throw new RuntimeException("Failed to load texture: " + texPath + "\n> " + STBImage.stbi_failure_reason());
 
 			// System.out.println(widthBuffer.get(0) + "x" + heightBuffer.get(0));
 

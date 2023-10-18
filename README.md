@@ -56,28 +56,29 @@ java -jar vakraft.jar
 - `Q` - Previous block
 - `Shift` - Fly down
 - `Space` - Fly up
-- `TAB` - Cursor exit
+- `TAB` - Get cursor
 - `ESC` - Close window
 
 # TODO
 ## Main focus
 - [ ] Shader improvement
-- [ ] Terrain generation
+- [X] Terrain generation (*Started*)
+- [ ] Procedural generation
 - [ ] Change `Model` to interface (*maybe*)
 - [ ] Add subchunks (*maybe*)
 - [ ] Light
 
 ## Fix bugs
-- [ ] Fix "*Keyboard Input*" bug
+- [X] Fix "*Keyboard Input*" bug
 - [ ] Fix mouse movement
 
 ## Not my focus now
+- [X] Load blocks from file (*maybe*)
 - [ ] Collision
 - [ ] Gravity
-- [ ] Load blocks from file (*maybe*)
 - [ ] Save/Load (*maybe*)
 
 # Credits
 Made by me<br>
-The project structure is inspired by [StartForKiller/JavaMinecraft](https://github.com/StartForKiller/JavaMinecraft)
-
+The project structure is inspired by [StartForKiller/JavaMinecraft](https://github.com/StartForKiller/JavaMinecraft)<br>
+`NoiseGeneration.java` and `PerlinNoiseGeneration.java` author: https://github.com/Bukkit/Bukkit/tree/master/src/main/java/org/bukkit/util/noise

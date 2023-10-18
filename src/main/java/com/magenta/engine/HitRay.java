@@ -6,7 +6,6 @@ import org.joml.Vector3f;
 import org.joml.Vector3i;
 
 import com.magenta.game.World;
-import com.magenta.game.block.BlocksEnum;
 
 public class HitRay {
 	public static int HIT_RANGE = 5;

@@ -1,7 +1,5 @@
 package com.magenta.main;
 
-import java.util.Random;
-
 import org.joml.Vector2f;
 import org.joml.Vector3f;
 import org.lwjgl.glfw.GLFW;
@@ -11,7 +9,6 @@ import com.magenta.engine.HitRay;
 import com.magenta.engine.IGameLogic;
 import com.magenta.engine.KeyboardInput;
 import com.magenta.engine.Window;
-import com.magenta.game.Chunk;
 import com.magenta.game.World;
 import com.magenta.game.block.BlocksEnum;
 import com.magenta.engine.MouseInput;
@@ -91,27 +88,22 @@ public class Game implements IGameLogic {
 		else if(keyboardInput.isPressingKey(GLFW.GLFW_KEY_SPACE))
 			cameraInc.y = 1;
 
-		// if(keyboardInput.isKeyPressed(GLFW.GLFW_KEY_LEFT_CONTROL))
-		// 	doubleSpeed = !doubleSpeed;
+		if(keyboardInput.isKeyDown(GLFW.GLFW_KEY_LEFT_CONTROL))
+			doubleSpeed = !doubleSpeed;
 
 
 		// Change block //
-		/**
-		 * Bug, below not workin because of the way isKeyPressed works
-		 * Because it checks then pressed becomes -1, so is aways -1
-		 * */
-
-		// System.out.println("KEY: " + keyboardInput.getPressedKey());
-		if(keyboardInput.isKeyPressed(GLFW.GLFW_KEY_E)) {
+		// System.out.println("KEY: " + keyboardInput.getKeyDown());
+		if(keyboardInput.isKeyDown(GLFW.GLFW_KEY_E)) {
 			holdingBlock++;
 			if(world.getBlockTypes().size() <= holdingBlock) holdingBlock = 1;
 		
-			System.out.println("Holding Block: " + BlocksEnum.getBlockById(holdingBlock).getName());
-		} else if(keyboardInput.isKeyPressed(GLFW.GLFW_KEY_Q)) {
+			System.out.println("Holding Block: " + world.getBlockTypes().get(holdingBlock).getName());
+		} else if(keyboardInput.isKeyDown(GLFW.GLFW_KEY_Q)) {
 			holdingBlock--;	
-			if(holdingBlock < 0) holdingBlock = world.getBlockTypes().size() - 1;
+			if(holdingBlock <= 0) holdingBlock = world.getBlockTypes().size() - 1;
 
-			System.out.println("Holding Block: " + BlocksEnum.getBlockById(holdingBlock).getName());
+			System.out.println("Holding Block: " + world.getBlockTypes().get(holdingBlock).getName());
 		}
 
 

@@ -4,10 +4,8 @@ import org.lwjgl.glfw.GLFW;
 
 public class KeyboardInput {
 	private Window window;
-	private int pressedKey = -1;
-	// private int keyReleased = -1;
-
-
+	private int keyDown = -1;
+	
 	public KeyboardInput(Window window) {
 		this.window = window;
 	}
@@ -15,8 +13,7 @@ public class KeyboardInput {
 	public void init() {
 		GLFW.glfwSetKeyCallback(window.getWindowHandle(), (window, key, scancode, action, mods) -> {
 			// Just change if is action is pressed
-			if(action == 1) this.pressedKey = key;
-
+		  	if(action == GLFW.GLFW_PRESS) this.keyDown = key;
 			// System.out.println("Key: " + key + "\nAction: " + action + "\nMods: " + mods);
 		});
 	}
@@ -25,14 +22,17 @@ public class KeyboardInput {
 		return GLFW.glfwGetKey(window.getWindowHandle(), key) == GLFW.GLFW_PRESS;
 	}
 	
-	public boolean isKeyPressed(int key) {
-		// System.out.println("pressedKey: " + pressedKey + "\n key: " + key);
-		int currentKey = pressedKey;
-		pressedKey = -1;
-		return currentKey == key;
+	public boolean isKeyDown(int key) {
+		int currentKeyDown = keyDown;
+		if(currentKeyDown != key) return false;
+
+		// Reset keyDown after checking
+		keyDown = -1; 
+		return true;
+		
 	}
 
-	public int getPressedKey() {
-		return pressedKey; // Return the stored value
+	public int getKeyDown() {
+		return keyDown; // Return the stored value
 	}
 }

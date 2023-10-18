@@ -4,33 +4,38 @@ import com.magenta.render.TextureManager;
 
 public class BlockType {
 	// Block specs //
-	private final int id;
+	// private final int id;
 	// private final BlocksEnum blockEnum;
 	private final String name;
-	private final String[] faces; // { top, bottom, sides }
+	private final String[] textures; // { top, bottom, sides }
 	private final Model model;
 
 
-	// public BlockType(String name, String[] faces, Model model, TextureManager texManager) {
-	public BlockType(BlocksEnum blockEnum, TextureManager texManager) {
+	public BlockType(String name, String[] textures, Model model, TextureManager texManager) {
+	// public BlockType(BlocksEnum blockEnum, TextureManager texManager) {
 		// Block //
-		this.id = blockEnum.getId();
-		// this.blockEnum = blockEnum;
-		this.name = blockEnum.getName();
-		this.faces = blockEnum.getTextures();
+		// this.id = blockEnum.getId();
+		// this.name = blockEnum.getName();
+		// this.textures = blockEnum.getTextures();
+		this.name = name;
+		this.textures = textures;
 
 		// Model //
-		model = blockEnum.getModel(); // Just for init
+		this.model = model; // Just for init
 
+		addAllFaces(texManager);
+	}
+
+	private void addAllFaces(TextureManager texManager) {
 		// Add textures //
 		// Load all block textures
 		int texIndex;
-		for(String face : faces) { // faces => This block textures (array)
+		for(String face : textures) { // faces => This block textures (array)
 			texManager.addTexture("blocks/"+face); // Adds current texture
 			texIndex = texManager.getTextureIndex("blocks/"+face); // Texture index in All Textures array (grab image)
 			// ^ gets current face to apply texture
 
-			switch (faces.length) {
+			switch (textures.length) {
 				case 1:
 					// Sides the same
 					for(int i=0; i < 6; i++) {
@@ -86,16 +91,20 @@ public class BlockType {
 
 
 	// Block // 
-	public int getId() {
-		return id;
+	// public int getId() {
+	// 	return id;
+	// }
+
+	public String getName() {
+		return name;
 	}
 
 	public String[] getFaces() {
-		return faces;
+		return textures;
 	}
 
 	public String getFace(int index) {
-		return "blocks/" + faces[index]; // Load from blocks/
+		return "blocks/" + textures[index]; // Load from "blocks/"
 	}
 
 

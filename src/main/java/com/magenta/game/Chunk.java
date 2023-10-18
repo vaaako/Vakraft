@@ -12,9 +12,8 @@ import com.magenta.render.mesh.Mesh;
 import com.magenta.render.mesh.MeshLoader;
 
 public class Chunk {
-	public final static int CHUNK_WIDTH = 16;
-	public final static int CHUNK_HEIGHT = 16;
-	public final static int CHUNK_LENGTH = 16;
+	public final static int CHUNK_SIZE = 16;
+	public final static int CHUNK_HEIGHT = 128;
 
 	// Chunk Meshes //
 	private LinkedList<Float> vertexPositions = new LinkedList<>();
@@ -32,14 +31,19 @@ public class Chunk {
 
 	// World //
 	private World world;
-	// private BlocksEnum[][][] blocks; // Chunk blocks
-	private int[][][] blocks; // Chunk blocks
+	public int[][][] blocks; // Chunk blocks
+
+
+	private final TerrainGeneration terrainGeneration = new TerrainGeneration(0, CHUNK_SIZE, CHUNK_HEIGHT);
 
 	public Chunk(World world, Vector3f chunkPosition) {
 		this.world = world;
 		this.chunkPosition = chunkPosition;
-		this.realPosition = new Vector3f(chunkPosition).mul(CHUNK_WIDTH, CHUNK_HEIGHT, CHUNK_LENGTH); // World-space position for the chunk
-		this.blocks = new int[CHUNK_WIDTH][CHUNK_HEIGHT][CHUNK_LENGTH]; // 0 -> air (default)
+		this.realPosition = new Vector3f(chunkPosition).mul(CHUNK_SIZE, CHUNK_HEIGHT, CHUNK_SIZE); // World-space position for the chunk
+		// this.blocks = new int[CHUNK_SIZE][CHUNK_HEIGHT][CHUNK_SIZE]; // 0 -> air (default)
+		
+		this.blocks = terrainGeneration.generateChunk((int) this.chunkPosition.x, (int) this.chunkPosition.y);
+		// this.blocks = terrainGeneration.bigBlock();
 	}
 
 	public void updateMesh() {
@@ -52,9 +56,9 @@ public class Chunk {
 
 
 		// Iterate throught all local block positions in the chunk
-		for(int localX = 0; localX < CHUNK_WIDTH; localX++) {	
+		for(int localX = 0; localX < CHUNK_SIZE; localX++) {	
 			for(int localY = 0; localY < CHUNK_HEIGHT; localY++) {
-				for(int localZ = 0; localZ < CHUNK_LENGTH; localZ++) {
+				for(int localZ = 0; localZ < CHUNK_SIZE; localZ++) {
 					int blockNumber = this.blocks[localX][localY][localZ];
 
 					// System.out.println("Block Number: " + blockNumber + "\nSize: " + this.world.getBlockTypes().size());
