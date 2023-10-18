@@ -38,16 +38,14 @@ public class TextureManager {
 		GL11.glTexParameteri(texType, GL11.GL_TEXTURE_MAG_FILTER, GL11.GL_NEAREST);
 		GL11.glTexParameteri(texType, GL11.GL_TEXTURE_MIN_FILTER, GL11.GL_NEAREST);
 
-		// GL11.glTexParameteri(texType, GL11.GL_TEXTURE_WRAP_S, GL11.GL_REPEAT);
-		// GL11.glTexParameteri(texType, GL11.GL_TEXTURE_WRAP_T, GL11.GL_REPEAT);
-
-
 		// Assigns image to texture object
 		GL15.glTexImage3D(texType, 0, GL11.GL_RGBA,
 			width, height, max, 0,
 			GL11.GL_RGBA, GL11.GL_UNSIGNED_BYTE, (ByteBuffer) null);
 		// Data type of pixels -> Most commons -> GL_RGB (jpg/jpeg) and GL_RGBA (png),
 	}
+
+
 
 	public void generateMipmap() {	
 		GL30.glGenerateMipmap(texType); // Generates mipmap -> Smaller versions of the same texture (used when texture is far away, for example)
@@ -98,8 +96,6 @@ public class TextureManager {
 
 		System.out.println("[-] Loaded Texture "+texture);
 	}
-
-
 
 
 	public void texUnit(ShaderProgram shader, String uniform, int unit) {
