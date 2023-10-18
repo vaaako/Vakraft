@@ -88,7 +88,6 @@ public class Renderer {
 		updateMatrices();
 		world.render();
 		
-
 		aim.render();
 
 		GL30.glBindVertexArray(0); // Unloads VAO

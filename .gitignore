@@ -8,6 +8,7 @@ build
 TODO.txt
 bin/
 
+src/main/java/com/magenta/engine/Font/
 
 # Sublime
 .classpath

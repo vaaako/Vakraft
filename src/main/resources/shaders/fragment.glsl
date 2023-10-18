@@ -16,12 +16,10 @@ void main() {
 	vec4 texColor = texture(texSampler, texCoord);
 	FragColor = texColor * shadingValue; // Shadow
 
-	// If pixel is transparent not render
+	// If pixel is transparent, discard it
 	if(texColor.a == 0.0) {
 		discard;
 	}
-
-
 	// Mix with color
 	// FragColor = texture(texSampler, texCoord) * vec4(color(r, g, b), 1.0);
 } 

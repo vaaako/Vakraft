@@ -17,7 +17,7 @@ public class BlockLoader {
 		this.filename = filename;
 
 		// Load file
-		reader = new BufferedReader(new InputStreamReader(BlockLoader.class.getClassLoader().getResourceAsStream(""+filename)));
+		reader = new BufferedReader(new InputStreamReader(BlockLoader.class.getClassLoader().getResourceAsStream(filename)));
 		if(reader == null) throw new RuntimeException("File: " + filename + " not found");
 	}
 

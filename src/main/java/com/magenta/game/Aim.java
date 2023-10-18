@@ -1,5 +1,8 @@
 package com.magenta.game;
 
+import java.util.ArrayList;
+
+import org.joml.Vector3f;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL30;
 
@@ -8,6 +11,7 @@ import com.magenta.render.mesh.Mesh;
 import com.magenta.render.mesh.MeshLoader;
 
 public class Aim {
+
 	// Mesh
 	private final float[] vertices;
 	private final int[] indices;
@@ -48,7 +52,8 @@ public class Aim {
 			indices = new int[segments * 3];
 
 			for (int i = 0; i <= segments; i++) {
-				float angle = (float) (2 * Math.PI * i / segments);
+				float angle = (float) Math.toRadians(360.0f / segments * i);
+				// float angle = (float) (2 * Math.PI * i / segments);
 				vertices[i * 3] = (float) (size * Math.cos(angle));
 				vertices[i * 3 + 1] = (float) (size * Math.sin(angle));
 				vertices[i * 3 + 2] = 0.0f;

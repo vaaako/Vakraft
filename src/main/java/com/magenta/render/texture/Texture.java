@@ -84,12 +84,24 @@ public class Texture {
 		GL11.glDeleteTextures(texID);
 	}
 
+
+
+
 	public int getTexID() {
-	    return texID;
+		return texID;
 	}
 
 	public int getTexType() {
-	    return texType;
+		return texType;
+	}
+
+
+	public int getWidth() {
+		return width;
+	}
+
+	public int getHeight() {
+		return height;
 	}
 
 	// public int getTextureIndex(String texture) {

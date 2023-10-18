@@ -12,7 +12,7 @@ import com.magenta.render.mesh.Mesh;
 import com.magenta.render.mesh.MeshLoader;
 
 public class Chunk {
-	public final static int CHUNK_SIZE = 16;
+	public final static int CHUNK_SIZE = 32;
 	public final static int CHUNK_HEIGHT = 58;
 
 	// Chunk Meshes //
@@ -40,7 +40,6 @@ public class Chunk {
 		this.world = world;
 		this.chunkPosition = chunkPosition;
 		this.realPosition = new Vector3f(chunkPosition).mul(CHUNK_SIZE, CHUNK_HEIGHT, CHUNK_SIZE); // World-space position for the chunk
-		// this.blocks = new int[CHUNK_SIZE][CHUNK_HEIGHT][CHUNK_SIZE]; // 0 -> air (default)
 		
 		this.blocks = terrainGeneration.generateChunk((int) this.chunkPosition.x, (int) this.chunkPosition.y);
 		// this.blocks = terrainGeneration.bigBlock();

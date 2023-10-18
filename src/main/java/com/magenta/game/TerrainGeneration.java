@@ -34,6 +34,8 @@ public class TerrainGeneration {
 		this.offsetZ = random.nextDouble() * 1000000;
 	}
 
+
+	// Generate terrain height
 	private int generateHeight(int wx, int wz) {
 		double x = wx + offsetX;
 		double z = wz + offsetZ;
@@ -43,6 +45,7 @@ public class TerrainGeneration {
 		double amplitude = 1;
 		double max = 0;
 
+		// Perlin noise generation loop
 		for(int i = 0; i < 8; i++) {
 			height += noiseGenerator.noise(x * frequency, z * frequency) * amplitude;
 			max += amplitude;
@@ -56,7 +59,7 @@ public class TerrainGeneration {
 		return (int) Math.floor((e * 0.5 + 0.5) * CHUNK_HEIGHT);
 	}
 
-
+	// Generate height map for a chunk
 	private void generateHeightMap(int wx, int wz) {
 		for (int i = 0; i < CHUNK_SIZE; i++) {
 			for (int j = 0; j < CHUNK_SIZE; j++) {
@@ -67,6 +70,21 @@ public class TerrainGeneration {
 		}
 	}
 
+	private void carveCaves(int[][][] blocks) {
+		for (int i = 0; i < CHUNK_SIZE; i++) {
+			for (int j = 0; j < CHUNK_HEIGHT; j++) {
+				for (int k = 0; k < CHUNK_SIZE; k++) {
+					double noise = noiseGenerator.noise(i * 0.1, j * 0.1, k * 0.1);
+					int height = (int) heightMap[i][k];
+
+
+					if (noise > 0.6) { // Before = 0.6
+						blocks[i][j][k] = 0;
+					}
+				}
+			}
+		}
+	}
 
 	private void addWater(int[][][] blocks) {
 		for(int i = 0; i < CHUNK_SIZE; i++) {
@@ -95,9 +113,10 @@ public class TerrainGeneration {
 			
 			if (height > WATER_HEIGHT && height < CHUNK_HEIGHT - 10) {
 				for (int j = 1; j <= treeHeight; j++) {
-					blocks[x][height + j][z] = 9; // Woord
+					blocks[x][height + j][z] = 9; // Wood log
 				}
-				
+					
+				// Add leaves around the tree trunk
 				for (int a = -2; a <= 2; a++) {
 					for (int b = -2; b <= 2; b++) {
 						for (int j = 1; j <= 3; j++) {
@@ -112,6 +131,7 @@ public class TerrainGeneration {
 					}
 				}
 				
+				// Add leaves on top of the tree trunk
 				for (int a = -1; a <= 1; a++) {
 					for (int b = -1; b <= 1; b++) {
 						blocks[x + a][height + treeHeight + 4][z + b] = 19; // Leaves
@@ -121,25 +141,11 @@ public class TerrainGeneration {
 		}
 	}
 
-
-	private void carveCaves(int[][][] blocks) {
-		for (int i = 0; i < CHUNK_SIZE; i++) {
-			for (int j = 0; j < CHUNK_HEIGHT; j++) {
-				for (int k = 0; k < CHUNK_SIZE; k++) {
-					double noise = noiseGenerator.noise(i * 0.1, j * 0.1, k * 0.1);
-					int height = (int) heightMap[i][k];
-
-
-					if (noise > 0.6) { // Before = 0.6
-						blocks[i][j][k] = 0;
-					}
-				}
-			}
-		}
-	}
-
 	private void addPlants(int[][][] blocks) {
-		int[] plants = { 15, 10, 11 }; // Plants
+		// int[] plants = { 15, 10, 11 }; // Plants
+		int[] plants = { 10, 11 }; // Plants
+
+		// For each block
 		for (int i = 0; i < CHUNK_SIZE; i++) {
 			for (int j = 0; j < CHUNK_HEIGHT; j++) {
 				for (int k = 0; k < CHUNK_SIZE; k++) {
@@ -170,9 +176,9 @@ public class TerrainGeneration {
 					if (j == height) {
 						blocks[i][j][k] = 3; // Grass
 					} else if (j < height && j > stoneThreshold) {
-						blocks[i][j][k] = 5;
+						blocks[i][j][k] = 5; // Dirt
 					} else if (j < height) {
-						blocks[i][j][k] = 6;
+						blocks[i][j][k] = 6; // Stone
 					} else {
 						blocks[i][j][k] = 0;
 					}
@@ -181,11 +187,13 @@ public class TerrainGeneration {
 		}
 
 		carveCaves(blocks);
-		addPlants(blocks);
+		
 		addWater(blocks);
 		addTrees(blocks);
+		
+		addPlants(blocks);
 
-		// set bottom layer to bedrock
+		// Set bottom layer to bedrock
 		for (int i = 0; i < CHUNK_SIZE; i++) {
 			for (int k = 0; k < CHUNK_SIZE; k++) {
 				blocks[i][0][k] = 1; // Bedrock
