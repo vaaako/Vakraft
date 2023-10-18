@@ -46,8 +46,9 @@ bash run.sh -r # Use -c to compile to a JAR file
 ```
 
 ### Running the JAR File
+>WARNING: Check for the correct `jar` name
 ```sh
-java -jar vakraft.jar
+java -jar vakraft.jare
 ```
 
 # Controls
@@ -61,12 +62,12 @@ java -jar vakraft.jar
 
 # TODO
 ## Main focus
-- [ ] Shader improvement
 - [X] Terrain generation (*Started*)
 - [ ] Procedural generation
 - [ ] Change `Model` to interface (*maybe*)
 - [ ] Add subchunks (*maybe*)
 - [ ] Light
+- [ ] Shader improvement
 
 ## Fix bugs
 - [X] Fix "*Keyboard Input*" bug
