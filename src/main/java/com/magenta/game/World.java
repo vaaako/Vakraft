@@ -39,7 +39,7 @@ public class World {
 				// float z = (float) Math.floor((wz - 1)) / Chunk.CHUNK_SIZE);
 
 				// Chunk currentChunk = new Chunk(this, new Vector3f(x, 0, z)); // Y: -1 = Start at -1 (camera spawns at Y:0)
-				Chunk currentChunk = new Chunk(this, new Vector3f(wx - WORLD_CENTER, 0, wz - WORLD_CENTER)); // Y: -1 = Start at -1 (camera spawns at Y:0)
+				Chunk currentChunk = new Chunk(this, new Vector3f(wx - WORLD_CENTER, -1, wz - WORLD_CENTER)); // Y: -1 = Start at -1 (camera spawns at Y:0)
 				chunks.put(currentChunk.getChunkPosition(), currentChunk); // Add to chunks list
 			}
 		}
