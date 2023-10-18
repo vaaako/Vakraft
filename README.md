@@ -60,17 +60,22 @@ java -jar vakraft.jar
 - `ESC` - Close window
 
 # TODO
-- [ ] Collision
-- [ ] Gravity
-- [ ] Fix mouse movement
-- [ ] Fix "*Keyboard Input*" bug
-- [ ] Light
+## Main focus
 - [ ] Shader improvement
 - [ ] Terrain generation
+- [ ] Change `Model` to interface (*maybe*)
 - [ ] Add subchunks (*maybe*)
+- [ ] Light
+
+## Fix bugs
+- [ ] Fix "*Keyboard Input*" bug
+- [ ] Fix mouse movement
+
+## Not my focus now
+- [ ] Collision
+- [ ] Gravity
 - [ ] Load blocks from file (*maybe*)
 - [ ] Save/Load (*maybe*)
-- [ ] Change `Model` to interface (*maybe*)
 
 # Credits
 Made by me<br>
