@@ -1,9 +1,12 @@
 package com.magenta.render;
 
+import java.io.InputStream;
 import java.nio.ByteBuffer;
 import java.nio.IntBuffer;
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.swing.filechooser.FileSystemView;
 
 import org.lwjgl.BufferUtils;
 import org.lwjgl.opengl.GL11;
@@ -12,6 +15,8 @@ import org.lwjgl.opengl.GL20;
 import org.lwjgl.opengl.GL30;
 import org.lwjgl.stb.STBImage;
 import org.lwjgl.system.MemoryStack;
+
+import com.magenta.render.texture.Texture;
 
 /**
  * Texture Array
@@ -60,9 +65,13 @@ public class TextureManager {
 			IntBuffer channelsBuffer = BufferUtils.createIntBuffer(1);
 
 			String texPath = "src/main/resources/textures/"+texture+".png";
+			// InputStream texIs = TextureManager.class.getClassLoader().getResourceAsStream("textures/"+texture+".png");
+			// if(texIs == null) throw new RuntimeException("Failed to load texture: " + texture);
+			// ByteBuffer texByteBuffer = ByteBuffer.wrap(texIs.readAllBytes()); // Convert to bytes and load as ByteBuffer
+
 			ByteBuffer texBuffer = STBImage.stbi_load(texPath, widthBuffer, heightBuffer, channelsBuffer, 0); // Loads
 			STBImage.stbi_set_flip_vertically_on_load(true); // Image is loaded flipped by default
-			if(texBuffer==null) throw new RuntimeException("Failed to load texture: " + texPath + "\n> " + STBImage.stbi_failure_reason());
+			if(texBuffer==null) throw new RuntimeException("Failed to load texture: " + texture + "\n> " + STBImage.stbi_failure_reason());
 
 			// System.out.println(widthBuffer.get(0) + "x" + heightBuffer.get(0));
 
@@ -70,8 +79,14 @@ public class TextureManager {
 			// STBImage.stbi_image_free(texBuffer);
 
 			return texBuffer;
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
+
+		return null;
 	}
+
 
 	public void addTexture(String texture) {
 		// Check if texture is added
@@ -97,7 +112,6 @@ public class TextureManager {
 		System.out.println("[-] Loaded Texture "+texture);
 	}
 
-
 	public void texUnit(ShaderProgram shader, String uniform, int unit) {
 		int texUni = GL20.glGetUniformLocation(shader.getProgramID(), uniform); // Get uniform texture
 
@@ -121,11 +135,11 @@ public class TextureManager {
 	}
 
 	public int getTexID() {
-	    return texID;
+		return texID;
 	}
 
 	public int getTexType() {
-	    return texType;
+		return texType;
 	}
 
 	public int getTextureIndex(String texture) {

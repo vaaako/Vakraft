@@ -7,12 +7,13 @@ else
 	else
 		./gradlew shadowJar
 
+		# Because of the way the Textures are loaded, this is necessary (STBI fault, shame on it)
+		jar -uf *-all.jar src/main/resources/textures
+
 		clear
 		echo "=> jar file created!"
 		cp build/libs/*-all.jar . # Copy jar to current location
 		ls --color=auto
-
-		# java -jar *-all.jar
 	fi
 fi
 
